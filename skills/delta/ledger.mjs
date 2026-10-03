@@ -97,7 +97,7 @@ export async function buildLedger({ enabledMap, perSession, idx, projectOf, hook
         const outside = total ? 1 - inUsed / total : 0;
         if (outside >= 0.4) { // only worth it if most sessions happen elsewhere
           row.action = 'scope'; row.savings = Math.round(d.tokens * outside);
-          row.commands = [`claude plugin disable ${key} --scope user`, ...projects.map((p) => `cd "${projPath.get(p)}" && claude plugin enable ${key} --scope project`)];
+          row.commands = [`claude plugin disable ${key} --scope user`, ...projects.map((p) => `cd "${projPath.get(p)}" && claude plugin enable ${key} --scope local`)];
           row.note = `${inferred ? 'your stack uses it only in' : 'used only in'} ${projects.join(', ')}; ${Math.round(outside * 100)}% of your sessions are elsewhere${inferred ? ' (hook-based, so usage is inferred from dependencies)' : ''}`;
         }
       }
