@@ -36,15 +36,30 @@ const tips = await load(tipsSrc);
 const communitySrc = /^https?:/.test(feedSrc) ? feedSrc.replace(/feed.json$/, 'community.json') : path.join(path.dirname(feedSrc), 'community.json');
 
 // --- gather local facts ---
-const slash = {};
+// Slash commands, all-time AND recent. Habits and workflows change, so conclusions about what you DO now use the recent window;
+// all-time counts are only used for "have you ever tried this feature".
+const RECENT_DAYS = 60;
+const slash = {}, slashRecent = {}, slashLast = {};
 let historyEntries = 0;
+const recentCut = Date.now() - RECENT_DAYS * 864e5;
 for (const line of (await tryRead(path.join(home, '.claude', 'history.jsonl'))).split('\n')) {
   if (!line) continue;
   let d; try { d = JSON.parse(line); } catch { continue; }
   historyEntries++;
   const m = /^\/([\w:-]+)/.exec(d.display || '');
-  if (m) slash[m[1]] = (slash[m[1]] || 0) + 1;
+  if (!m) continue;
+  const ts = Number(d.timestamp) || 0;
+  slash[m[1]] = (slash[m[1]] || 0) + 1;
+  if (ts >= recentCut) slashRecent[m[1]] = (slashRecent[m[1]] || 0) + 1;
+  if (ts > (slashLast[m[1]] || 0)) slashLast[m[1]] = ts;
 }
+// Workflows that were big once and are idle now (grouped by family: gsd:plan-phase, gsd-update -> gsd).
+const family = (c) => c.split(/[:-]/)[0];
+const fam = {};
+for (const [c, n] of Object.entries(slash)) { const f = family(c); const x = fam[f] || (fam[f] = { all: 0, recent: 0, last: 0 }); x.all += n; x.recent += slashRecent[c] || 0; x.last = Math.max(x.last, slashLast[c] || 0); }
+const SYSTEM_CMDS = new Set(['clear', 'model', 'usage', 'resume', 'effort', 'login', 'exit', 'compact', 'mcp', 'plugin', 'reload', 'rc', 'remote', 'skills', 'config', 'help', 'doctor', 'rate', 'fast', 'status', 'memory', 'agents', 'cost', 'permissions', 'ide', 'add', 'delta']);
+const dropped = Object.entries(fam).filter(([f, x]) => !SYSTEM_CMDS.has(f) && x.all >= 20 && x.recent === 0 && x.last && Date.now() - x.last > RECENT_DAYS * 864e5)
+  .sort((a, b) => b[1].all - a[1].all).slice(0, 4).map(([f, x]) => ({ family: f, uses: x.all, lastUsed: new Date(x.last).toISOString().slice(0, 10) }));
 const settingsRaw = (await tryRead(path.join(home, '.claude', 'settings.json'))) + (await tryRead(path.join(home, '.claude', 'settings.local.json')));
 const settings = await tryJson(path.join(home, '.claude', 'settings.json')) || {};
 const plugins = Object.entries(settings.enabledPlugins || {}).filter(([, on]) => on).map(([k]) => k.split('@')[0].toLowerCase());
@@ -100,11 +115,18 @@ for (const t of tips) {
   actions.push({ kind: 'try', weight: (inFeed.has(t.id) ? 20 : 0) + (t.since ? 5 : 0), title: t.title, command: t.try, why: t.why, id: t.id });
 }
 
-// Habit: heavy /clear, almost no compacting.
-if (used('clear') >= 100 && used('compact') < used('clear') / 20) {
-  actions.push({ kind: 'habit', weight: 18, title: `You ran /clear ${used('clear')}x but /compact ${used('compact')}x`,
+// Habit (recent window only): lots of /clear, no compacting.
+const rc = (n) => slashRecent[n] || 0;
+if (rc('clear') >= 40 && rc('compact') < rc('clear') / 20) {
+  actions.push({ kind: 'habit', weight: 18, title: `In the last ${RECENT_DAYS} days you ran /clear ${rc('clear')}x and /compact ${rc('compact')}x`,
     command: '/rewind → "Summarize up to here"   (or let auto-compact run)',
     why: 'Each /clear throws away context you may have wanted. Summarizing keeps the useful part and the prompt cache.' });
+}
+// Workflows you dropped: informational, so recommendations are never built on a habit that no longer exists.
+if (dropped.length) {
+  actions.push({ kind: 'info', weight: 17, title: `Idle workflows (not used in ${RECENT_DAYS}+ days): ${dropped.map((d) => `/${d.family} (${d.uses}x, last ${d.lastUsed})`).join(', ')}`,
+    command: 'If a plugin or skill for one of these still loads, disable it; otherwise nothing to do',
+    why: 'Delta only builds recommendations on what you do now, not on what you did in the past.' });
 }
 
 // Overlapping plugins/skills.
