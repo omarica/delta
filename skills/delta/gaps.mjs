@@ -30,6 +30,7 @@ async function load(src) {
 const feed = await load(feedSrc);
 const tipsSrc = /^https?:/.test(feedSrc) ? feedSrc.replace(/feed\.json$/, 'tips.json') : path.join(path.dirname(feedSrc), 'tips.json');
 const tips = await load(tipsSrc);
+const communitySrc = /^https?:/.test(feedSrc) ? feedSrc.replace(/feed.json$/, 'community.json') : path.join(path.dirname(feedSrc), 'community.json');
 
 // --- gather local facts ---
 const slash = {};
@@ -49,6 +50,19 @@ try { skills = (await readdir(path.join(home, '.claude', 'skills'))).map((s) => 
 const codexCfg = await tryRead(path.join(home, '.codex', 'config.toml'));
 let version = ''; try { version = execFileSync('claude', ['--version'], { encoding: 'utf8', timeout: 8000 }).trim(); } catch {}
 const used = (n) => slash[n] || 0;
+
+// --- setup assessment (stack + real usage vs. the live marketplace) ---
+let assessment = null;
+if (!args.includes('--no-assess')) {
+  try { const { assess } = await import('./assess.mjs'); assessment = await assess({ HERE, plugins, enabledMap: settings.enabledPlugins || {}, skills, slash }); }
+  catch (e) { console.error(`[assess skipped] ${e.message}`); }
+}
+
+let community = null;
+if (assessment && !args.includes('--no-community')) {
+  try { const { matchCommunity } = await import('./community.mjs'); community = await matchCommunity({ HERE, src: communitySrc, stackTags: assessment.stackTags, installedNames: assessment.installedNames, includeLow: args.includes('--community-all') }); }
+  catch (e) { console.error(`[community skipped] ${e.message}`); }
+}
 
 // --- findings ---
 const actions = [];
@@ -89,12 +103,64 @@ actions.sort((a, b) => b.weight - a.weight);
 const result = {
   generated: new Date().toISOString(), claudeVersion: version, historyEntries,
   plugins: plugins.length, skills: skills.length, codexInstalled: !!codexCfg,
-  forYou: actions.slice(0, 5), fromFeed: feedPicks,
+  forYou: actions.slice(0, 5), assessment, community, fromFeed: feedPicks,
 };
 
 if (wantJson) { console.log(JSON.stringify(result, null, 2)); process.exit(0); }
 console.log(`# Your delta  (${version || 'Claude Code'}; ${plugins.length} plugins, ${skills.length} skills${codexCfg ? ', Codex' : ''}; analysed ${historyEntries} history entries locally)\n`);
+if (assessment?.ledger) {
+  const L = assessment.ledger;
+  const acts = L.rows.filter((r) => r.action !== 'keep');
+  console.log(`## Token ledger: ${L.totalTokens.toLocaleString()} tokens of plugin context load at the start of EVERY session`);
+  console.log(`Applying the changes below would cut that to ~${L.afterTokens.toLocaleString()} (-${L.potentialSavings.toLocaleString()}, ${Math.round(100 * L.potentialSavings / Math.max(1, L.totalTokens))}%). Based on ${L.sessions} recorded sessions; a plugin you use rarely may look unused.`);
+  for (const r of acts) {
+    console.log(`- [${r.action.toUpperCase()}] ${r.plugin}: ${r.tokens.toLocaleString()} tok/session, saves ~${r.savings.toLocaleString()} (${r.note})`);
+    for (const c of r.commands) console.log(`    ${c}`);
+  }
+  const kept = L.rows.filter((r) => r.action === 'keep' && r.tokens >= 400).map((r) => `${r.plugin} (${r.tokens})`);
+  if (kept.length) console.log(`- Kept as is: ${kept.join(', ')}`);
+  const cm = (assessment.claudeMd || []).filter((c) => c.heavy);
+  for (const c of cm) console.log(`- [TRIM] ${c.label} CLAUDE.md is ~${c.tokens.toLocaleString()} tokens, loaded every session there. Move rarely-needed rules into path-scoped .claude/rules/*.md files or delete stale ones.`);
+  console.log('');
+}
+if (assessment) {
+  console.log(`## Your setup (stack: ${assessment.stack.join(', ') || 'unknown'}; ${assessment.projects} projects, ${assessment.sessions} sessions since ${assessment.since})`);
+  console.log('\n## Install (fits your stack)');
+  if (!assessment.install.length) console.log('- Nothing missing for your stack.');
+  for (const i of assessment.install) console.log(`- ${i.plugin}: ${i.why}\n    ${i.command}\n    Why you: ${i.evidence}`);
+  // The token ledger above supersedes the older prune list; only fall back to it when the ledger is unavailable.
+  if (!assessment.ledger) {
+    console.log('\n## Prune (installed, never used)');
+    if (!assessment.prune.length) console.log('- Everything installed has been used.');
+    for (const i of assessment.prune) console.log(`- ${i.plugin}: ${i.why}\n    ${i.command}`);
+    if (assessment.harmless?.length) console.log(`- (unused but ~free, keep or remove as you like: ${assessment.harmless.join(', ')})`);
+    if (assessment.unmeasurable?.length) console.log(`- (not measurable, run through hooks: ${assessment.unmeasurable.join(', ')})`);
+  } else if (assessment.harmless?.length) {
+    console.log(`\n(Unused but ~free, no action needed: ${assessment.harmless.join(', ')})`);
+  }
+  console.log('');
+}
+if (community) {
+  console.log('## Community picks (GitHub, not vetted by Anthropic)');
+  if (!community.picks.length) console.log('- No high-confidence pick for your setup today.');
+  if (community.hiddenLowConfidence) console.log(`  (${community.hiddenLowConfidence} lower-confidence keyword matches hidden; run with --community-all to see them)`);
+  for (const c of community.picks) {
+    const flags = [c.risk.hooks && 'runs hooks', c.risk.mcp && 'starts an MCP server', c.risk.scripts && 'has install scripts'].filter(Boolean);
+    console.log(`- ${c.plugin} (${c.repo})${c.confidence === 'low' ? ' [LOW CONFIDENCE]' : ''}: ${c.description}`);
+    console.log(`    Why you: ${c.why}`);
+    console.log(`    Trust ${c.trust}/100 | ${c.stars.toLocaleString()} stars | ${/NOASSERTION|none/.test(c.license) ? 'license unclear' : c.license} | pushed ${c.pushedDaysAgo}d ago | repo ${c.ageDays}d old${c.isNew ? ' | NEW this week' : ''}${c.starsDelta ? ` | +${c.starsDelta} stars/wk` : ''}`);
+    const baseTok = assessment?.ledger?.totalTokens;
+    console.log(`    Context cost: ${c.estTokens === null ? 'unknown (run `claude plugin details` after adding its marketplace)' : `~${c.estTokens.toLocaleString()} tokens/session${baseTok ? ` (+${Math.round(100 * c.estTokens / baseTok)}% on your current ${baseTok.toLocaleString()})` : ''}${c.risk.hooks || c.risk.mcp ? ', plus whatever its hooks/MCP inject' : ''}`}`);
+    console.log(`    Review first: ${flags.length ? flags.join(', ') : 'none detected from file names, so still read its hooks and .mcp.json'}  ${c.url}`);
+    for (const i of c.installs) console.log(`    ${i}`);
+  }
+  console.log('');
+}
 console.log('## Change in your setup');
 for (const a of result.forYou) console.log(`- [${a.kind.toUpperCase()}] ${a.title}\n    ${a.command}\n    ${a.why}`);
 console.log('\n## New this week');
 for (const f of result.fromFeed) console.log(`- [${f.kind.toUpperCase()}] ${f.title}${f.command ? `\n    ${f.command}` : ''}\n    ${f.why}  ${f.url || ''}`);
+if (args.includes('--more') && feed.more?.length) {
+  console.log('\n## More this week');
+  for (const f of feed.more) console.log(`- [${f.kind.toUpperCase()}] ${f.title}  ${f.url || ''}`);
+}

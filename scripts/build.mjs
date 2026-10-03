@@ -56,7 +56,7 @@ async function claudeChangelog() {
       out.push({
         id: `cc-${ver}-${out.length}`, kind: 'new', tool: 'Claude Code', date,
         title: text.replace(/^Added /, '').slice(0, 160),
-        action: tip ? `Try: ${tip.try}` : null,
+        action: tip ? `Try: ${tip.try}` : (/^Added (?:an? |the )?(?:new )?(?:built-in )?`\/[a-z-]+`/.test(text) ? `Try: ${text.match(/`(\/[a-z-]+)`/)[1]}` : null),
         why: tip ? tip.why : `Added in v${ver}.`,
         url: `https://github.com/${repo}/releases/tag/v${ver}`,
         tipId: tip?.id ?? null, score,
@@ -133,7 +133,10 @@ for (const it of items) {
 }
 
 const generated = new Date().toISOString();
-const feed = { generated, window_days: cfg.windowDays, items: picked.map(({ score, ...r }) => ({ ...r, score: Math.round(score) })) };
+const clean = ({ score, ...r }) => ({ ...r, score: Math.round(score) });
+const pickedIds = new Set(picked.map((p) => p.id));
+const more = items.filter((i) => !pickedIds.has(i.id) && i.score >= (cfg.moreMinScore ?? 25)).slice(0, cfg.maxMore ?? 12);
+const feed = { generated, window_days: cfg.windowDays, items: picked.map(clean), more: more.map(clean) };
 await mkdir(path.join(ROOT, 'docs'), { recursive: true });
 await writeFile(path.join(ROOT, 'docs/feed.json'), JSON.stringify(feed, null, 2));
 await writeFile(path.join(ROOT, 'docs/tips.json'), JSON.stringify(tips, null, 2));
@@ -153,9 +156,10 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
 body{background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif;max-width:680px;margin:0 auto;padding:24px 16px}
 h1{font-size:1.4rem;margin:0}.sub{color:var(--mut);margin:4px 0 24px}article{background:var(--card);border-radius:10px;padding:14px 16px;margin:0 0 12px}
 .tag{font:600 11px/1 system-ui;color:var(--acc);letter-spacing:.06em}a{color:inherit}h2{font-size:1.02rem;margin:6px 0}
-.act{margin:6px 0;font-family:ui-monospace,monospace;font-size:.88rem}.why{color:var(--mut);margin:4px 0 0;font-size:.92rem}</style></head><body>
+.act{margin:6px 0;font-family:ui-monospace,monospace;font-size:.88rem}summary{cursor:pointer;color:var(--mut);margin:16px 0 10px}.why{color:var(--mut);margin:4px 0 0;font-size:.92rem}</style></head><body>
 <h1>Delta</h1><p class="sub">${feed.items.length} things worth your attention · ${generated.slice(0, 10)} · <a href="feed.xml">RSS</a> · <a href="feed.json">JSON</a></p>
 ${feed.items.map((i) => `<article><span class="tag">${label[i.kind] || i.kind} · ${esc(i.tool)}</span><h2><a href="${esc(i.url)}">${esc(i.title)}</a></h2>${i.action ? `<p class="act">${esc(i.action)}</p>` : ''}<p class="why">${esc(i.why)}</p></article>`).join('\n') || '<p>Nothing worth your attention today.</p>'}
+${feed.more.length ? `<details><summary>More this week (${feed.more.length})</summary>${feed.more.map((i) => `<article><span class="tag">${label[i.kind] || i.kind} · ${esc(i.tool)}</span><h2><a href="${esc(i.url)}">${esc(i.title)}</a></h2><p class="why">${esc(i.why)}</p></article>`).join('')}</details>` : ''}
 <p class="sub">Personalize it: run the <code>/delta</code> skill to compare this feed with your own setup.</p></body></html>`;
 await writeFile(path.join(ROOT, 'docs/index.html'), html);
 console.log(`built ${feed.items.length} items from ${items.length} candidates`);

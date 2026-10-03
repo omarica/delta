@@ -15,6 +15,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Discover community plugins and skills
+        run: node scripts/discover.mjs
+        continue-on-error: true   # a GitHub search hiccup must not block the daily feed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build feed
         run: node scripts/build.mjs
         env:

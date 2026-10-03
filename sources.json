@@ -1,5 +1,7 @@
 {
   "maxItems": 5,
+  "maxMore": 12,
+  "moreMinScore": 25,
   "maxPerKind": 2,
   "windowDays": 7,
   "claudeCodeChangelog": {

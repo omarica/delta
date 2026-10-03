@@ -1,0 +1,321 @@
+{
+  "tags": {
+    "nextjs": [
+      "^next$"
+    ],
+    "react": [
+      "^react$"
+    ],
+    "typescript": [
+      "^typescript$"
+    ],
+    "tailwind": [
+      "^tailwindcss$",
+      "^@tailwindcss/"
+    ],
+    "supabase": [
+      "^@supabase/",
+      "^supabase$"
+    ],
+    "stripe": [
+      "^stripe$",
+      "^@stripe/"
+    ],
+    "sentry": [
+      "^@sentry/",
+      "^sentry-sdk$"
+    ],
+    "trpc": [
+      "^@trpc/"
+    ],
+    "drizzle": [
+      "^drizzle-orm$"
+    ],
+    "prisma": [
+      "^prisma$",
+      "^@prisma/client$"
+    ],
+    "posthog": [
+      "posthog"
+    ],
+    "vercel": [
+      "^@vercel/",
+      "^vercel$"
+    ],
+    "llm-app": [
+      "^openai$",
+      "^@anthropic-ai/sdk$",
+      "^anthropic$",
+      "^ai$",
+      "^@ai-sdk/",
+      "^langchain",
+      "^llama-index"
+    ],
+    "mcp": [
+      "modelcontextprotocol",
+      "^mcp$",
+      "^fastmcp$"
+    ],
+    "playwright": [
+      "playwright"
+    ],
+    "mobile": [
+      "^expo$",
+      "^react-native$"
+    ],
+    "postgres": [
+      "^pg$",
+      "^postgres$",
+      "^psycopg",
+      "^asyncpg$",
+      "^sqlalchemy$"
+    ],
+    "redis": [
+      "^ioredis$",
+      "^redis$",
+      "^@upstash/redis$"
+    ],
+    "data": [
+      "^pandas$",
+      "^numpy$",
+      "^polars$"
+    ],
+    "trading": [
+      "^ccxt$",
+      "^alpaca"
+    ],
+    "rag": [
+      "chromadb",
+      "qdrant",
+      "ragflow",
+      "^faiss"
+    ],
+    "cad-bim": [
+      "^ezdxf$",
+      "pyautocad",
+      "^pyrevit$"
+    ]
+  },
+  "files": {
+    "python": [
+      "pyproject.toml",
+      "requirements.txt",
+      "uv.lock",
+      "setup.py"
+    ],
+    "typescript": [
+      "tsconfig.json"
+    ],
+    "docker": [
+      "Dockerfile",
+      "compose.yaml",
+      "docker-compose.yml"
+    ]
+  },
+  "extensions": {
+    ".py": "python",
+    ".ts": "typescript",
+    ".tsx": "react",
+    ".dxf": "cad-bim",
+    ".dwg": "cad-bim",
+    ".rvt": "cad-bim",
+    ".swift": "swift",
+    ".go": "go",
+    ".rs": "rust"
+  },
+  "recommend": [
+    {
+      "plugin": "pyright-lsp",
+      "when": [
+        "python"
+      ],
+      "reason": "Type-aware code intelligence for your Python projects; Claude catches type errors while it edits.",
+      "requires": {
+        "bin": "pyright-langserver",
+        "install": "npm install -g pyright"
+      }
+    },
+    {
+      "plugin": "typescript-lsp",
+      "when": [
+        "typescript"
+      ],
+      "reason": "Type-aware code intelligence for your TypeScript projects.",
+      "requires": {
+        "bin": "typescript-language-server",
+        "install": "npm install -g typescript-language-server typescript"
+      }
+    },
+    {
+      "plugin": "chrome-devtools-mcp",
+      "when": [
+        "nextjs",
+        "react"
+      ],
+      "unlessSkill": [
+        "playwright-cli"
+      ],
+      "reason": "Lets Claude inspect a live browser: performance traces, console errors and layout bugs in your web apps."
+    },
+    {
+      "plugin": "claude-security",
+      "when": [
+        "stripe",
+        "supabase"
+      ],
+      "reason": "You ship payments and auth; a deep vulnerability scan of your own code is worth a regular run."
+    },
+    {
+      "plugin": "context7",
+      "when": [
+        "nextjs",
+        "react",
+        "llm-app"
+      ],
+      "reason": "Up-to-date library docs in context, so Claude stops using outdated APIs from older training data."
+    },
+    {
+      "plugin": "gopls-lsp",
+      "when": [
+        "go"
+      ],
+      "reason": "Go code intelligence.",
+      "requires": {
+        "bin": "gopls",
+        "install": "go install golang.org/x/tools/gopls@latest"
+      }
+    },
+    {
+      "plugin": "rust-analyzer-lsp",
+      "when": [
+        "rust"
+      ],
+      "reason": "Rust code intelligence.",
+      "requires": {
+        "bin": "rust-analyzer",
+        "install": "rustup component add rust-analyzer"
+      }
+    },
+    {
+      "plugin": "swift-lsp",
+      "when": [
+        "swift"
+      ],
+      "reason": "Swift code intelligence."
+    }
+  ],
+  "autoMatchCategories": [
+    "development",
+    "database",
+    "deployment",
+    "monitoring",
+    "security",
+    "testing"
+  ],
+  "passivePlugins": [
+    "-lsp$",
+    "^security-guidance$",
+    "^claude-md-management$"
+  ],
+  "autoTags": [
+    "supabase",
+    "stripe",
+    "sentry",
+    "vercel",
+    "posthog",
+    "redis",
+    "postgres",
+    "drizzle",
+    "prisma",
+    "mcp",
+    "playwright",
+    "docker"
+  ],
+  "communityTags": {
+    "nextjs": "next.?js",
+    "react": "\breact\b",
+    "typescript": "typescript",
+    "tailwind": "tailwind",
+    "supabase": "supabase",
+    "stripe": "stripe",
+    "sentry": "sentry",
+    "trpc": "trpc",
+    "drizzle": "drizzle",
+    "prisma": "prisma",
+    "vercel": "vercel",
+    "python": "python|pyright|\bpytest\b",
+    "postgres": "postgres",
+    "redis": "redis",
+    "docker": "docker",
+    "playwright": "playwright",
+    "mcp": "\bmcp\b",
+    "llm-app": "\bllm\b|openai|anthropic|\brag\b",
+    "rag": "\brag\b|retrieval|embedding",
+    "cad-bim": "autocad|\bdxf\b|revit|\bbim\b|\bcad\b",
+    "trading": "trading|ccxt|quant",
+    "data": "pandas|dataframe|\betl\b|analytics",
+    "mobile": "react.native|\bexpo\b|swiftui|flutter",
+    "go": "\bgolang\b|\bgo\b",
+    "rust": "\brust\b"
+  },
+  "capabilities": {
+    "memory": {
+      "match": "(persistent|long.?term|cross.?session|agent|project|claude)\\s+memory|memory\\s+(system|layer|bank|store)|remember(s|ing)?\\s+(across|previous|your)|session\\s+(history|continuity|recall)|context\\s+(handoff|continuity)",
+      "have": "mem|memory|remember|handoff"
+    },
+    "context": {
+      "match": "context.?(window|saving|optimi[sz]|compress|mode)|token.?(saving|reduc|optimi[sz])|reduce.{0,20}tokens",
+      "have": "context-mode|rtk|compress|ponytail"
+    },
+    "review": {
+      "match": "code.?review|pr.?review|review.?agents?",
+      "have": "review"
+    },
+    "security": {
+      "match": "security|vulnerab|secret.?scan|\bowasp\b",
+      "have": "security"
+    },
+    "testing": {
+      "match": "\\btdd\\b|test.?driven|\\be2e\\b|test.?(generation|automation)",
+      "have": "tdd|test|playwright"
+    },
+    "planning": {
+      "match": "planning|spec.?driven|roadmap|task.?(breakdown|management)|workflow",
+      "have": "superpowers|gsd|plan|spec"
+    },
+    "design": {
+      "match": "ui.?ux|design.?system|frontend.?design|\bfigma\b",
+      "have": "design|ui-ux|impeccable"
+    },
+    "docs": {
+      "match": "documentation|library.?docs|up.?to.?date docs",
+      "have": "context7|docs"
+    },
+    "git": {
+      "match": "\\bgit\\b.{0,20}(workflow|commit|worktree)|pull.?request|worktrees?",
+      "have": "commit|git|worktree"
+    },
+    "debugging": {
+      "match": "\\bdebug(ging)?\\b|root.?cause|observability",
+      "have": "debug|sentry"
+    },
+    "agents": {
+      "match": "multi.?agent|subagents?|agent.?orchestrat|parallel agents",
+      "have": "agent|orchestrat"
+    }
+  },
+  "community": {
+    "topics": [
+      "claude-code-plugin",
+      "claude-code-plugins",
+      "claude-code-skills",
+      "claude-code-skill",
+      "claude-skills",
+      "claude-code-marketplace",
+      "agent-skills"
+    ],
+    "minStars": 100,
+    "pushedWithinDays": 45,
+    "maxItems": 150
+  }
+}

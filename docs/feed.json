@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T14:08:55.131Z",
+  "generated": "2026-10-03T16:15:50.541Z",
   "window_days": 7,
   "items": [
     {
@@ -57,7 +57,151 @@
       "action": null,
       "why": "Select transcript text and paste with middle-click in fullscreen mode on supported local Linux X11 terminals. · Start sessions outside a project with workspace defaults when policy permits, and restore saved permissions when resuming.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
-      "score": 57
+      "score": 56
+    }
+  ],
+  "more": [
+    {
+      "id": "cc-2.1.287-8",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-01T18:00:22Z",
+      "title": "You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with `/plugin enable cc-plugin-you-sh",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "tipId": "mods",
+      "score": 59
+    },
+    {
+      "id": "cc-2.1.288-4",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-02T20:19:57Z",
+      "title": "`--max-findings <n>|all` to /code-review to report more or fewer findings than the usual limit; the choice is reused until you pass `--max-findings default`",
+      "action": "Try: /code-review high",
+      "why": "A second pair of eyes before you commit; runs as a background subagent.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "tipId": "code-review",
+      "score": 53
+    },
+    {
+      "id": "hn-49911995",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-09-30T17:37:40Z",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "action": null,
+      "why": "194 points, 97 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49911995",
+      "score": 52
+    },
+    {
+      "id": "cc-2.1.285-15",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-29T19:27:30Z",
+      "title": "`claude --desktop` to open the Claude desktop app on the current directory, or on a session with `--continue` / `--resume <id>`",
+      "action": null,
+      "why": "Added in v2.1.285.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.284-24",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-28T18:02:03Z",
+      "title": "`/rate-limit-options` to `/help` and the command menu for claude.ai subscribers, so the usage-limit notices that mention it point to a command you can find",
+      "action": "Try: /rate-limit-options",
+      "why": "Added in v2.1.284.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "tipId": null,
+      "score": 45
+    },
+    {
+      "id": "cc-2.1.287-11",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-01T18:00:22Z",
+      "title": "URL prompts from MCP servers on the 2025-11-25 protocol, for example to sign in. If a server no longer connects after this update, add \"bareElicitationCapabilit",
+      "action": null,
+      "why": "Added in v2.1.287.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "tipId": null,
+      "score": 44
+    },
+    {
+      "id": "cc-2.1.285-16",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-29T19:27:30Z",
+      "title": "`claude plugin configure <plugin>` to show a plugin's options and which are unset, or save new values read from stdin with `--values-stdin`",
+      "action": null,
+      "why": "Added in v2.1.285.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
+      "tipId": null,
+      "score": 40
+    },
+    {
+      "id": "cc-2.1.288-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-02T20:19:57Z",
+      "title": "recovery for a prompt cleared with Ctrl+C: pressing Up on the empty prompt brings the draft back, including pasted text and images",
+      "action": null,
+      "why": "Added in v2.1.288.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "tipId": null,
+      "score": 38
+    },
+    {
+      "id": "cc-2.1.284-25",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-28T18:02:03Z",
+      "title": "`/mcp reconnect all` in the interactive terminal to retry every MCP server that failed to connect or needs authentication at once",
+      "action": null,
+      "why": "Added in v2.1.284.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "tipId": null,
+      "score": 38
+    },
+    {
+      "id": "hn-49934511",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-02T15:19:56Z",
+      "title": "The Four Horsemen of Agentic Coding",
+      "action": null,
+      "why": "110 points, 88 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49934511",
+      "score": 37
+    },
+    {
+      "id": "cc-2.1.286-12",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-30T19:10:13Z",
+      "title": "a count such as \"2 of 5\" to the permission prompt when several permission requests stack up",
+      "action": null,
+      "why": "Added in v2.1.286.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+      "tipId": null,
+      "score": 34
+    },
+    {
+      "id": "cc-2.1.284-21",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-28T18:02:03Z",
+      "title": "a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked a",
+      "action": null,
+      "why": "Added in v2.1.284.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "tipId": null,
+      "score": 30
     }
   ]
 }
