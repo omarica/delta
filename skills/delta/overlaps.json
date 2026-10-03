@@ -1,0 +1,19 @@
+[
+  {
+    "group": "UI / design skills",
+    "plugins": [
+      "frontend-design",
+      "ui-ux-pro-max",
+      "impeccable"
+    ],
+    "note": "These all steer visual design. Pick one primary so their instructions do not fight and each one's description stops costing context."
+  },
+  {
+    "group": "Memory / handoff",
+    "plugins": [
+      "claude-mem",
+      "superpowers"
+    ],
+    "note": "Two memory systems double-inject context. Keep one."
+  }
+]

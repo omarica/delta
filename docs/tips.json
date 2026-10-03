@@ -1,0 +1,180 @@
+[
+  {
+    "id": "goal",
+    "tool": "Claude Code",
+    "since": "2.1.139",
+    "title": "/goal keeps Claude working until a condition holds",
+    "try": "/goal all tests pass and lint is clean",
+    "why": "Replaces repeated \"continue\" prompts on long tasks; it re-checks the condition each turn.",
+    "keywords": "/goal",
+    "detect": {
+      "slash": [
+        "goal"
+      ]
+    }
+  },
+  {
+    "id": "fork",
+    "tool": "Claude Code",
+    "since": "2.1.207",
+    "title": "/fork copies the conversation into a background session",
+    "try": "/fork   (then keep working while the copy runs a side task)",
+    "why": "Explore a risky refactor or a side question without polluting your main context.",
+    "keywords": "/fork|fork mode",
+    "detect": {
+      "slash": [
+        "fork"
+      ]
+    }
+  },
+  {
+    "id": "loop",
+    "tool": "Claude Code",
+    "since": "2.1.92",
+    "title": "/loop re-runs a prompt on an interval, or self-paces",
+    "try": "/loop 5m check the deploy and tell me if it fails",
+    "why": "Babysitting CI, deploys and PRs without staying in the chat.",
+    "keywords": "/loop",
+    "detect": {
+      "slash": [
+        "loop"
+      ]
+    }
+  },
+  {
+    "id": "code-review",
+    "tool": "Claude Code",
+    "since": "2.1.143",
+    "title": "/code-review reports correctness bugs in a diff",
+    "try": "/code-review high",
+    "why": "A second pair of eyes before you commit; runs as a background subagent.",
+    "keywords": "code-review",
+    "detect": {
+      "slash": [
+        "code-review",
+        "ultrareview"
+      ]
+    }
+  },
+  {
+    "id": "rewind",
+    "tool": "Claude Code",
+    "since": "2.1.139",
+    "title": "/rewind can summarize earlier context instead of wiping it",
+    "try": "/rewind  → pick \"Summarize up to here\"",
+    "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
+    "keywords": "rewind",
+    "detect": {
+      "slash": [
+        "rewind",
+        "compact"
+      ]
+    }
+  },
+  {
+    "id": "skill-doctor",
+    "tool": "Claude Code",
+    "since": "2.1.251",
+    "title": "/skill-doctor shows what each skill costs in context",
+    "try": "/skill-doctor",
+    "why": "Plugins and skills load descriptions into every session; prune the ones you never trigger.",
+    "keywords": "skill-doctor",
+    "detect": {
+      "slash": [
+        "skill-doctor"
+      ]
+    }
+  },
+  {
+    "id": "usage",
+    "tool": "Claude Code",
+    "since": "2.1.143",
+    "title": "/usage breaks down limits by skill, subagent, plugin and MCP server",
+    "try": "/usage",
+    "why": "Finds the one plugin or MCP server quietly eating your plan.",
+    "keywords": "/usage",
+    "detect": {
+      "slash": [
+        "usage"
+      ]
+    }
+  },
+  {
+    "id": "agents-view",
+    "tool": "Claude Code",
+    "since": "2.1.139",
+    "title": "claude agents: one screen for every session",
+    "try": "claude agents",
+    "why": "See what is running, blocked on you, or done across parallel sessions.",
+    "keywords": "agent view|claude agents",
+    "detect": {
+      "slash": [
+        "agents"
+      ]
+    }
+  },
+  {
+    "id": "fallback-model",
+    "tool": "Claude Code",
+    "since": "2.1.166",
+    "title": "fallbackModel keeps sessions alive when a model is overloaded",
+    "try": "settings.json → \"fallbackModel\": [\"sonnet\"]",
+    "why": "Up to three fallbacks tried in order instead of a failed turn.",
+    "keywords": "fallbackModel",
+    "detect": {
+      "setting": [
+        "fallbackModel"
+      ]
+    }
+  },
+  {
+    "id": "max-effort",
+    "tool": "Claude Code",
+    "since": "2.1.263",
+    "title": "maxEffortLevel caps reasoning effort everywhere",
+    "try": "settings.json → \"maxEffortLevel\": \"high\"",
+    "why": "A guard against accidentally running the most expensive effort level on routine work.",
+    "keywords": "maxEffortLevel",
+    "detect": {
+      "setting": [
+        "maxEffortLevel"
+      ]
+    }
+  },
+  {
+    "id": "plugin-eval",
+    "tool": "Claude Code",
+    "since": "2.1.263",
+    "title": "claude plugin eval tests your plugin against a no-plugin baseline",
+    "try": "claude plugin eval init",
+    "why": "Proves a skill or plugin earns its context cost before you keep it.",
+    "keywords": "plugin eval",
+    "detect": {
+      "never": true
+    }
+  },
+  {
+    "id": "mods",
+    "tool": "Claude Code",
+    "title": "Mods: plugins that run inside the session (panes, bands, hooks)",
+    "try": "Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+    "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+    "keywords": "\\bmods?\\b",
+    "detect": {
+      "never": true
+    }
+  },
+  {
+    "id": "codex-multi-agent",
+    "tool": "Codex",
+    "title": "Codex multi-agent and hooks are config flags",
+    "try": "~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+    "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+    "keywords": "multi_agent|subagent",
+    "detect": {
+      "codexConfig": [
+        "multi_agent"
+      ]
+    }
+  }
+]

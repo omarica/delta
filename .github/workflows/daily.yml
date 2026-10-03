@@ -1,0 +1,27 @@
+name: daily-delta
+on:
+  schedule:
+    - cron: "15 6 * * *"   # 06:15 UTC every day
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build feed
+        run: node scripts/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit docs if changed
+        run: |
+          git config user.name "delta[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs
+          git diff --cached --quiet || (git commit -m "chore: daily delta $(date -u +%F)" && git push)

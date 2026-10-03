@@ -1,0 +1,24 @@
+[
+  {
+    "id": "curated-ponytail-caveat",
+    "kind": "stop",
+    "tool": "Plugins",
+    "date": "2026-10-03",
+    "expires": "2026-11-03",
+    "title": "Ponytail: useful, but not a token saver",
+    "action": "Judge it on code size, not tokens. Viral videos claim 50%+ token savings; the top reply cites the docs saying that is not its purpose.",
+    "why": "Reported 3,629 -> 490 lines on one task; the savings claim is disputed.",
+    "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229"
+  },
+  {
+    "id": "curated-omniroute-caution",
+    "kind": "stop",
+    "tool": "Plugins",
+    "date": "2026-10-03",
+    "expires": "2026-11-03",
+    "title": "Treat \"unlimited free usage\" routers with suspicion",
+    "action": "Before installing a router that pools free third-party providers, read its source: your prompts and code pass through it. Unverified community warning, not a confirmed finding.",
+    "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
+    "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229"
+  }
+]

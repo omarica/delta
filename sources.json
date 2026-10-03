@@ -1,0 +1,18 @@
+{
+  "maxItems": 5,
+  "maxPerKind": 2,
+  "windowDays": 7,
+  "claudeCodeChangelog": {
+    "repo": "anthropics/claude-code",
+    "file": "CHANGELOG.md"
+  },
+  "releases": [
+    { "repo": "anthropics/claude-code", "tool": "Claude Code" },
+    { "repo": "openai/codex", "tool": "Codex", "stableOnly": true },
+    { "repo": "anthropics/claude-plugins-official", "tool": "Claude plugins", "stableOnly": true }
+  ],
+  "hn": {
+    "minPoints": 60,
+    "queries": ["claude code", "codex cli", "agent skills", "MCP server", "agentic coding"]
+  }
+}

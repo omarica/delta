@@ -1,0 +1,63 @@
+{
+  "generated": "2026-10-03T14:01:47.877Z",
+  "window_days": 7,
+  "items": [
+    {
+      "id": "cc-2.1.287-7",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-01T18:00:22Z",
+      "title": "Claude Mods: plugins may now modify deeper behavior",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "tipId": "mods",
+      "score": 84
+    },
+    {
+      "id": "cc-2.1.284-20",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-28T18:02:03Z",
+      "title": "Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads",
+      "action": null,
+      "why": "Added in v2.1.284.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "tipId": null,
+      "score": 65
+    },
+    {
+      "id": "curated-ponytail-caveat",
+      "kind": "stop",
+      "tool": "Plugins",
+      "date": "2026-10-03T00:00:00.000Z",
+      "title": "Ponytail: useful, but not a token saver",
+      "action": "Judge it on code size, not tokens. Viral videos claim 50%+ token savings; the top reply cites the docs saying that is not its purpose.",
+      "why": "Reported 3,629 -> 490 lines on one task; the savings claim is disputed.",
+      "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
+      "score": 62
+    },
+    {
+      "id": "curated-omniroute-caution",
+      "kind": "stop",
+      "tool": "Plugins",
+      "date": "2026-10-03T00:00:00.000Z",
+      "title": "Treat \"unlimited free usage\" routers with suspicion",
+      "action": "Before installing a router that pools free third-party providers, read its source: your prompts and code pass through it. Unverified community warning, not a confirmed finding.",
+      "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
+      "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
+      "score": 62
+    },
+    {
+      "id": "rel-openai/codex-rust-v0.160.0",
+      "kind": "new",
+      "tool": "Codex",
+      "date": "2026-10-01T20:19:13Z",
+      "title": "Codex 0.160.0: Browse older tasks in the agent command center with a keyboard-accessible “Show more” action.",
+      "action": null,
+      "why": "Select transcript text and paste with middle-click in fullscreen mode on supported local Linux X11 terminals. · Start sessions outside a project with workspace defaults when policy permits, and restore saved permissions when resuming.",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
+      "score": 57
+    }
+  ]
+}
