@@ -1,7 +1,7 @@
 // Shared hygiene for text that came from the internet (posts, READMEs, release notes, HN titles, plugin descriptions).
 // Delta prints this text into output that an AI assistant reads, so it must never carry instructions or terminal tricks.
-export const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
-export const SAFE_REPO = /^[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}$/;
+export const SAFE = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
+export const SAFE_REPO = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}\/(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
 
 // Control chars, terminal escapes, zero-width and bidi override characters.
 const INVISIBLE = /[\x00-\x1f\x7f-\x9f​-‏‪-‮⁠-⁩﻿]/g;

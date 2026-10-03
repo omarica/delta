@@ -126,7 +126,7 @@ export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) 
   for (const [k, n] of scan.used) credit(k, n);
   for (const [k, n] of Object.entries(slash)) credit(k, n);
   // The catalog (downloaded or cached) is untrusted input: keep only entries whose name is a plain identifier, since names end up in commands.
-  const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
+  const SAFE = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
   if (market) market.plugins = (Array.isArray(market.plugins) ? market.plugins : []).filter((p) => p && typeof p.name === 'string' && SAFE.test(p.name))
     .map((p) => ({ ...p, description: String(p.description ?? '').replace(/[\x00-\x1f\x7f-\x9f​-‏‪-‮⁦-⁩]/g, ' ').slice(0, 300), category: typeof p.category === 'string' ? p.category.slice(0, 40) : '' }));
   const catalog = new Map((market?.plugins || []).map((p) => [p.name, p]));
@@ -146,6 +146,7 @@ export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) 
   try { out.ledger = await buildLedger({ enabledMap, perSession: scan.perSession, idx, projectOf, hooky, tagProjects: stack.tagProjects, installPaths }); } catch (e) { out.ledgerError = e.message; }
   const roots = new Map(); for (const s of scan.perSession) { const p = projectOf(s.cwd); if (p) roots.set(p.root, p); }
   out.claudeMd = await claudeMdAudit([...roots.values()]);
+  out.projectRoots = [...roots.values()]; // { name, root } for every project you actually work in (used to read dependency names)
 
   // 1. Curated, verified recommendations (only plugins that exist in the live marketplace and are not installed/declined).
   const seen = new Set();

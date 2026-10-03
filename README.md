@@ -14,6 +14,7 @@ AI coding tools ship almost daily, and every plugin you install is loaded into t
 | **Where do my tokens go?** | Prices every enabled plugin with `claude plugin details`, attributes real usage to the projects where it happens (from your session transcripts), and finds heavy plugins that load everywhere but are used in one or two projects | `claude plugin disable X --scope user` then `claude plugin enable X --scope project` per project |
 | **What am I missing?** | Detects your stack from project manifests (dependency names only), matches the live official marketplace, checks prerequisites (e.g. a language server binary), and flags plugins you already cover | `claude plugin install ...` |
 | **Is the community offering something better?** | Crawled GitHub plugins and skills, scored for trust, priced in tokens, gated by confidence, with risk flags for hooks / MCP servers / install scripts | marketplace add + install |
+| **Which skills should I install?** | `skills.mjs`: builds queries from your stack and project dependencies, harvests the skills.sh registry (real install counts), checks each source's GitHub reputation, drops likely install farms (e.g. 639K installs vs 5 stars), scores relevance, fetches the real `SKILL.md` and scans it. A safe installer stages from a pinned commit, refuses high-severity findings, never overwrites, and does nothing without `--confirm` | two ranked lists (your libraries, general) with a verdict per skill |
 | **What are people actually using right now?** | Reads your saved `/last30days` research (Reddit, X, YouTube, TikTok, Instagram, HN) and extracts the tools people name; resolves unknown names to GitHub repos (flagged as guesses until you verify the owner) and feeds them back into the crawler via `docs/seeds.json` | landscape view per category and rising list with a verdict per item |
 | **Am I using my tools well?** | Features you have never used, habits (e.g. `/clear` vs `/compact`), overlapping plugins, heavy CLAUDE.md files | exact commands or settings |
 
@@ -30,6 +31,7 @@ git clone https://github.com/omarica/delta && cd delta
 node scripts/build.mjs      # build the feed (set GITHUB_TOKEN to raise the rate limit)
 node scripts/discover.mjs   # crawl community plugins/skills
 node skills/delta/gaps.mjs  # your audit in the terminal  (--more, --community-all, --json)
+node skills/delta/skills.mjs # deep skill search for your stack (first run ~8 min, then cached; --install <id> [--confirm])
 ```
 
 Install the skill in Claude Code: copy `skills/delta/` to `~/.claude/skills/delta/`, add a `delta.config.json` with `{"home": "<path to your clone>"}` (or set `DELTA_FEED_URL` to a published `feed.json`), then run `/delta`.
@@ -51,6 +53,8 @@ Install the skill in Claude Code: copy `skills/delta/` to `~/.claude/skills/delt
 | `skills/delta/stack.json` | Stack detection, curated recommendations (with prerequisites), community topics, capability keywords |
 
 ## Known limits (read these)
+
+- **Skill install counts are registry telemetry** (from `npx skills`), easy to inflate and undercounting other install paths. Delta cross-checks against GitHub stars, vendor identity and pack uniformity, but it is a signal, not proof. Per-skill counts mostly measure the pack. The search covers the union of its queries (200 results each), not the whole registry, and does not A/B test skills.
 
 - **Community buzz needs a saved `/last30days` run** (Delta never calls those APIs or handles keys). Names mentioned in social posts are matched heuristically; the landscape's category assignment and the "you already have it" check are name-based and can mislabel lookalikes.
 

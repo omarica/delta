@@ -14,8 +14,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const now = Date.now();
 const days = (iso) => Math.max(0, (now - new Date(iso).getTime()) / 864e5);
 // Names and descriptions come from third-party repos and end up in commands/terminal output: never trust them.
-const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
-const SAFE_REPO = /^[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}$/;
+const SAFE = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
+const SAFE_REPO = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}\/(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
 const clean = (s, n = 220) => String(s ?? '').replace(/[\x00-\x1f\x7f-\x9f​-‏‪-‮⁦-⁩]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
 
 async function gh(url) {

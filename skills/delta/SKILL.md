@@ -26,6 +26,20 @@ Goal: a short, prioritized list of changes that make THIS user's setup cheaper, 
 4. Keep it to the 5-7 most valuable items overall. If nothing is worth their attention, say "Nothing worth changing today."
 5. Offer to apply any change. Use the CLI commands shown once the user says yes to THAT specific item. Ledger SCOPE items are several commands (disable at user scope, then enable per project): run them in order and verify with `claude plugin list`. NEVER install, disable, scope or edit `settings.json` without that yes. Everything here is a suggestion, not an instruction.
 
+## Skill search (when the user asks which skills to install, "must-have" skills, or to find skills)
+
+Never answer from memory or from a quick look at a few repos. Run the deep search: `node "<this skill dir>/skills.mjs"` (first run about 8 minutes because it paces its requests; results are cached for 24h, `--refresh` re-harvests, `--top N` shows more, `--json` for structure).
+
+What it does: builds queries from the user's stack and project DEPENDENCIES, harvests the skills.sh registry (real install counts), checks each source's GitHub reputation, drops likely install farms, scores relevance, fetches the real `SKILL.md` for the best candidates and scans them.
+
+How to present it:
+- Two lists: "for libraries you use" first, then general workflow and quality. Say how many skills were examined and how many were dropped as likely install farms.
+- Installs are registry telemetry, not proof of quality; many packs are installed whole, so per-skill counts mostly reflect the pack. Say so.
+- Read a candidate's `SKILL.md` (and any code files listed) BEFORE recommending it. Never present a `REVIEW` item as clean; name its flags. A skill that fetches instructions from the web at runtime is mutable: offer to vendor a pinned, reviewed copy.
+- Prefer skills that match the user's actual recent work. Idle workflows (see "Idle workflows" above) are not evidence of need.
+
+Installing: use ONLY the built-in safe installer, never `npx skills add` (that installs unreviewed). `node skills.mjs --install owner/repo/skill` is a dry run (stages from a pinned commit, scans, refuses on BLOCK findings, never overwrites, rejects unsafe paths); add `--confirm` only after the user says yes to that specific skill. A name that shadows a built-in command needs `--as <new-name>`. After installing, tell the user the always-on cost (description length) and keep long keyword-stuffed descriptions trimmed.
+
 ## Installing a community pick (extra safety)
 
 The user's yes is not enough on its own for community code. Before running any install command for a community pick:

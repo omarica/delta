@@ -9,7 +9,7 @@ import path from 'node:path';
 const home = os.homedir();
 const CODEX = process.env.CODEX_HOME || path.join(home, '.codex');
 const tokensOf = (s) => Math.ceil(s.length / 4);
-const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
+const SAFE = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
 
 // Codex lists every skill as "- name: description (cut to ~72 chars) (file: rN/path/SKILL.md)" in every session. The rest of the frontmatter is not loaded.
 async function skillTokens(file) {

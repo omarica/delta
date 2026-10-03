@@ -12,8 +12,8 @@ async function load(src) {
 
 // The feed may come from a remote URL, so treat every field as untrusted. Names must be plain identifiers,
 // commands are REBUILT here from validated fields (the feed's own `installs` strings are ignored), text is stripped of control chars.
-const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
-const SAFE_REPO = /^[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}$/;
+const SAFE = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
+const SAFE_REPO = /^(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}\/(?!\.{1,2}(?:\/|$))[A-Za-z0-9._-]{1,100}$/;
 import { defang, isInstructionLike } from './safe.mjs';
 const clean = (s, n = 220) => defang(s, n);
 function validInstalls(it) {
