@@ -11,13 +11,16 @@ const run = promisify(execFile);
 const home = os.homedir();
 
 // `claude plugin details` is slow (~2s each); cache results for 12h, keyed by plugin name.
-const CACHE = path.join(os.tmpdir(), 'delta-details-cache.json');
+const CACHE = path.join(home, '.claude', 'delta-cache', 'details.json'); // user-owned, not the shared temp dir
 let cachePromise = null;
 async function cached(name, fn) {
   cachePromise ||= readFile(CACHE, 'utf8').then(JSON.parse).catch(() => ({}));
   const cache = await cachePromise;
-  const hit = cache[name]; if (hit && Date.now() - hit.t < 432e5) return hit.d;
-  const d = await fn(); if (d) { cache[name] = { t: Date.now(), d }; try { await (await import('node:fs/promises')).writeFile(CACHE, JSON.stringify(cache)); } catch {} }
+  const hit = cache[name];
+  // Cached values are only trusted if they have the exact expected shape (plain numbers).
+  const sane = (d) => d && ['tokens', 'skills', 'agents', 'hooks', 'mcp'].every((k) => d[k] === null || (Number.isFinite(d[k]) && d[k] >= 0 && d[k] < 1e7));
+  if (hit && Date.now() - hit.t < 432e5 && sane(hit.d)) return hit.d;
+  const d = await fn(); if (d) { cache[name] = { t: Date.now(), d }; try { const fsp = await import('node:fs/promises'); await fsp.mkdir(path.dirname(CACHE), { recursive: true }); await fsp.writeFile(CACHE, JSON.stringify(cache)); } catch {} }
   return d;
 }
 const details = (name) => cached(name, () => detailsRaw(name));

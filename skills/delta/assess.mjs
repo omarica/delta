@@ -1,7 +1,7 @@
 // Local setup assessment: detects your stack, measures what you actually use, and matches both against
 // the live official plugin marketplace. Nothing is uploaded. Only the marketplace catalog is downloaded.
 // Reads: ~/.claude/projects/*/*.jsonl (tool names + working directories only), project manifests (dependency NAMES).
-import { readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { readFile, readdir, stat, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import os from 'node:os';
 import { execFileSync } from 'node:child_process';
@@ -17,7 +17,9 @@ const exists = (p) => existsSync(p);
 const tryRead = async (p) => { try { return await readFile(p, 'utf8'); } catch { return ''; } };
 
 async function marketplace() {
-  const cache = path.join(os.tmpdir(), 'delta-marketplace.json');
+  // Cache in a user-owned folder, not the shared temp dir (any local process could overwrite a file there).
+  const cacheDir = path.join(home, '.claude', 'delta-cache'); try { await mkdir(cacheDir, { recursive: true }); } catch {}
+  const cache = path.join(cacheDir, 'marketplace.json');
   try { const s = await stat(cache); if (Date.now() - s.mtimeMs < 864e5) return JSON.parse(await readFile(cache, 'utf8')); } catch {}
   try {
     const r = await fetch(MARKET_URL, { signal: AbortSignal.timeout(15000) });
@@ -123,6 +125,10 @@ export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) 
   const credit = (name, n) => { const lc = name.toLowerCase(); const plugin = lc.includes(':') ? lc.split(':')[0] : (idx.get(lc) || lc); usedBy.set(plugin, (usedBy.get(plugin) || 0) + n); };
   for (const [k, n] of scan.used) credit(k, n);
   for (const [k, n] of Object.entries(slash)) credit(k, n);
+  // The catalog (downloaded or cached) is untrusted input: keep only entries whose name is a plain identifier, since names end up in commands.
+  const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
+  if (market) market.plugins = (Array.isArray(market.plugins) ? market.plugins : []).filter((p) => p && typeof p.name === 'string' && SAFE.test(p.name))
+    .map((p) => ({ ...p, description: String(p.description ?? '').replace(/[\x00-\x1f\x7f-\x9f​-‏‪-‮⁦-⁩]/g, ' ').slice(0, 300), category: typeof p.category === 'string' ? p.category.slice(0, 40) : '' }));
   const catalog = new Map((market?.plugins || []).map((p) => [p.name, p]));
   const have = new Set([...Object.keys(enabledMap)].map((k) => k.split('@')[0].toLowerCase()));
   const installCmd = (n) => `claude plugin install ${n}@${MARKET_NAME}`;
