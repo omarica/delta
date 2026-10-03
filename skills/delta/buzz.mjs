@@ -13,7 +13,8 @@ const home = os.homedir();
 export const BUZZ_FILE = path.join(home, '.claude', 'delta-cache', 'buzz.json');
 const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
 const SAFE_REPO = /^[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}$/;
-const clean = (s, n = 160) => String(s ?? '').replace(/[\x00-\x1f\x7f-\x9f​-‏‪-‮⁦-⁩]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
+import { defang } from './safe.mjs';
+const clean = (s, n = 160) => defang(s, n);
 const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
 const STOP = new Set(['claude', 'code', 'codex', 'skills', 'skill', 'plugins', 'plugin', 'agents', 'agent', 'mcp', 'github', 'anthropic', 'openai', 'cursor', 'review', 'planning', 'memory', 'context', 'free', 'open', 'source', 'first', 'second', 'third', 'fourth', 'fifth', 'this', 'that', 'comment', 'stop', 'using', 'dont', 'don', 'tools', 'tool', 'install', 'installed', 'subagents', 'hooks', 'model', 'models', 'chat', 'gemini', 'gpt', 'copilot', 'windsurf', 'vscode', 'docker', 'python', 'node', 'react', 'learn', 'security', 'connect', 'workflow', 'design', 'research', 'writing', 'browser', 'testing', 'deploy', 'planning', 'docs', 'simple', 'basic', 'starter', 'helper', 'utils', 'open-source', 'opensource', 'automation', 'productivity', 'development', 'commands', 'prompts', 'template', 'templates']);
 
@@ -41,13 +42,16 @@ function candidates(text) {
 const repoLinks = (text) => [...text.matchAll(/github\.com\/([A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100})/g)].map((m) => m[1].replace(/\.git$/, '')).filter((r) => SAFE_REPO.test(r));
 
 function token() { if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN; try { return execFileSync('gh', ['auth', 'token'], { encoding: 'utf8', timeout: 8000 }).trim(); } catch { return ''; } }
-async function resolveRepo(name, tok) {
+export async function resolveRepo(name, tok) {
   const h = { 'User-Agent': 'delta', Accept: 'application/vnd.github+json', ...(tok ? { Authorization: `Bearer ${tok}` } : {}) };
   try {
     const j = await (await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(`${name} in:name`)}&sort=stars&per_page=8`, { headers: h, signal: AbortSignal.timeout(15000) })).json();
     const n = norm(name);
-    const hit = (j.items || []).find((r) => norm(r.name).includes(n) && r.stargazers_count >= 200 && !r.archived && !r.fork
-      && /claude|agent|skill|plugin|mcp|codex|llm|context|token|prompt/i.test(`${r.description || ''} ${(r.topics || []).join(' ')}`) && SAFE_REPO.test(r.full_name));
+    const pool = (j.items || []).filter((r) => norm(r.name) === n && !r.archived && !r.fork && SAFE_REPO.test(r.full_name)).sort((x, y) => y.stargazers_count - x.stargazers_count);
+    // Anyone can create a lookalike repo (and buy stars), so a name alone is only trusted when one exact-name repo clearly dominates.
+    if (pool.length > 1 && pool[0].stargazers_count < 3 * pool[1].stargazers_count) return null;
+    const hit = pool.find((r) => r.stargazers_count >= 500
+      && /claude|agent|skill|plugin|mcp|codex|llm|context|token|prompt/i.test(`${r.description || ''} ${(r.topics || []).join(' ')}`));
     return hit ? { unverified: true, runnerUp: (j.items || []).filter((r) => r.full_name !== hit.full_name && norm(r.name).includes(n)).slice(0, 2).map((r) => `${r.full_name} (${r.stargazers_count})`), repo: hit.full_name, stars: hit.stargazers_count, license: hit.license?.spdx_id || 'none', pushed: hit.pushed_at?.slice(0, 10), description: clean(hit.description) } : null;
   } catch { return null; }
 }
@@ -61,10 +65,11 @@ export async function ingest(rawPath, { indexPath, resolve = true } = {}) {
     for (const n of [it.plugin, it.repo.split('/')[1]]) if (n && norm(n).length >= 5 && !STOP.has(norm(n)) && !known.has(norm(n))) known.set(norm(n), { repo: it.repo, plugin: it.plugin, re: new RegExp(`(^|[^a-z0-9])${n.toLowerCase().split(/[-_.s]+/).filter(Boolean).map((t) => t.replace(/[^a-z0-9]/g, '')).join('[-_. ]?')}($|[^a-z0-9])`, 'i') });
   }
   const mentions = new Map();
-  const bump = (key, display, item, repo) => {
-    const m = mentions.get(key) || { name: clean(display, 40), repo: repo || null, count: 0, reach: 0, sources: {}, quotes: [] };
+  const bump = (key, display, item, repo, viaLink = false) => {
+    const m = mentions.get(key) || { name: clean(display, 40), repo: repo || null, viaLink: false, count: 0, reach: 0, sources: {}, quotes: [] };
     m.count++; m.reach += item.reach; m.sources[item.source] = (m.sources[item.source] || 0) + 1;
     if (!m.repo && repo) m.repo = repo;
+    if (viaLink) m.viaLink = true;
     if (m.quotes.length < 2) { const i = item.text.toLowerCase().indexOf(display.toLowerCase()); m.quotes.push(clean(item.text.slice(Math.max(0, i - 30), i + 150), 170)); }
     mentions.set(key, m);
   };
@@ -72,7 +77,7 @@ export async function ingest(rawPath, { indexPath, resolve = true } = {}) {
     const seen = new Set(); const low = norm(item.text);
     for (const [k, v] of known) if (!seen.has(k) && v.re.test(item.text)) { seen.add(k); bump(k, v.plugin || v.repo.split('/')[1], item, v.repo); }
     for (const c of candidates(item.text)) { const k = norm(c); if (!seen.has(k)) { seen.add(k); bump(k, c, item, known.get(k)?.repo); } }
-    for (const r of repoLinks(item.text)) { const k = norm(r.split('/')[1]); if (!seen.has(k) && !STOP.has(k)) { seen.add(k); bump(k, r.split('/')[1], item, r); } }
+    for (const r of repoLinks(item.text)) { const k = norm(r.split('/')[1]); if (!seen.has(k) && !STOP.has(k)) { seen.add(k); bump(k, r.split('/')[1], item, r, true); } }
   }
   // Keep names heard in 2+ items or with real reach; resolve the unknown ones to repos.
   const ranked = [...mentions.values()].filter((m) => m.count >= 2 || m.reach >= 5000).sort((a, b) => b.reach - a.reach).slice(0, 40);
@@ -82,7 +87,7 @@ export async function ingest(rawPath, { indexPath, resolve = true } = {}) {
     const r = await resolveRepo(m.name, tok); if (r) { m.repo = r.repo; m.resolved = r; } m.indexed = false;
   }
   const result = { generated: new Date().toISOString(), source: path.basename(rawPath), items: parseItems(md).length,
-    mentions: ranked.filter((m) => m.repo || m.count >= 2).map((m) => ({ name: m.name, repo: m.repo, indexed: !!m.indexed, count: m.count, reach: m.reach, sources: m.sources, quotes: m.quotes, resolved: m.resolved || null })) };
+    mentions: ranked.filter((m) => m.repo || m.count >= 2).map((m) => ({ name: m.name, viaLink: !!m.viaLink, repo: m.repo, indexed: !!m.indexed, count: m.count, reach: m.reach, sources: m.sources, quotes: m.quotes, resolved: m.resolved || null })) };
   await mkdir(path.dirname(BUZZ_FILE), { recursive: true }); await writeFile(BUZZ_FILE, JSON.stringify(result, null, 1));
   return result;
 }
@@ -110,5 +115,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   console.log(`ingested ${path.basename(raw)}: ${r.items} evidence items -> ${r.mentions.length} named tools`);
   for (const m of r.mentions.slice(0, 20)) console.log(`  ${String(m.count).padStart(2)}x reach ${String(m.reach).padStart(8)}  ${m.name.padEnd(26)} ${m.repo || '(unresolved)'}${m.indexed ? '' : m.repo ? '  [NOT IN INDEX]' : ''}  ${Object.keys(m.sources).join(',')}`);
   const seeds = val('--seeds');
-  if (seeds) { const list = [...new Set(r.mentions.filter((m) => m.repo && !m.indexed).map((m) => m.repo))]; await writeFile(seeds, JSON.stringify(list, null, 1)); console.log(`wrote ${list.length} seed repos to ${seeds}`); }
+  if (seeds) { const withGuesses = a.includes('--seeds-include-guesses');
+    const list = [...new Set(r.mentions.filter((m) => m.repo && !m.indexed && (m.viaLink || withGuesses)).map((m) => m.repo))].slice(0, 25); await writeFile(seeds, JSON.stringify(list, null, 1)); console.log(`wrote ${list.length} seed repos to ${seeds}`); }
 }

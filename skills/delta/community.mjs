@@ -14,7 +14,8 @@ async function load(src) {
 // commands are REBUILT here from validated fields (the feed's own `installs` strings are ignored), text is stripped of control chars.
 const SAFE = /^[A-Za-z0-9._-]{1,100}$/;
 const SAFE_REPO = /^[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}$/;
-const clean = (s, n = 220) => String(s ?? '').replace(/[\x00-\x1f\x7f-\x9f​-‏‪-‮⁦-⁩]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
+import { defang, isInstructionLike } from './safe.mjs';
+const clean = (s, n = 220) => defang(s, n);
 function validInstalls(it) {
   if (it.marketplace) return [`claude plugin marketplace add ${it.repo}`, `claude plugin install ${it.plugin}@${it.marketplace}`];
   if (it.kind === 'plugin') return [`git clone https://github.com/${it.repo}   # then run: claude --plugin-dir <path>`];
@@ -32,7 +33,7 @@ export async function matchCommunity({ HERE, src, stackTags, installedNames, max
   const userTags = Object.keys(stackTags);
   const scored = [];
   for (const it of data.items) {
-    if (!isValid(it) || it.trust < 55) continue;
+    if (!isValid(it) || it.trust < 55 || isInstructionLike(it.description) || isInstructionLike(it.plugin)) continue; // never surface entries that talk to the assistant
     if (have.some((n) => n === it.plugin.toLowerCase() || n === it.repo.split('/')[1].toLowerCase())) continue; // already have it
     // A tag only counts if you do not already have tooling for that technology (no 5th Supabase plugin, no 2nd Playwright tool).
     const hits = it.tags.filter((t) => userTags.includes(t) && !have.some((n) => n.includes(t.replace(/[^a-z0-9]/g, ''))));
@@ -49,7 +50,8 @@ export async function matchCommunity({ HERE, src, stackTags, installedNames, max
     if (hits.length) why.push(`fits your stack: ${hits.slice(0, 3).join(', ')} (${[...new Set(hits.flatMap((t) => stackTags[t] || []))].slice(0, 3).join(', ')})`);
     // Keyword matching is noisy, so only a standalone, well-established plugin with a real reason earns "high" confidence.
     const experimental = /\b(beta|alpha|experimental|diagnostic|probe|wip|cowork)\b/i.test(`${it.plugin} ${it.description}`);
-    const confidence = !experimental && !it.aggregator && it.trust >= 70 && it.stars >= 1000 && (gaps.length || specific.length) ? 'high' : 'low';
+    const established = it.origin === undefined || it.origin === 'topic' || (it.stars >= 5000 && it.ageDays >= 90); // repos found only via awesome lists / social buzz must prove themselves
+    const confidence = !experimental && established && !it.aggregator && it.trust >= 70 && it.stars >= 1000 && (gaps.length || specific.length) ? 'high' : 'low';
     scored.push({ ...it, score, confidence, why: why.join('; ') });
   }
   scored.sort((a, b) => b.score - a.score);
@@ -79,7 +81,7 @@ export async function landscape({ HERE, src, stackTags, installedNames, displayN
   const buzzFor = (it) => buzz?.mentions.find((m) => m.repo === it.repo || (m.name && m.name.toLowerCase() === it.plugin.toLowerCase())) || null;
   const shown = (displayNames || installedNames).map((n) => n.toLowerCase());
   const owned = (cap) => [...new Set(shown.filter((n) => new RegExp(cfg.capabilities[cap].have, 'i').test(n)))].slice(0, 4);
-  const valid = data.items.filter((it) => isValid(it) && it.trust >= 55 && !/\b(beta|alpha|experimental|diagnostic|probe|wip|cowork)\b/i.test(`${it.plugin} ${it.description}`));
+  const valid = data.items.filter((it) => isValid(it) && it.trust >= 55 && !isInstructionLike(it.description) && !/\b(beta|alpha|experimental|diagnostic|probe|wip|cowork)\b/i.test(`${it.plugin} ${it.description}`));
 
   const fit = (it, cap) => {
     const alreadyHave = have.some((n) => n === it.plugin.toLowerCase() || n === it.repo.split('/')[1].toLowerCase());
@@ -94,14 +96,14 @@ export async function landscape({ HERE, src, stackTags, installedNames, displayN
     return { verdict: 'FYI', why: 'general-purpose, not tied to your stack' };
   };
   const pack = (it, cap) => ({ plugin: it.plugin, repo: it.repo, inMarketplace: !!it.aggregator, stars: it.aggregator ? null : it.stars, trust: it.trust, license: clean(it.license, 30), ageDays: it.ageDays, pushedDaysAgo: it.pushedDaysAgo,
-    description: clean(it.description, 140), estTokens: Number.isFinite(it.estTokens) ? it.estTokens : null, aggregator: !!it.aggregator, risk: it.aggregator ? { hooks: false, mcp: false, scripts: false } : { hooks: !!it.risk?.hooks, mcp: !!it.risk?.mcp, scripts: !!it.risk?.scripts },
-    installs: validInstalls(it), buzz: (() => { const b = buzzFor(it); return b ? { count: b.count, reach: b.reach, sources: Object.keys(b.sources || {}) } : null; })(), ...fit(it, cap) });
+    description: clean(it.description, 140), estTokens: Number.isFinite(it.estTokens) ? it.estTokens : null, aggregator: !!it.aggregator, risk: it.aggregator ? { hooks: null, mcp: null, scripts: null } : { hooks: !!it.risk?.hooks, mcp: !!it.risk?.mcp, scripts: !!it.risk?.scripts },
+    installs: validInstalls(it), buzz: (() => { const b = buzzFor(it); return b ? { count: b.count, reach: b.reach, sources: Object.keys(b.sources || {}), unverified: !!b.resolved?.unverified } : null; })(), ...fit(it, cap) });
 
   const categories = [];
   for (const [cap, label] of Object.entries(CATS)) {
     const pool = valid.filter((it) => it.capabilities.includes(cap)).map((it) => {
       const b = buzzFor(it); const est = Number.isFinite(it.estTokens) ? it.estTokens : 600;
-      return { it, score: it.trust * 0.5 + (it.aggregator ? 0 : Math.log10(it.stars + 1) * 8) - est / 200 - (it.aggregator ? 18 : 0) + (b ? Math.min(10, Math.log10(b.reach + 1) * 2) : 0) };
+      return { it, score: it.trust * 0.5 + (it.aggregator ? 0 : Math.log10(it.stars + 1) * 8) - est / 200 - (it.aggregator ? 18 : 0) + (b && !b.resolved?.unverified ? Math.min(10, Math.log10(b.reach + 1) * 2) : 0) };
     }).sort((a, b) => b.score - a.score);
     const seen = new Set(); const top = [];
     for (const { it } of pool) { if (seen.has(it.repo)) continue; seen.add(it.repo); top.push(pack(it, cap)); if (top.length >= perCategory) break; }

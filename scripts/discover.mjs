@@ -33,7 +33,7 @@ async function search(q, pages = 5) {
   for (let page = 1; page <= pages; page++) {
     try {
       const j = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&per_page=50&page=${page}`);
-      for (const r of j.items) if (!found.has(r.full_name)) found.set(r.full_name, r);
+      for (const r of j.items) if (!found.has(r.full_name)) { r.__origin = 'topic'; found.set(r.full_name, r); }
       if (j.items.length < 50) break;
     } catch (e) { console.warn(`[search skip] ${q} p${page}: ${e.message}`); break; }
     await sleep(2200);
@@ -50,8 +50,8 @@ try {
   const j = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(`awesome claude in:name,description stars:>=300 pushed:>${iso(90 * 864e5)}`)}&sort=stars&per_page=20`);
   for (const r of j.items) if (/claude|skill|agent|mcp/i.test(`${r.name} ${r.description || ''}`) && SAFE_REPO.test(r.full_name)) listRepos.push(r);
 } catch (e) { console.warn(`[lists skip] ${e.message}`); }
-const seeds = new Set();
-try { for (const r of JSON.parse(await readFile(path.join(ROOT, 'docs/seeds.json'), 'utf8'))) if (typeof r === 'string' && SAFE_REPO.test(r) && !found.has(r)) seeds.add(r); } catch {} // repos people are naming (from /last30days via buzz.mjs); still validated and trust-scored like any other
+const seeds = new Set(); const buzzSeeds = new Set();
+try { for (const r of JSON.parse(await readFile(path.join(ROOT, 'docs/seeds.json'), 'utf8'))) if (typeof r === 'string' && SAFE_REPO.test(r) && !found.has(r)) { seeds.add(r); buzzSeeds.add(r); } } catch {} // repos people are naming (from /last30days via buzz.mjs); still validated and trust-scored like any other
 for (const l of listRepos.slice(0, 10)) {
   try {
     const md = await (await fetch(`https://raw.githubusercontent.com/${l.full_name}/${l.default_branch}/README.md`)).text();
@@ -66,7 +66,7 @@ const seedList = [...seeds].slice(0, C.maxSeeds); let si = 0;
 await Promise.all(Array.from({ length: 6 }, async () => {
   while (si < seedList.length) {
     const name = seedList[si++];
-    try { const r = await gh(`https://api.github.com/repos/${name}`); if (r.stargazers_count >= C.minStars && days(r.pushed_at) <= C.pushedWithinDays * 2) found.set(r.full_name, r); } catch {}
+    try { const r = await gh(`https://api.github.com/repos/${name}`); if (r.stargazers_count >= C.minStars && days(r.pushed_at) <= C.pushedWithinDays * 2 && !found.has(r.full_name)) { r.__origin = buzzSeeds.has(name) ? 'buzz' : 'list'; found.set(r.full_name, r); } } catch {}
   }
 }));
 console.log(`found ${found.size} candidate repos in total`);
@@ -101,9 +101,10 @@ async function inspect(r) {
   trust += age >= 180 ? 15 : age >= 60 ? 10 : age >= 30 ? 5 : 0;
   trust += r.forks_count / Math.max(1, r.stargazers_count) >= 0.04 ? 8 : 3;
   if (age < 21 && r.stargazers_count > 2000) trust -= 20;
+  if (r.__origin && r.__origin !== 'topic' && (age < 60 || r.stargazers_count < 1000)) trust -= 15; // listed on an awesome list / named in a post is not independent proof
   trust = Math.max(0, Math.round(Math.min(100, trust)));
   const base = { repo: r.full_name, url: r.html_url, stars: r.stargazers_count, forks: r.forks_count, license: spdx || 'none',
-    pushedDaysAgo: Math.round(pushed), ageDays: Math.round(age), kind, risk, trust };
+    pushedDaysAgo: Math.round(pushed), ageDays: Math.round(age), kind, risk, origin: r.__origin || 'topic', trust };
   const classify = (text) => ({
     tags: Object.entries(cfg.communityTags).filter(([, re]) => new RegExp(re, 'i').test(text)).map(([t]) => t),
     capabilities: Object.entries(cfg.capabilities).filter(([, c]) => new RegExp(c.match, 'i').test(text)).map(([t]) => t),
