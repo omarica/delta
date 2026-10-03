@@ -49,8 +49,8 @@ export async function resolveRepo(name, tok) {
     const n = norm(name);
     const pool = (j.items || []).filter((r) => norm(r.name) === n && !r.archived && !r.fork && SAFE_REPO.test(r.full_name)).sort((x, y) => y.stargazers_count - x.stargazers_count);
     // Anyone can create a lookalike repo (and buy stars), so a name alone is only trusted when one exact-name repo clearly dominates.
-    if (pool.length > 1 && pool[0].stargazers_count < 3 * pool[1].stargazers_count) return null;
-    const hit = pool.find((r) => r.stargazers_count >= 500
+    if (pool.length > 1 && pool[0].stargazers_count < 10 * pool[1].stargazers_count) return null;
+    const hit = pool.find((r) => r.stargazers_count >= 500 && (r.forks_count || 0) >= 10 && (Date.now() - new Date(r.created_at).getTime()) / 864e5 >= 45
       && /claude|agent|skill|plugin|mcp|codex|llm|context|token|prompt/i.test(`${r.description || ''} ${(r.topics || []).join(' ')}`));
     return hit ? { unverified: true, runnerUp: (j.items || []).filter((r) => r.full_name !== hit.full_name && norm(r.name).includes(n)).slice(0, 2).map((r) => `${r.full_name} (${r.stargazers_count})`), repo: hit.full_name, stars: hit.stargazers_count, license: hit.license?.spdx_id || 'none', pushed: hit.pushed_at?.slice(0, 10), description: clean(hit.description) } : null;
   } catch { return null; }

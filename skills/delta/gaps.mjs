@@ -29,7 +29,7 @@ async function load(src) {
 
 const feed = await load(feedSrc);
 // The feed is built from the internet (changelogs, Hacker News titles): neutralise anything that talks to the assistant before it is printed.
-{ const { defang } = await import('./safe.mjs'); const fix = (i) => ({ ...i, tool: defang(i.tool, 40), title: defang(i.title, 200), action: i.action ? defang(i.action, 200) : i.action, why: defang(i.why, 240), url: /^https:\/\/[A-Za-z0-9./?=&%_#:@~+-]+$/.test(i.url || '') ? i.url : '' });
+{ const { defang, safeUrl } = await import('./safe.mjs'); const fix = (i) => ({ ...i, tool: defang(i.tool, 40), title: defang(i.title, 200), action: i.action ? defang(i.action, 200) : i.action, why: defang(i.why, 240), url: safeUrl(i.url) ? i.url: '' });
   feed.items = (feed.items || []).map(fix); feed.more = (feed.more || []).map(fix); }
 const tipsSrc = /^https?:/.test(feedSrc) ? feedSrc.replace(/feed\.json$/, 'tips.json') : path.join(path.dirname(feedSrc), 'tips.json');
 const tips = await load(tipsSrc);

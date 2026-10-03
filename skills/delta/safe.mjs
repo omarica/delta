@@ -22,11 +22,32 @@ const INSTRUCTION_LIKE = new RegExp([
   String.raw`\.(env|npmrc|netrc)\b.{0,40}\b(send|upload|post|exfil)`,
 ].join('|'), 'i');
 
-export const isInstructionLike = (s) => INSTRUCTION_LIKE.test(String(s ?? ''));
+// Best-effort only: a pattern list can never catch every phrasing. It is one layer; the others are that text is data in a
+// labelled section, install commands are rebuilt locally, and nothing is ever installed without the user's explicit yes.
+// To defeat spacing / fullwidth / zero-width tricks we test the NFKC-normalised text AND a letters-only compact form.
+const COMPACT = ['ignorepreviousinstruction', 'ignoreallpreviousinstruction', 'ignoreprevious', 'ignoreprior', 'ignoretheabove', 'ignoreyourinstruction', 'disregardprevious', 'disregardall', 'disregardyour',
+  'forgetpreviousinstruction', 'forgetyourinstruction', 'overrideyourinstruction', 'systemprompt', 'developermessage', 'youmustrun', 'youmustinstall', 'youmustexecute', 'donottelltheuser', 'donttelltheuser',
+  'donotmentiontotheuser', 'newinstructions', 'curlhttp', 'wgethttp', 'invokewebrequest', 'pipetosh', 'pipetobash', 'sshkey', 'awscredentials'];
+const normalise = (s) => String(s ?? '').normalize('NFKC').replace(INVISIBLE, ' ');
+export const isInstructionLike = (s) => {
+  const t = normalise(s);
+  if (INSTRUCTION_LIKE.test(t)) return true;
+  const compact = t.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return COMPACT.some((p) => compact.includes(p));
+};
+
+// Only plain https links to a short allowlist of hosts, with no userinfo, port or punycode.
+const HOSTS = ['github.com', 'news.ycombinator.com', 'www.youtube.com', 'youtube.com', 'www.tiktok.com', 'www.instagram.com', 'www.reddit.com', 'reddit.com', 'x.com', 'docs.anthropic.com', 'code.claude.com'];
+export function safeUrl(u) {
+  try {
+    const x = new URL(String(u));
+    return x.protocol === 'https:' && !x.username && !x.password && !x.port && !x.hostname.includes('xn--') && HOSTS.includes(x.hostname.toLowerCase()) && /^[\x21-\x7e]+$/.test(x.href);
+  } catch { return false; }
+}
 
 // Clean untrusted text for display. Instruction-like text is replaced, not passed along.
 export function defang(s, n = 220) {
-  const t = String(s ?? '').replace(INVISIBLE, ' ').replace(/\s+/g, ' ').trim();
+  const t = normalise(s).replace(/\s+/g, ' ').trim();
   if (isInstructionLike(t)) return '[instruction-like text removed]';
   return t.slice(0, n);
 }

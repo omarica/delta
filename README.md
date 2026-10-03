@@ -65,6 +65,9 @@ Install the skill in Claude Code: copy `skills/delta/` to `~/.claude/skills/delt
 
 ## Safety
 
+Everything that comes from the internet (posts, READMEs, release notes, descriptions) is treated as hostile data: identifiers are validated, install commands are rebuilt locally, links must be plain https to an allowlisted host, text that tries to address an AI assistant is removed, names guessed from social posts are never promoted to installs or crawler seeds, and repos found only through awesome lists or posts must earn trust. The prompt-injection filter is best-effort (a pattern list cannot catch every phrasing), so it is one layer among several: nothing is ever installed without your explicit yes, and community picks are read before install. `node tests/security.mjs` checks all of this.
+
+
 Community plugins are not vetted by Anthropic and run with your permissions. Names and descriptions from third-party repos are treated as untrusted: identifiers are validated, install commands are rebuilt locally, and control characters are stripped. The `/delta` skill reads a pick's hooks and MCP config and asks you again before installing anything.
 
 ## Principles
