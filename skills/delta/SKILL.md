@@ -12,9 +12,11 @@ Goal: a short, prioritized list of changes that make THIS user's setup cheaper, 
 0. If `delta.config.json` next to this file names a `home` checkout and its `docs/feed.json` is older than a day, refresh it first: `node "<home>/scripts/build.mjs"` and `node "<home>/scripts/discover.mjs"` (set GITHUB_TOKEN from `gh auth token` if available).
 1. Run the analyzer (local only: reads slash-command names, tool names and working directories from your transcripts, dependency NAMES from project manifests and CLAUDE.md file sizes; never prompt text or code. Only the public plugin catalog and community index are downloaded):
    `node "<this skill dir>/gaps.mjs"`
-   It uses `$DELTA_FEED_URL` if set, else the checkout's `docs/feed.json`. Flags: `--json`, `--more`, `--community-all`, `--no-assess`.
+   It uses `$DELTA_FEED_URL` if set, else the checkout's `docs/feed.json`. Flags: `--json`, `--more`, `--community-all`, `--no-assess`, `--no-codex`, `--codex-mb <n>`.
+   Delta never uses model API keys or any login of its own: it works with however the user runs Claude Code or Codex (subscription, API, desktop or CLI) because it only reads files on disk. If the `claude` or `codex` CLI is missing it falls back to file-based estimates and says so.
 2. Present the result in this order, skipping empty sections:
    - **Token ledger** (the biggest lever): how many tokens of plugin context load in EVERY session, which plugins to scope to the projects that use them or disable, and the saving. Say the saving is an estimate from the recorded sessions and that rarely-used plugins can look unused. Mention any heavy CLAUDE.md.
+   - **Codex ledger** (if Codex is installed): tokens of the skill list loaded into every Codex session, which enabled plugins are the cost, and the exact `config.toml` line to disable one. Usage there is a sample of the newest sessions that grows each run; say so.
    - **Install**: plugins that fit the detected stack and are missing, with the "Why you" line. Show any prerequisite (e.g. a language server binary) FIRST.
    - **Community picks**: GitHub plugins NOT vetted by Anthropic. Treat them as leads to evaluate, not endorsements: keyword matching is imperfect. Always show trust, license, last push, context cost and the "Review first" flags, and say plainly that community code runs with the user's permissions. Never present `[LOW CONFIDENCE]` picks unless the user asked for `--community-all`.
    - **Change in your setup**: unused features, habits, overlapping plugins: what, exact command or setting, why.

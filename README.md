@@ -18,6 +18,10 @@ AI coding tools ship almost daily, and every plugin you install is loaded into t
 
 Everything is local and read-only until you say yes to a specific change. Nothing leaves your machine except fetching the public catalogs.
 
+**No API keys, ever.** Delta reads files on disk, so it works with however you use Claude Code or Codex: subscription, API key, desktop app or CLI. The only credential anywhere is the GitHub token that GitHub Actions provides automatically to the daily job (locally, an optional `gh` login just raises a rate limit).
+
+**Claude Code and Codex are both audited.** For Codex it prices the skill list injected into every session (calibrated against a real injected list: 10,254 estimated vs 10,096 measured), shows which enabled plugin is the cost, samples your newest sessions for real skill reads, and prints the `config.toml` line to disable a plugin.
+
 ## Use it
 
 ```bash
@@ -52,6 +56,8 @@ Install the skill in Claude Code: copy `skills/delta/` to `~/.claude/skills/delt
 - **Community picks are leads, not endorsements.** Matching is keyword-based. Only standalone, well-established plugins with a real reason show by default; the rest are hidden behind `--community-all`. Trust scores are heuristics, not a security audit.
 - **Token costs of community plugins are estimates** (about 110 tokens per skill or agent), and hooks or MCP servers can inject more.
 - **The tips library is hand-written and small.** Only part of each week's changelog gets a "Try" line. Contributions to `tips.json` are the best way to improve it.
+- **Codex usage is a sample.** Codex session logs are huge (5 GB here), so each run scans up to 150 MB of new sessions, newest first, and caches the result per file; coverage grows every run. Skills that live inside a project (`.agents/skills`) are not attributed to that project.
+- Without the `claude` CLI, Claude plugin costs fall back to estimates from plugin files (about 10% off).
 - Reddit and X are not sources; only GitHub and Hacker News are.
 
 ## Safety

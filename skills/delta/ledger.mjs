@@ -35,9 +35,20 @@ async function detailsRaw(name) {
 
 const SAFE_NAME = /^[A-Za-z0-9._@-]{1,120}$/;
 
-export async function buildLedger({ enabledMap, perSession, idx, projectOf, hooky, tagProjects = new Map(), minTokens = 400 }) {
+// No CLI? Estimate from the plugin's files: ~110 tokens per skill/agent, ~50 per command (calibrated on `claude plugin details` output).
+async function estimateFromFiles(dir) {
+  if (!dir) return null;
+  const { readdir: rd, stat: st } = await import('node:fs/promises');
+  const count = async (sub, test) => { try { return (await rd(path.join(dir, sub), { withFileTypes: true })).filter(test).length; } catch { return 0; } };
+  const skillDirs = await (async () => { try { let n = 0; for (const e of await rd(path.join(dir, 'skills'), { withFileTypes: true })) if (e.isDirectory()) { try { await st(path.join(dir, 'skills', e.name, 'SKILL.md')); n++; } catch {} } return n; } catch { return 0; } })();
+  const agents = await count('agents', (e) => e.isFile() && e.name.endsWith('.md'));
+  const commands = await count('commands', (e) => e.isFile() && e.name.endsWith('.md'));
+  return { tokens: Math.round(110 * (skillDirs + agents) + 50 * commands), skills: skillDirs, agents, hooks: 0, mcp: 0, estimated: true };
+}
+
+export async function buildLedger({ enabledMap, perSession, idx, projectOf, hooky, tagProjects = new Map(), installPaths = new Map(), minTokens = 400 }) {
   const keys = Object.entries(enabledMap).filter(([k, on]) => on && SAFE_NAME.test(k)).map(([k]) => k);
-  const info = new Map((await Promise.all(keys.map(async (k) => [k, await details(k.split('@')[0])]))));
+  const info = new Map((await Promise.all(keys.map(async (k) => [k, (await details(k.split('@')[0])) || (await estimateFromFiles(installPaths.get(k)))]))));
   const plugOf = (name) => { const lc = name.toLowerCase(); return lc.includes(':') ? lc.split(':')[0] : (idx.get(lc) || lc); };
 
   // Sessions per project, and per plugin per project (sessions in which the plugin was actually used).
@@ -94,7 +105,7 @@ export async function buildLedger({ enabledMap, perSession, idx, projectOf, hook
     saving += row.savings; rows.push(row);
   }
   rows.sort((a, b) => b.tokens - a.tokens);
-  return { sessions: total, totalTokens, potentialSavings: saving, afterTokens: totalTokens - saving, rows };
+  return { sessions: total, totalTokens, potentialSavings: saving, afterTokens: totalTokens - saving, rows, estimated: rows.some((r) => r.estimated) };
 }
 
 // CLAUDE.md files are loaded into every session in that project: flag the heavy ones.

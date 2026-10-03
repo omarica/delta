@@ -58,6 +58,13 @@ if (!args.includes('--no-assess')) {
   catch (e) { console.error(`[assess skipped] ${e.message}`); }
 }
 
+// Codex: works from files on disk (config.toml, skills, a bounded sample of recent sessions); no CLI or keys needed.
+let codex = null;
+if (!args.includes('--no-codex')) {
+  try { const { assessCodex } = await import('./codex.mjs'); codex = await assessCodex({ budgetMB: Number(argVal('--codex-mb')) || 150 }); }
+  catch (e) { console.error(`[codex skipped] ${e.message}`); }
+}
+
 let community = null;
 if (assessment && !args.includes('--no-community')) {
   try { const { matchCommunity } = await import('./community.mjs'); community = await matchCommunity({ HERE, src: communitySrc, stackTags: assessment.stackTags, installedNames: assessment.installedNames, includeLow: args.includes('--community-all') }); }
@@ -103,16 +110,29 @@ actions.sort((a, b) => b.weight - a.weight);
 const result = {
   generated: new Date().toISOString(), claudeVersion: version, historyEntries,
   plugins: plugins.length, skills: skills.length, codexInstalled: !!codexCfg,
-  forYou: actions.slice(0, 5), assessment, community, fromFeed: feedPicks,
+  forYou: actions.slice(0, 5), assessment, codex, community, fromFeed: feedPicks,
 };
 
 if (wantJson) { console.log(JSON.stringify(result, null, 2)); process.exit(0); }
 console.log(`# Your delta  (${version || 'Claude Code'}; ${plugins.length} plugins, ${skills.length} skills${codexCfg ? ', Codex' : ''}; analysed ${historyEntries} history entries locally)\n`);
-if (assessment?.ledger) {
+if (codex) {
+  console.log(`## Codex: ~${codex.totalTokens.toLocaleString()} tokens of skill list load in EVERY Codex session (${codex.skillCount} skills from ${codex.enabledPlugins.length} enabled plugins + your skill folders)`);
+  if (codex.usage) console.log(`Usage is a SAMPLE: your newest ${codex.usage.scanned} of ${codex.usage.totalSessions} sessions (${codex.usage.megabytes} MB), counting only real skill reads. Estimate calibrated against a real injected skill list; a skill you use rarely may show 0 reads.`);
+  for (const s of codex.unusedSources) {
+    console.log(`- [${s.key ? 'DISABLE' : 'REVIEW'}] ${s.source.replace(/^plugin:/, '')}: ~${s.tokens.toLocaleString()} tok/session (${s.skills} skills), 0 reads in the sample`);
+    if (s.key) console.log(`    ~/.codex/config.toml:  [plugins."${s.key}"]  enabled = false      (or: codex plugin remove ${s.key})`);
+    else console.log(`    These live in your own skill folder; remove or move the ones you don't use.`);
+  }
+  const used = codex.sources.filter((s) => s.reads > 0).map((s) => `${s.source.replace(/^plugin:/, '')} (${s.reads})`);
+  if (used.length) console.log(`- Kept (read in the sample): ${used.join(', ')}`);
+  for (const a of codex.agents.filter((x) => x.heavy)) console.log(`- [TRIM] ${a.label} is ~${a.tokens.toLocaleString()} tokens, loaded every session.`);
+  console.log('');
+}
+if (assessment?.ledger && assessment.ledger.totalTokens > 0) {
   const L = assessment.ledger;
   const acts = L.rows.filter((r) => r.action !== 'keep');
   console.log(`## Token ledger: ${L.totalTokens.toLocaleString()} tokens of plugin context load at the start of EVERY session`);
-  console.log(`Applying the changes below would cut that to ~${L.afterTokens.toLocaleString()} (-${L.potentialSavings.toLocaleString()}, ${Math.round(100 * L.potentialSavings / Math.max(1, L.totalTokens))}%). Based on ${L.sessions} recorded sessions; a plugin you use rarely may look unused.`);
+  console.log(`Applying the changes below would cut that to ~${L.afterTokens.toLocaleString()} (-${L.potentialSavings.toLocaleString()}, ${Math.round(100 * L.potentialSavings / Math.max(1, L.totalTokens))}%). Based on ${L.sessions} recorded sessions; a plugin you use rarely may look unused.${L.estimated ? ' Token costs are ESTIMATED from plugin files because the claude CLI was not available.' : ''}`);
   for (const r of acts) {
     console.log(`- [${r.action.toUpperCase()}] ${r.plugin}: ${r.tokens.toLocaleString()} tok/session, saves ~${r.savings.toLocaleString()} (${r.note})`);
     for (const c of r.commands) console.log(`    ${c}`);

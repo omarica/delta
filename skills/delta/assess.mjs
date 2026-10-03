@@ -104,23 +104,23 @@ function alwaysOnTokens(name) {
 
 // Which plugin owns which skill / command / agent name, and which plugins act through hooks (usage not measurable).
 async function pluginIndex() {
-  const idx = new Map(); const hooky = new Set();
+  const idx = new Map(); const hooky = new Set(); const paths = new Map();
   const reg = JSON.parse((await tryRead(path.join(home, '.claude', 'plugins', 'installed_plugins.json'))) || '{}').plugins || {};
   for (const [key, installs] of Object.entries(reg)) {
-    const plugin = key.split('@')[0]; const ip = installs?.[0]?.installPath; if (!ip) continue;
+    const plugin = key.split('@')[0]; const ip = installs?.[0]?.installPath; if (!ip) continue; paths.set(key, ip);
     for (const [sub, strip] of [['skills', ''], ['commands', '.md'], ['agents', '.md']]) {
       try { for (const e of await readdir(path.join(ip, sub))) idx.set(e.replace(strip, '').toLowerCase(), plugin); } catch {}
     }
     if (exists(path.join(ip, 'hooks')) || exists(path.join(ip, 'hooks.json')) || exists(path.join(ip, '.claude-plugin', 'hooks.json'))) hooky.add(plugin);
   }
-  return { idx, hooky };
+  return { idx, hooky, paths };
 }
 
 export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) {
   const stackCfg = JSON.parse(await readFile(path.join(HERE, 'stack.json'), 'utf8'));
   const [market, scan] = await Promise.all([marketplace(), scanTranscripts()]);
   const stack = await detectStack(stackCfg, scan.cwds);
-  const { idx, hooky } = await pluginIndex();
+  const { idx, hooky, paths: installPaths } = await pluginIndex();
   const usedBy = new Map(); // plugin -> uses
   const credit = (name, n) => { const lc = name.toLowerCase(); const plugin = lc.includes(':') ? lc.split(':')[0] : (idx.get(lc) || lc); usedBy.set(plugin, (usedBy.get(plugin) || 0) + n); };
   for (const [k, n] of scan.used) credit(k, n);
@@ -143,7 +143,7 @@ export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) 
     const r = n.toLowerCase().startsWith(norm(home).toLowerCase()) ? findProjectRoot(n) : null;
     const v = r && norm(r) !== norm(home) ? { name: path.basename(r), root: norm(r) } : null; rootCache.set(n, v); return v;
   };
-  try { out.ledger = await buildLedger({ enabledMap, perSession: scan.perSession, idx, projectOf, hooky, tagProjects: stack.tagProjects }); } catch (e) { out.ledgerError = e.message; }
+  try { out.ledger = await buildLedger({ enabledMap, perSession: scan.perSession, idx, projectOf, hooky, tagProjects: stack.tagProjects, installPaths }); } catch (e) { out.ledgerError = e.message; }
   const roots = new Map(); for (const s of scan.perSession) { const p = projectOf(s.cwd); if (p) roots.set(p.root, p); }
   out.claudeMd = await claudeMdAudit([...roots.values()]);
 
