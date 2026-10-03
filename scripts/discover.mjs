@@ -25,20 +25,51 @@ async function gh(url) {
   return r.json();
 }
 
-// 1. Search by topic (30 searches/min limit, so pace them).
-const since = new Date(now - C.pushedWithinDays * 864e5).toISOString().slice(0, 10);
+// 1. Discovery. GitHub search returns at most 1000 results and allows 30 requests/min, so page deeper and pace the calls.
+const iso = (msAgo) => new Date(now - msAgo).toISOString().slice(0, 10);
+const since = iso(C.pushedWithinDays * 864e5);
 const found = new Map();
-for (const topic of C.topics) {
-  for (const page of [1, 2]) {
+async function search(q, pages = 5) {
+  for (let page = 1; page <= pages; page++) {
     try {
-      const j = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(`topic:${topic} pushed:>${since} stars:>=${C.minStars}`)}&sort=stars&per_page=50&page=${page}`);
+      const j = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&per_page=50&page=${page}`);
       for (const r of j.items) if (!found.has(r.full_name)) found.set(r.full_name, r);
       if (j.items.length < 50) break;
-    } catch (e) { console.warn(`[search skip] ${topic} p${page}: ${e.message}`); break; }
-    await sleep(2500);
+    } catch (e) { console.warn(`[search skip] ${q} p${page}: ${e.message}`); break; }
+    await sleep(2200);
   }
 }
-console.log(`found ${found.size} candidate repos`);
+// 1a. Popular: by topic.
+for (const topic of C.topics) await search(`topic:${topic} pushed:>${since} stars:>=${C.minStars}`);
+// 1b. Rising: recently created repos that already have real traction (no star history needed).
+for (const topic of C.topics.slice(0, 5)) await search(`topic:${topic} created:>${iso(C.risingWithinDays * 864e5)} stars:>=${C.risingMinStars}`, 2);
+console.log(`topic search: ${found.size} candidate repos`);
+// 1c. The community's own curated "awesome" lists are where the long tail lives: harvest the repos they link to.
+const listRepos = [];
+try {
+  const j = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(`awesome claude in:name,description stars:>=300 pushed:>${iso(90 * 864e5)}`)}&sort=stars&per_page=20`);
+  for (const r of j.items) if (/claude|skill|agent|mcp/i.test(`${r.name} ${r.description || ''}`) && SAFE_REPO.test(r.full_name)) listRepos.push(r);
+} catch (e) { console.warn(`[lists skip] ${e.message}`); }
+const seeds = new Set();
+try { for (const r of JSON.parse(await readFile(path.join(ROOT, 'docs/seeds.json'), 'utf8'))) if (typeof r === 'string' && SAFE_REPO.test(r) && !found.has(r)) seeds.add(r); } catch {} // repos people are naming (from /last30days via buzz.mjs); still validated and trust-scored like any other
+for (const l of listRepos.slice(0, 10)) {
+  try {
+    const md = await (await fetch(`https://raw.githubusercontent.com/${l.full_name}/${l.default_branch}/README.md`)).text();
+    for (const m of md.matchAll(/https:\/\/github\.com\/([A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100})(?=[/)\s#"'\]]|$)/g)) {
+      const repo = m[1].replace(/\.git$/, '');
+      if (SAFE_REPO.test(repo) && !found.has(repo) && !listRepos.some((x) => x.full_name === repo)) seeds.add(repo);
+    }
+  } catch {}
+}
+console.log(`awesome lists: ${listRepos.length} lists -> ${seeds.size} linked repos to check`);
+const seedList = [...seeds].slice(0, C.maxSeeds); let si = 0;
+await Promise.all(Array.from({ length: 6 }, async () => {
+  while (si < seedList.length) {
+    const name = seedList[si++];
+    try { const r = await gh(`https://api.github.com/repos/${name}`); if (r.stargazers_count >= C.minStars && days(r.pushed_at) <= C.pushedWithinDays * 2) found.set(r.full_name, r); } catch {}
+  }
+}));
+console.log(`found ${found.size} candidate repos in total`);
 
 // 2. Validate each repo by its file tree; pull marketplace details; compute trust.
 const OK_LICENSE = /^(MIT|Apache-2\.0|BSD|ISC|CC0|MPL|Unlicense|GPL|LGPL|AGPL)/i;

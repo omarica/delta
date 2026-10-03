@@ -133,7 +133,7 @@ export async function assess({ HERE, plugins, enabledMap, skills, slash = {} }) 
   const have = new Set([...Object.keys(enabledMap)].map((k) => k.split('@')[0].toLowerCase()));
   const installCmd = (n) => `claude plugin install ${n}@${MARKET_NAME}`;
   const projList = (tag) => [...(stack.tagProjects.get(tag) || [])];
-  const out = { sessions: scan.sessions, since: scan.since, projects: stack.projects.length, stack: [...stack.tagProjects.keys()], stackTags: Object.fromEntries([...stack.tagProjects].map(([t, s]) => [t, [...s]])), installedNames: [...have, ...skills, ...idx.keys()], install: [], prune: [], marketplace: !!market };
+  const out = { sessions: scan.sessions, since: scan.since, projects: stack.projects.length, stack: [...stack.tagProjects.keys()], stackTags: Object.fromEntries([...stack.tagProjects].map(([t, s]) => [t, [...s]])), installedNames: [...have, ...skills, ...idx.keys()], installedPlugins: [...have, ...skills.filter((s) => !s.startsWith('.'))], install: [], prune: [], marketplace: !!market };
 
   // Token ledger: cost of every enabled plugin vs where it is really used; plus heavy CLAUDE.md files.
   const rootCache = new Map();

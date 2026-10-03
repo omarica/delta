@@ -14,6 +14,7 @@ AI coding tools ship almost daily, and every plugin you install is loaded into t
 | **Where do my tokens go?** | Prices every enabled plugin with `claude plugin details`, attributes real usage to the projects where it happens (from your session transcripts), and finds heavy plugins that load everywhere but are used in one or two projects | `claude plugin disable X --scope user` then `claude plugin enable X --scope project` per project |
 | **What am I missing?** | Detects your stack from project manifests (dependency names only), matches the live official marketplace, checks prerequisites (e.g. a language server binary), and flags plugins you already cover | `claude plugin install ...` |
 | **Is the community offering something better?** | Crawled GitHub plugins and skills, scored for trust, priced in tokens, gated by confidence, with risk flags for hooks / MCP servers / install scripts | marketplace add + install |
+| **What are people actually using right now?** | Reads your saved `/last30days` research (Reddit, X, YouTube, TikTok, Instagram, HN) and extracts the tools people name; resolves unknown names to GitHub repos (flagged as guesses until you verify the owner) and feeds them back into the crawler via `docs/seeds.json` | landscape view per category and rising list with a verdict per item |
 | **Am I using my tools well?** | Features you have never used, habits (e.g. `/clear` vs `/compact`), overlapping plugins, heavy CLAUDE.md files | exact commands or settings |
 
 Everything is local and read-only until you say yes to a specific change. Nothing leaves your machine except fetching the public catalogs.
@@ -50,6 +51,8 @@ Install the skill in Claude Code: copy `skills/delta/` to `~/.claude/skills/delt
 | `skills/delta/stack.json` | Stack detection, curated recommendations (with prerequisites), community topics, capability keywords |
 
 ## Known limits (read these)
+
+- **Community buzz needs a saved `/last30days` run** (Delta never calls those APIs or handles keys). Names mentioned in social posts are matched heuristically; the landscape's category assignment and the "you already have it" check are name-based and can mislabel lookalikes.
 
 - **Usage is measured from the session transcripts that still exist** (the ledger prints how many sessions and since when). A plugin you use rarely can look unused, and savings are estimates.
 - **Hook-based plugins can't be measured by use**, so Delta infers their projects from your dependencies.

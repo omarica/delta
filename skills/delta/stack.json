@@ -316,6 +316,9 @@
     ],
     "minStars": 100,
     "pushedWithinDays": 45,
-    "maxItems": 150
+    "maxItems": 600,
+    "maxSeeds": 900,
+    "risingWithinDays": 120,
+    "risingMinStars": 300
   }
 }

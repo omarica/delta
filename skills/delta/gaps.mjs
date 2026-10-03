@@ -65,6 +65,16 @@ if (!args.includes('--no-codex')) {
   catch (e) { console.error(`[codex skipped] ${e.message}`); }
 }
 
+// Community buzz (from a saved /last30days run) and the popular/rising landscape; both are local reads, no keys.
+let buzz = null, landscapeData = null;
+if (assessment && !args.includes('--no-community')) {
+  try { const { loadBuzz } = await import('./buzz.mjs'); buzz = await loadBuzz(); } catch (e) { console.error(`[buzz skipped] ${e.message}`); }
+  if (!args.includes('--no-landscape')) {
+    try { const { landscape } = await import('./community.mjs'); landscapeData = await landscape({ HERE, src: communitySrc, stackTags: assessment.stackTags, installedNames: assessment.installedNames, displayNames: assessment.installedPlugins, buzz, perCategory: args.includes('--landscape-all') ? 5 : 2 }); }
+    catch (e) { console.error(`[landscape skipped] ${e.message}`); }
+  }
+}
+
 let community = null;
 if (assessment && !args.includes('--no-community')) {
   try { const { matchCommunity } = await import('./community.mjs'); community = await matchCommunity({ HERE, src: communitySrc, stackTags: assessment.stackTags, installedNames: assessment.installedNames, includeLow: args.includes('--community-all') }); }
@@ -110,7 +120,7 @@ actions.sort((a, b) => b.weight - a.weight);
 const result = {
   generated: new Date().toISOString(), claudeVersion: version, historyEntries,
   plugins: plugins.length, skills: skills.length, codexInstalled: !!codexCfg,
-  forYou: actions.slice(0, 5), assessment, codex, community, fromFeed: feedPicks,
+  forYou: actions.slice(0, 5), assessment, codex, community, landscape: landscapeData, buzz, fromFeed: feedPicks,
 };
 
 if (wantJson) { console.log(JSON.stringify(result, null, 2)); process.exit(0); }
@@ -173,6 +183,28 @@ if (community) {
     console.log(`    Context cost: ${c.estTokens === null ? 'unknown (run `claude plugin details` after adding its marketplace)' : `~${c.estTokens.toLocaleString()} tokens/session${baseTok ? ` (+${Math.round(100 * c.estTokens / baseTok)}% on your current ${baseTok.toLocaleString()})` : ''}${c.risk.hooks || c.risk.mcp ? ', plus whatever its hooks/MCP inject' : ''}`}`);
     console.log(`    Review first: ${flags.length ? flags.join(', ') : 'none detected from file names, so still read its hooks and .mcp.json'}  ${c.url}`);
     for (const i of c.installs) console.log(`    ${i}`);
+  }
+  console.log('');
+}
+if (buzz?.mentions?.length) {
+  console.log(`## Community buzz (what people are naming right now, from your saved /last30days run of ${String(buzz.generated).slice(0, 10)})`);
+  for (const m of buzz.mentions.slice(0, 8)) {
+    const srcs = Object.keys(m.sources || {}).join('/');
+    console.log(`- ${m.name}: ${m.count}x across ${srcs}, reach ~${Math.round(m.reach / 1000).toLocaleString()}K${m.repo ? `  ${m.repo}` : ''}${m.indexed ? '' : m.repo ? '  [not in the index yet' + (m.resolved?.unverified ? '; repo guessed from the name, verify the owner' : '') + ']' : '  [could not resolve to a repo]'}`);
+  }
+  console.log('');
+}
+if (landscapeData) {
+  const V = { CONSIDER: 'CONSIDER', WATCH: 'WATCH', SKIP: 'SKIP', HAVE: 'HAVE', FYI: 'FYI' };
+  const line = (e) => `  - ${e.plugin} (${e.inMarketplace ? 'in ' + e.repo + ' marketplace' : e.repo}) ${e.stars === null ? '' : Math.round(e.stars / 1000) + 'K stars, '}trust ${e.trust}, ${e.estTokens === null ? 'cost unknown' : '~' + e.estTokens.toLocaleString() + ' tok'}${e.risk.hooks || e.risk.mcp ? ', hooks/MCP' : ''}${e.buzz ? `, buzz ${e.buzz.count}x` : ''}  [${V[e.verdict]}: ${e.why}]`;
+  console.log(`## Community landscape: popular per category and rising, with how each fits you (${landscapeData.repos} repos indexed)`);
+  for (const c of landscapeData.categories.filter((x) => x.top.length)) {
+    console.log(`- ${c.label}${c.youHave.length ? ` (you have: ${c.youHave.join(', ')})` : ' (you have nothing here)'}`);
+    for (const e of c.top) console.log(line(e));
+  }
+  if (landscapeData.rising.length) {
+    console.log('- Rising (new in the last 120 days, fastest growing; hype is common here, so treat as leads)');
+    for (const e of landscapeData.rising) console.log(line(e) + `  +${e.starsPerDay} stars/day`);
   }
   console.log('');
 }
