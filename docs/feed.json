@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-03T21:28:25.044Z",
+  "generated": "2026-10-04T12:19:39.859Z",
   "window_days": 7,
   "items": [
     {
-      "id": "cc-2.1.287-7",
+      "id": "cc-2.1.287-8",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-01T18:00:22Z",
@@ -12,10 +12,21 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": "mods",
-      "score": 84
+      "score": 82
     },
     {
-      "id": "cc-2.1.284-20",
+      "id": "hn-49946567",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-03T18:29:30Z",
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "action": null,
+      "why": "221 points, 152 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49946567",
+      "score": 64
+    },
+    {
+      "id": "cc-2.1.284-21",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-28T18:02:03Z",
@@ -24,7 +35,7 @@
       "why": "Added in v2.1.284.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
       "tipId": null,
-      "score": 65
+      "score": 63
     },
     {
       "id": "curated-ponytail-caveat",
@@ -47,6 +58,20 @@
       "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
+    }
+  ],
+  "more": [
+    {
+      "id": "cc-2.1.287-9",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-01T18:00:22Z",
+      "title": "You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with `/plugin enable cc-plugin-you-sh",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "tipId": "mods",
+      "score": 57
     },
     {
       "id": "rel-openai/codex-rust-v0.160.0",
@@ -57,24 +82,10 @@
       "action": null,
       "why": "Select transcript text and paste with middle-click in fullscreen mode on supported local Linux X11 terminals. · Start sessions outside a project with workspace defaults when policy permits, and restore saved permissions when resuming.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
-      "score": 56
-    }
-  ],
-  "more": [
-    {
-      "id": "cc-2.1.287-8",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-01T18:00:22Z",
-      "title": "You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with `/plugin enable cc-plugin-you-sh",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
-      "tipId": "mods",
-      "score": 59
+      "score": 55
     },
     {
-      "id": "cc-2.1.288-4",
+      "id": "cc-2.1.288-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-02T20:19:57Z",
@@ -83,7 +94,7 @@
       "why": "A second pair of eyes before you commit; runs as a background subagent.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "tipId": "code-review",
-      "score": 53
+      "score": 52
     },
     {
       "id": "hn-49911995",
@@ -94,10 +105,10 @@
       "action": null,
       "why": "194 points, 97 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49911995",
-      "score": 52
+      "score": 51
     },
     {
-      "id": "cc-2.1.285-15",
+      "id": "cc-2.1.285-16",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-29T19:27:30Z",
@@ -106,10 +117,10 @@
       "why": "Added in v2.1.285.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
       "tipId": null,
-      "score": 47
+      "score": 46
     },
     {
-      "id": "cc-2.1.284-24",
+      "id": "cc-2.1.284-25",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-28T18:02:03Z",
@@ -118,10 +129,10 @@
       "why": "Added in v2.1.284.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
-      "id": "cc-2.1.287-11",
+      "id": "cc-2.1.287-12",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-01T18:00:22Z",
@@ -130,10 +141,10 @@
       "why": "Added in v2.1.287.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": null,
-      "score": 44
+      "score": 42
     },
     {
-      "id": "cc-2.1.285-16",
+      "id": "cc-2.1.285-17",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-29T19:27:30Z",
@@ -142,10 +153,10 @@
       "why": "Added in v2.1.285.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
       "tipId": null,
-      "score": 40
+      "score": 39
     },
     {
-      "id": "cc-2.1.288-2",
+      "id": "cc-2.1.288-3",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-02T20:19:57Z",
@@ -154,10 +165,10 @@
       "why": "Added in v2.1.288.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "tipId": null,
-      "score": 38
+      "score": 37
     },
     {
-      "id": "cc-2.1.284-25",
+      "id": "cc-2.1.284-26",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-28T18:02:03Z",
@@ -166,7 +177,7 @@
       "why": "Added in v2.1.284.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
       "tipId": null,
-      "score": 38
+      "score": 36
     },
     {
       "id": "hn-49934511",
@@ -177,10 +188,10 @@
       "action": null,
       "why": "111 points, 89 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49934511",
-      "score": 37
+      "score": 36
     },
     {
-      "id": "cc-2.1.286-12",
+      "id": "cc-2.1.286-13",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-09-30T19:10:13Z",
@@ -189,19 +200,7 @@
       "why": "Added in v2.1.286.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
       "tipId": null,
-      "score": 34
-    },
-    {
-      "id": "cc-2.1.284-21",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-09-28T18:02:03Z",
-      "title": "a \"Yes, but ask again next time\" answer to auto mode's prompt before a read outside the working directories, so you can allow that one read and still be asked a",
-      "action": null,
-      "why": "Added in v2.1.284.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
-      "tipId": null,
-      "score": 30
+      "score": 33
     }
   ]
 }
