@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T12:19:39.859Z",
+  "generated": "2026-10-05T14:33:19.338Z",
   "window_days": 7,
   "items": [
     {
@@ -12,7 +12,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": "mods",
-      "score": 82
+      "score": 80
     },
     {
       "id": "hn-49946567",
@@ -21,21 +21,9 @@
       "date": "2026-10-03T18:29:30Z",
       "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
       "action": null,
-      "why": "221 points, 152 comments on Hacker News.",
+      "why": "236 points, 157 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49946567",
-      "score": 64
-    },
-    {
-      "id": "cc-2.1.284-21",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-09-28T18:02:03Z",
-      "title": "Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads",
-      "action": null,
-      "why": "Added in v2.1.284.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
-      "tipId": null,
-      "score": 63
+      "score": 66
     },
     {
       "id": "curated-ponytail-caveat",
@@ -58,6 +46,18 @@
       "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
+    },
+    {
+      "id": "cc-2.1.284-21",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-09-28T18:02:03Z",
+      "title": "Claude Sonnet 5.5 (`claude-sonnet-5-5`), now the default Sonnet model on the Anthropic API — 1M context, $2/$10 per Mtok with $0.20/Mtok cache reads",
+      "action": null,
+      "why": "Added in v2.1.284.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+      "tipId": null,
+      "score": 61
     }
   ],
   "more": [
@@ -71,7 +71,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": "mods",
-      "score": 57
+      "score": 55
     },
     {
       "id": "rel-openai/codex-rust-v0.160.0",
@@ -82,7 +82,18 @@
       "action": null,
       "why": "Select transcript text and paste with middle-click in fullscreen mode on supported local Linux X11 terminals. · Start sessions outside a project with workspace defaults when policy permits, and restore saved permissions when resuming.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
-      "score": 55
+      "score": 52
+    },
+    {
+      "id": "hn-49911995",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-09-30T17:37:40Z",
+      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
+      "action": null,
+      "why": "194 points, 99 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49911995",
+      "score": 51
     },
     {
       "id": "cc-2.1.288-5",
@@ -94,18 +105,7 @@
       "why": "A second pair of eyes before you commit; runs as a background subagent.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "tipId": "code-review",
-      "score": 52
-    },
-    {
-      "id": "hn-49911995",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-09-30T17:37:40Z",
-      "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-      "action": null,
-      "why": "194 points, 97 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=49911995",
-      "score": 51
+      "score": 49
     },
     {
       "id": "cc-2.1.285-16",
@@ -117,7 +117,7 @@
       "why": "Added in v2.1.285.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
       "tipId": null,
-      "score": 46
+      "score": 43
     },
     {
       "id": "cc-2.1.284-25",
@@ -129,7 +129,7 @@
       "why": "Added in v2.1.284.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.287-12",
@@ -141,7 +141,7 @@
       "why": "Added in v2.1.287.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": null,
-      "score": 42
+      "score": 40
     },
     {
       "id": "cc-2.1.285-17",
@@ -153,7 +153,18 @@
       "why": "Added in v2.1.285.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
       "tipId": null,
-      "score": 39
+      "score": 36
+    },
+    {
+      "id": "hn-49934511",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-02T15:19:56Z",
+      "title": "The Four Horsemen of Agentic Coding",
+      "action": null,
+      "why": "114 points, 89 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49934511",
+      "score": 36
     },
     {
       "id": "cc-2.1.288-3",
@@ -165,7 +176,7 @@
       "why": "Added in v2.1.288.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "tipId": null,
-      "score": 37
+      "score": 34
     },
     {
       "id": "cc-2.1.284-26",
@@ -177,18 +188,7 @@
       "why": "Added in v2.1.284.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
       "tipId": null,
-      "score": 36
-    },
-    {
-      "id": "hn-49934511",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-02T15:19:56Z",
-      "title": "The Four Horsemen of Agentic Coding",
-      "action": null,
-      "why": "111 points, 89 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=49934511",
-      "score": 36
+      "score": 34
     },
     {
       "id": "cc-2.1.286-13",
@@ -200,7 +200,7 @@
       "why": "Added in v2.1.286.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
       "tipId": null,
-      "score": 33
+      "score": 30
     }
   ]
 }
