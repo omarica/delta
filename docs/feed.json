@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-06T13:17:43.326Z",
+  "generated": "2026-10-07T13:19:10.266Z",
   "window_days": 7,
   "items": [
     {
-      "id": "cc-2.1.287-19",
+      "id": "cc-2.1.287-25",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-01T18:00:22Z",
@@ -12,7 +12,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": "mods",
-      "score": 78
+      "score": 76
     },
     {
       "id": "hn-49946567",
@@ -21,9 +21,20 @@
       "date": "2026-10-03T18:29:30Z",
       "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
       "action": null,
-      "why": "242 points, 161 comments on Hacker News.",
+      "why": "246 points, 161 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49946567",
       "score": 66
+    },
+    {
+      "id": "hn-49981905",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-06T18:00:34Z",
+      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+      "action": null,
+      "why": "233 points, 132 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49981905",
+      "score": 65
     },
     {
       "id": "curated-ponytail-caveat",
@@ -46,23 +57,35 @@
       "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
-    },
-    {
-      "id": "cc-2.1.290-1",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`agentId` to the `tool.check` event of plugin hooks, so a hook can tell a subagent's permission check from the main session's",
-      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
-      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "codex-multi-agent",
-      "score": 62
     }
   ],
   "more": [
     {
-      "id": "cc-2.1.290-0",
+      "id": "cc-2.1.292-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-06T18:59:30Z",
+      "title": "`prompt.autocomplete`, an event a mod hooks to add its own rows to the prompt box's autocomplete list",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+      "tipId": "mods",
+      "score": 61
+    },
+    {
+      "id": "cc-2.1.292-5",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-06T18:59:30Z",
+      "title": "workflow agents to the `agent.spawn` mod hook, with their run and index, so a mod can refuse them",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+      "tipId": "mods",
+      "score": 61
+    },
+    {
+      "id": "cc-2.1.290-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-05T23:33:17Z",
@@ -71,10 +94,22 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 62
+      "score": 60
     },
     {
-      "id": "cc-2.1.290-2",
+      "id": "cc-2.1.290-7",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-05T23:33:17Z",
+      "title": "`agentId` to the `tool.check` event of plugin hooks, so a hook can tell a subagent's permission check from the main session's",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
+      "tipId": "codex-multi-agent",
+      "score": 60
+    },
+    {
+      "id": "cc-2.1.290-8",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-05T23:33:17Z",
@@ -83,10 +118,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 62
+      "score": 60
     },
     {
-      "id": "cc-2.1.290-3",
+      "id": "cc-2.1.290-9",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-05T23:33:17Z",
@@ -95,10 +130,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 62
+      "score": 60
     },
     {
-      "id": "cc-2.1.290-4",
+      "id": "cc-2.1.290-10",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-05T23:33:17Z",
@@ -107,7 +142,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 62
+      "score": 60
     },
     {
       "id": "rel-openai/codex-rust-v0.160.1",
@@ -118,10 +153,10 @@
       "action": null,
       "why": "[#51121](https://github.com/openai/codex/pull/51121): Backport Windows remote MCP environment preservation to 0.160.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
-      "score": 58
+      "score": 56
     },
     {
-      "id": "cc-2.1.287-20",
+      "id": "cc-2.1.287-26",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-01T18:00:22Z",
@@ -130,7 +165,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
       "tipId": "mods",
-      "score": 53
+      "score": 51
     },
     {
       "id": "hn-49911995",
@@ -141,10 +176,22 @@
       "action": null,
       "why": "194 points, 99 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49911995",
-      "score": 50
+      "score": 49
     },
     {
-      "id": "cc-2.1.288-16",
+      "id": "cc-2.1.292-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-06T18:59:30Z",
+      "title": "`--marketplace <source>` to `claude plugin install`: adds the marketplace if needed, under the same policy checks as `claude plugin marketplace add`, then insta",
+      "action": null,
+      "why": "Added in v2.1.292.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+      "tipId": null,
+      "score": 46
+    },
+    {
+      "id": "cc-2.1.288-22",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-02T20:19:57Z",
@@ -153,54 +200,7 @@
       "why": "A second pair of eyes before you commit; runs as a background subagent.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
       "tipId": "code-review",
-      "score": 48
-    },
-    {
-      "id": "cc-2.1.285-27",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-09-29T19:27:30Z",
-      "title": "`claude --desktop` to open the Claude desktop app on the current directory, or on a session with `--continue` / `--resume <id>`",
-      "action": null,
-      "why": "Added in v2.1.285.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
-      "tipId": null,
-      "score": 42
-    },
-    {
-      "id": "cc-2.1.290-6",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`claude attach <name>` and `claude logs <name>`: part of a session name works in place of the id",
-      "action": null,
-      "why": "Added in v2.1.290.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": null,
-      "score": 39
-    },
-    {
-      "id": "cc-2.1.287-23",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-01T18:00:22Z",
-      "title": "URL prompts from MCP servers on the 2025-11-25 protocol, for example to sign in. If a server no longer connects after this update, add \"bareElicitationCapabilit",
-      "action": null,
-      "why": "Added in v2.1.287.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "hn-49934511",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-02T15:19:56Z",
-      "title": "The Four Horsemen of Agentic Coding",
-      "action": null,
-      "why": "114 points, 89 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=49934511",
-      "score": 35
+      "score": 46
     }
   ]
 }
