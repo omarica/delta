@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T12:46:25.793Z",
+  "generated": "2026-10-12T15:18:58.047Z",
   "window_days": 7,
   "items": [
     {
@@ -12,7 +12,7 @@
       "why": "Added in v2.1.293.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
       "tipId": null,
-      "score": 67
+      "score": 65
     },
     {
       "id": "hn-50002665",
@@ -21,7 +21,7 @@
       "date": "2026-10-08T07:07:34Z",
       "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
       "action": null,
-      "why": "295 points, 131 comments on Hacker News.",
+      "why": "299 points, 133 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50002665",
       "score": 65
     },
@@ -34,7 +34,7 @@
       "action": null,
       "why": "269 points, 153 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=49981905",
-      "score": 65
+      "score": 64
     },
     {
       "id": "curated-ponytail-caveat",
@@ -70,7 +70,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "tipId": "codex-multi-agent",
-      "score": 60
+      "score": 57
     },
     {
       "id": "cc-2.1.296-2",
@@ -82,7 +82,18 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "tipId": "codex-multi-agent",
-      "score": 60
+      "score": 57
+    },
+    {
+      "id": "hn-50021899",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-09T15:26:33Z",
+      "title": "Five months treating bugs like patients and coding agents like a medical team",
+      "action": null,
+      "why": "214 points, 107 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50021899",
+      "score": 57
     },
     {
       "id": "rel-openai/codex-rust-v0.162.1",
@@ -93,7 +104,7 @@
       "action": null,
       "why": "Fixed startup failures caused by differences between a running background server's feature settings and CLI defaults. Compatibility checks now apply only to explicit command-line feature overrides.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.1",
-      "score": 57
+      "score": 54
     },
     {
       "id": "cc-2.1.293-22",
@@ -105,7 +116,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
       "tipId": "codex-multi-agent",
-      "score": 55
+      "score": 53
     },
     {
       "id": "cc-2.1.292-27",
@@ -117,7 +128,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
       "tipId": "mods",
-      "score": 54
+      "score": 51
     },
     {
       "id": "cc-2.1.292-29",
@@ -129,7 +140,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
       "tipId": "mods",
-      "score": 54
+      "score": 51
     },
     {
       "id": "cc-2.1.290-30",
@@ -141,7 +152,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
       "id": "cc-2.1.290-31",
@@ -153,7 +164,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "codex-multi-agent",
-      "score": 52
+      "score": 50
     },
     {
       "id": "cc-2.1.290-32",
@@ -165,7 +176,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
       "id": "cc-2.1.290-33",
@@ -177,7 +188,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
       "id": "cc-2.1.290-34",
@@ -188,18 +199,6 @@
       "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "mods",
-      "score": 52
-    },
-    {
-      "id": "cc-2.1.295-18",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-08T19:48:38Z",
-      "title": "children to a mod's `Button`: strings and `Text`, so a row of a list is one pressable with a chip or a dim detail inside",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
       "tipId": "mods",
       "score": 50
     }
