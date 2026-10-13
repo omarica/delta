@@ -1,7 +1,29 @@
 {
-  "generated": "2026-10-12T15:18:58.047Z",
+  "generated": "2026-10-13T14:09:09.880Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50060694",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-12T18:29:04Z",
+      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+      "action": null,
+      "why": "582 points, 279 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50060694",
+      "score": 71
+    },
+    {
+      "id": "hn-50059523",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-12T17:14:01Z",
+      "title": "AI coding agents generate more code, but not more software",
+      "action": null,
+      "why": "346 points, 290 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50059523",
+      "score": 71
+    },
     {
       "id": "cc-2.1.293-21",
       "kind": "new",
@@ -12,29 +34,7 @@
       "why": "Added in v2.1.293.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
       "tipId": null,
-      "score": 65
-    },
-    {
-      "id": "hn-50002665",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-08T07:07:34Z",
-      "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
-      "action": null,
-      "why": "299 points, 133 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50002665",
-      "score": 65
-    },
-    {
-      "id": "hn-49981905",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-06T18:00:34Z",
-      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
-      "action": null,
-      "why": "269 points, 153 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=49981905",
-      "score": 64
+      "score": 63
     },
     {
       "id": "curated-ponytail-caveat",
@@ -61,6 +61,39 @@
   ],
   "more": [
     {
+      "id": "hn-50002665",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-08T07:07:34Z",
+      "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+      "action": null,
+      "why": "301 points, 132 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50002665",
+      "score": 64
+    },
+    {
+      "id": "hn-49981905",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-06T18:00:34Z",
+      "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+      "action": null,
+      "why": "269 points, 153 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=49981905",
+      "score": 63
+    },
+    {
+      "id": "hn-50021899",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-09T15:26:33Z",
+      "title": "Five months treating bugs like patients and coding agents like a medical team",
+      "action": null,
+      "why": "216 points, 118 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50021899",
+      "score": 57
+    },
+    {
       "id": "cc-2.1.296-1",
       "kind": "new",
       "tool": "Claude Code",
@@ -70,7 +103,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "tipId": "codex-multi-agent",
-      "score": 57
+      "score": 55
     },
     {
       "id": "cc-2.1.296-2",
@@ -82,18 +115,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "tipId": "codex-multi-agent",
-      "score": 57
-    },
-    {
-      "id": "hn-50021899",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-09T15:26:33Z",
-      "title": "Five months treating bugs like patients and coding agents like a medical team",
-      "action": null,
-      "why": "214 points, 107 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50021899",
-      "score": 57
+      "score": 55
     },
     {
       "id": "rel-openai/codex-rust-v0.162.1",
@@ -104,7 +126,7 @@
       "action": null,
       "why": "Fixed startup failures caused by differences between a running background server's feature settings and CLI defaults. Compatibility checks now apply only to explicit command-line feature overrides.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.1",
-      "score": 54
+      "score": 52
     },
     {
       "id": "cc-2.1.293-22",
@@ -116,7 +138,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
       "tipId": "codex-multi-agent",
-      "score": 53
+      "score": 51
     },
     {
       "id": "cc-2.1.292-27",
@@ -128,7 +150,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
       "tipId": "mods",
-      "score": 51
+      "score": 49
     },
     {
       "id": "cc-2.1.292-29",
@@ -140,67 +162,42 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
       "tipId": "mods",
-      "score": 51
+      "score": 49
     },
     {
-      "id": "cc-2.1.290-30",
+      "id": "cc-2.1.295-18",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`serverToolUses` to the result of a mod's `turn.step` hook: the tool calls the API ran itself (the advisor), each with its id, name, input, start and end",
+      "date": "2026-10-08T19:48:38Z",
+      "title": "children to a mod's `Button`: strings and `Text`, so a row of a list is one pressable with a chip or a dim detail inside",
       "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
       "tipId": "mods",
-      "score": 50
+      "score": 45
     },
     {
-      "id": "cc-2.1.290-31",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`agentId` to the `tool.check` event of plugin hooks, so a hook can tell a subagent's permission check from the main session's",
-      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
-      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "codex-multi-agent",
-      "score": 50
+      "id": "hn-50059096",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-12T16:46:34Z",
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "action": null,
+      "why": "146 points, 103 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "score": 45
     },
     {
-      "id": "cc-2.1.290-32",
+      "id": "cc-2.1.296-4",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`ceiling` to the question and verdict a mod's `tool.check` hook reads, naming the approval an organization requires for a tool",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "mods",
-      "score": 50
-    },
-    {
-      "id": "cc-2.1.290-33",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "`ThemeKey` and `Color` types to the plugin hooks typings, so an editor lists the theme colors a mod's drawing can name",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "mods",
-      "score": 50
-    },
-    {
-      "id": "cc-2.1.290-34",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-05T23:33:17Z",
-      "title": "to `claude plugin validate`: each hook a mod registers at a gating site is listed with whether it has a `.catch` (`gatingHooks` under `--json`)",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
-      "tipId": "mods",
-      "score": 50
+      "date": "2026-10-09T19:28:59Z",
+      "title": "a note in `/plugin` on a plugin whose hooks are left out because another enabled plugin has the same name",
+      "action": null,
+      "why": "Added in v2.1.296.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+      "tipId": null,
+      "score": 40
     }
   ]
 }
