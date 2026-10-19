@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T11:01:51.400Z",
+  "generated": "2026-10-19T13:08:12.549Z",
   "window_days": 7,
   "items": [
     {
@@ -12,7 +12,7 @@
       "why": "See what is running, blocked on you, or done across parallel sessions.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "agents-view",
-      "score": 86
+      "score": 84
     },
     {
       "id": "hn-50122951",
@@ -21,9 +21,9 @@
       "date": "2026-10-16T19:04:47Z",
       "title": "How the Claude Code team does code review",
       "action": null,
-      "why": "460 points, 465 comments on Hacker News.",
+      "why": "479 points, 470 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50122951",
-      "score": 70
+      "score": 69
     },
     {
       "id": "cc-2.1.299-33",
@@ -35,7 +35,7 @@
       "why": "Finds the one plugin or MCP server quietly eating your plan.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "usage",
-      "score": 69
+      "score": 67
     },
     {
       "id": "hn-50060694",
@@ -46,7 +46,7 @@
       "action": null,
       "why": "609 points, 294 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50060694",
-      "score": 66
+      "score": 65
     },
     {
       "id": "curated-ponytail-caveat",
@@ -70,7 +70,7 @@
       "action": null,
       "why": "364 points, 313 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50059523",
-      "score": 66
+      "score": 65
     },
     {
       "id": "curated-omniroute-caution",
@@ -93,7 +93,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 56
+      "score": 53
     },
     {
       "id": "cc-2.1.300-16",
@@ -105,7 +105,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 56
+      "score": 53
     },
     {
       "id": "rel-openai/codex-rust-v0.163.0",
@@ -116,7 +116,7 @@
       "action": null,
       "why": "Send a follow-up while Codex is responding to steer it immediately. Interrupting a turn also stops active Code Mode cells and their nested tool calls. · Configure a leader key in `/keymap`. The default is `Ctrl+X`, shortcut hints stay open until you choose or cancel, and voice mute moves to `F9`.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-      "score": 55
+      "score": 53
     },
     {
       "id": "cc-2.1.299-24",
@@ -128,7 +128,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 54
+      "score": 52
     },
     {
       "id": "cc-2.1.299-28",
@@ -140,7 +140,7 @@
       "why": "Proves a skill or plugin earns its context cost before you keep it.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "plugin-eval",
-      "score": 54
+      "score": 52
     },
     {
       "id": "cc-2.1.299-31",
@@ -152,7 +152,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 54
+      "score": 52
     },
     {
       "id": "cc-2.1.299-32",
@@ -164,7 +164,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 54
+      "score": 52
     },
     {
       "id": "cc-2.1.301-6",
@@ -176,7 +176,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
       "tipId": "mods",
-      "score": 50
+      "score": 48
     },
     {
       "id": "cc-2.1.300-9",
@@ -188,7 +188,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 48
+      "score": 45
     },
     {
       "id": "cc-2.1.300-12",
@@ -200,7 +200,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 48
+      "score": 45
     }
   ]
 }
