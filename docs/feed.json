@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-19T13:08:12.549Z",
+  "generated": "2026-10-20T11:33:19.471Z",
   "window_days": 7,
   "items": [
     {
-      "id": "cc-2.1.299-25",
+      "id": "cc-2.1.299-32",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -12,7 +12,7 @@
       "why": "See what is running, blocked on you, or done across parallel sessions.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "agents-view",
-      "score": 84
+      "score": 82
     },
     {
       "id": "hn-50122951",
@@ -21,12 +21,12 @@
       "date": "2026-10-16T19:04:47Z",
       "title": "How the Claude Code team does code review",
       "action": null,
-      "why": "479 points, 470 comments on Hacker News.",
+      "why": "483 points, 479 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50122951",
-      "score": 69
+      "score": 68
     },
     {
-      "id": "cc-2.1.299-33",
+      "id": "cc-2.1.299-40",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -35,17 +35,6 @@
       "why": "Finds the one plugin or MCP server quietly eating your plan.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "usage",
-      "score": 67
-    },
-    {
-      "id": "hn-50060694",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-12T18:29:04Z",
-      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-      "action": null,
-      "why": "609 points, 294 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50060694",
       "score": 65
     },
     {
@@ -58,19 +47,6 @@
       "why": "Reported 3,629 -> 490 lines on one task; the savings claim is disputed.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
-    }
-  ],
-  "more": [
-    {
-      "id": "hn-50059523",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-12T17:14:01Z",
-      "title": "AI coding agents generate more code, but not more software",
-      "action": null,
-      "why": "364 points, 313 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50059523",
-      "score": 65
     },
     {
       "id": "curated-omniroute-caution",
@@ -82,9 +58,47 @@
       "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
+    }
+  ],
+  "more": [
+    {
+      "id": "cc-2.1.304-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-19T21:34:39Z",
+      "title": "a transcript line when a plugin that runs first skips one of your mod's hooks, naming the event and the plugin",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "tipId": "mods",
+      "score": 62
     },
     {
-      "id": "cc-2.1.300-15",
+      "id": "cc-2.1.304-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-19T21:34:39Z",
+      "title": "`decider: \"person\"` to a mod's `tool.check` answer: only the permission dialog or a host's callback can approve the ask, and it is refused with the mod's reason",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "tipId": "mods",
+      "score": 54
+    },
+    {
+      "id": "cc-2.1.304-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-19T21:34:39Z",
+      "title": "`e.isReadOnly` to a mod's `tool.check` event, set when the tool call is read-only",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "tipId": "mods",
+      "score": 54
+    },
+    {
+      "id": "cc-2.1.300-22",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T18:24:25Z",
@@ -93,10 +107,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 53
+      "score": 52
     },
     {
-      "id": "cc-2.1.300-16",
+      "id": "cc-2.1.300-23",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T18:24:25Z",
@@ -105,7 +119,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
       "tipId": "mods",
-      "score": 53
+      "score": 52
     },
     {
       "id": "rel-openai/codex-rust-v0.163.0",
@@ -116,10 +130,10 @@
       "action": null,
       "why": "Send a follow-up while Codex is responding to steer it immediately. Interrupting a turn also stops active Code Mode cells and their nested tool calls. · Configure a leader key in `/keymap`. The default is `Ctrl+X`, shortcut hints stay open until you choose or cancel, and voice mute moves to `F9`.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-      "score": 53
+      "score": 51
     },
     {
-      "id": "cc-2.1.299-24",
+      "id": "cc-2.1.299-31",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -128,10 +142,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.299-28",
+      "id": "cc-2.1.299-35",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -140,10 +154,10 @@
       "why": "Proves a skill or plugin earns its context cost before you keep it.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "plugin-eval",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.299-31",
+      "id": "cc-2.1.299-38",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -152,10 +166,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.299-32",
+      "id": "cc-2.1.299-39",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-14T02:49:42Z",
@@ -164,10 +178,21 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.301-6",
+      "id": "hn-50148855",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-19T05:55:31Z",
+      "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+      "action": null,
+      "why": "156 points, 119 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50148855",
+      "score": 48
+    },
+    {
+      "id": "cc-2.1.301-13",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-15T19:22:06Z",
@@ -176,31 +201,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
       "tipId": "mods",
-      "score": 48
-    },
-    {
-      "id": "cc-2.1.300-9",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-14T18:24:25Z",
-      "title": "`virtualText` to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
-      "tipId": "mods",
-      "score": 45
-    },
-    {
-      "id": "cc-2.1.300-12",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-14T18:24:25Z",
-      "title": "a `dir` prop on a mod's `Text` for right-to-left text: on Windows and in VS Code's terminal its rows read in that direction and sit flush right",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
-      "tipId": "mods",
-      "score": 45
+      "score": 46
     }
   ]
 }
