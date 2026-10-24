@@ -1,18 +1,7 @@
 {
-  "generated": "2026-10-23T11:35:58.218Z",
+  "generated": "2026-10-24T10:56:06.057Z",
   "window_days": 7,
   "items": [
-    {
-      "id": "hn-50122951",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-16T19:04:47Z",
-      "title": "How the Claude Code team does code review",
-      "action": null,
-      "why": "486 points, 480 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50122951",
-      "score": 65
-    },
     {
       "id": "curated-ponytail-caveat",
       "kind": "stop",
@@ -44,10 +33,10 @@
       "action": null,
       "why": "Set model, reasoning effort, speed, and permission profiles directly with inline `/model` and `/permissions` arguments. · Preview viewed and generated images in the fullscreen transcript on terminals supporting Kitty or Sixel graphics.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-      "score": 59
+      "score": 57
     },
     {
-      "id": "cc-2.1.304-4",
+      "id": "cc-2.1.304-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-19T21:34:39Z",
@@ -56,10 +45,8 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": "mods",
-      "score": 56
-    }
-  ],
-  "more": [
+      "score": 54
+    },
     {
       "id": "hn-50148855",
       "kind": "news",
@@ -69,10 +56,12 @@
       "action": null,
       "why": "172 points, 128 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50148855",
-      "score": 49
-    },
+      "score": 48
+    }
+  ],
+  "more": [
     {
-      "id": "cc-2.1.304-5",
+      "id": "cc-2.1.304-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-19T21:34:39Z",
@@ -81,10 +70,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": "mods",
-      "score": 48
+      "score": 46
     },
     {
-      "id": "cc-2.1.304-6",
+      "id": "cc-2.1.304-7",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-19T21:34:39Z",
@@ -93,7 +82,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": "mods",
-      "score": 48
+      "score": 46
     },
     {
       "id": "hn-50175779",
@@ -104,10 +93,10 @@
       "action": null,
       "why": "135 points, 91 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50175779",
-      "score": 41
+      "score": 40
     },
     {
-      "id": "cc-2.1.307-0",
+      "id": "cc-2.1.307-1",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-21T22:17:02Z",
@@ -116,10 +105,10 @@
       "why": "Added in v2.1.307.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
-      "id": "cc-2.1.305-2",
+      "id": "cc-2.1.305-3",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-20T20:46:50Z",
@@ -128,10 +117,10 @@
       "why": "Added in v2.1.305.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
-      "id": "cc-2.1.305-3",
+      "id": "cc-2.1.305-4",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-20T20:46:50Z",
@@ -140,10 +129,10 @@
       "why": "Added in v2.1.305.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
-      "id": "cc-2.1.304-9",
+      "id": "cc-2.1.304-10",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-19T21:34:39Z",
@@ -152,10 +141,10 @@
       "why": "Added in v2.1.304.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": null,
-      "score": 33
+      "score": 31
     },
     {
-      "id": "cc-2.1.304-10",
+      "id": "cc-2.1.304-11",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-19T21:34:39Z",
@@ -164,43 +153,7 @@
       "why": "Added in v2.1.304.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": null,
-      "score": 33
-    },
-    {
-      "id": "cc-2.1.302-11",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-16T20:53:06Z",
-      "title": "`CLAUDE_CODE_AUTO_MODE_MODEL` to choose the model the client-side auto mode classifier uses; it does not change the model for server-side auto mode",
-      "action": null,
-      "why": "Added in v2.1.302.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "cc-2.1.302-12",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-16T20:53:06Z",
-      "title": "an `Idle compaction` row to `/config` for turning idle compaction off or back on; the notices shown after an idle compaction now say how to turn it off",
-      "action": null,
-      "why": "Added in v2.1.302.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "cc-2.1.302-13",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-16T20:53:06Z",
-      "title": "a notice to `/design-sync` and `/design-login` that standalone Claude Design (claude.ai/design) closes by December 14, 2026",
-      "action": null,
-      "why": "Added in v2.1.302.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
-      "tipId": null,
-      "score": 27
+      "score": 31
     }
   ]
 }
