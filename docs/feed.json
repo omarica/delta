@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T12:56:49.471Z",
+  "generated": "2026-10-27T12:08:22.714Z",
   "window_days": 7,
   "items": [
     {
@@ -33,20 +33,34 @@
       "action": null,
       "why": "Set model, reasoning effort, speed, and permission profiles directly with inline `/model` and `/permissions` arguments. · Preview viewed and generated images in the fullscreen transcript on terminals supporting Kitty or Sixel graphics.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-      "score": 53
+      "score": 51
     },
     {
-      "id": "cc-2.1.304-5",
+      "id": "cc-2.1.311-0",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-10-19T21:34:39Z",
-      "title": "a transcript line when a plugin that runs first skips one of your mod's hooks, naming the event and the plugin",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
-      "tipId": "mods",
-      "score": 50
+      "date": "2026-10-26T21:51:23Z",
+      "title": "`--hold-idle-file` and `--max-hold-min` to `self-hosted-runner`, to keep an idle session while your host reports processes it left running",
+      "action": null,
+      "why": "Added in v2.1.311.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+      "tipId": null,
+      "score": 39
     },
+    {
+      "id": "cc-2.1.311-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-26T21:51:23Z",
+      "title": "a tip for the Explanatory output style, shown when you ask Claude for explanations",
+      "action": null,
+      "why": "Added in v2.1.311.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+      "tipId": null,
+      "score": 39
+    }
+  ],
+  "more": [
     {
       "id": "hn-50175779",
       "kind": "news",
@@ -56,36 +70,10 @@
       "action": null,
       "why": "137 points, 91 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50175779",
-      "score": 38
-    }
-  ],
-  "more": [
-    {
-      "id": "cc-2.1.304-6",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-19T21:34:39Z",
-      "title": "`decider: \"person\"` to a mod's `tool.check` answer: only the permission dialog or a host's callback can approve the ask, and it is refused with the mod's reason",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
-      "tipId": "mods",
-      "score": 42
+      "score": 37
     },
     {
-      "id": "cc-2.1.304-7",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-19T21:34:39Z",
-      "title": "`e.isReadOnly` to a mod's `tool.check` event, set when the tool call is read-only",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
-      "tipId": "mods",
-      "score": 42
-    },
-    {
-      "id": "cc-2.1.307-1",
+      "id": "cc-2.1.307-3",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-21T22:17:02Z",
@@ -94,10 +82,10 @@
       "why": "Added in v2.1.307.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
       "tipId": null,
-      "score": 31
+      "score": 29
     },
     {
-      "id": "cc-2.1.305-3",
+      "id": "cc-2.1.305-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-20T20:46:50Z",
@@ -106,10 +94,10 @@
       "why": "Added in v2.1.305.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
       "tipId": null,
-      "score": 29
+      "score": 27
     },
     {
-      "id": "cc-2.1.305-4",
+      "id": "cc-2.1.305-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-20T20:46:50Z",
@@ -117,30 +105,6 @@
       "action": null,
       "why": "Added in v2.1.305.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
-      "tipId": null,
-      "score": 29
-    },
-    {
-      "id": "cc-2.1.304-10",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-19T21:34:39Z",
-      "title": "the names of the tools called earlier to the compaction summary in the transcript view (Ctrl+O)",
-      "action": null,
-      "why": "Added in v2.1.304.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "cc-2.1.304-11",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-19T21:34:39Z",
-      "title": "a warning on Pro and Max plans when resuming an inactive conversation would use a noticeable share of your 5-hour usage limit: resume anyway, or start a new con",
-      "action": null,
-      "why": "Added in v2.1.304.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
       "tipId": null,
       "score": 27
     }
