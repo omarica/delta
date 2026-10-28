@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T12:08:22.714Z",
+  "generated": "2026-10-28T12:49:58.094Z",
   "window_days": 7,
   "items": [
     {
@@ -25,18 +25,30 @@
       "score": 62
     },
     {
-      "id": "rel-openai/codex-rust-v0.164.0",
+      "id": "rel-openai/codex-rust-v0.165.0",
       "kind": "new",
       "tool": "Codex",
-      "date": "2026-10-23T04:48:10Z",
-      "title": "Codex 0.164.0: Save reusable prompts and slash commands in ten numbered `/presets` slots, with a keyboard menu for quick access.",
+      "date": "2026-10-27T20:09:38Z",
+      "title": "Codex 0.165.0: Added a built-in Google Cloud Vertex AI provider, configured with `model_provider = \"gcp\"`.",
       "action": null,
-      "why": "Set model, reasoning effort, speed, and permission profiles directly with inline `/model` and `/permissions` arguments. · Preview viewed and generated images in the fullscreen transcript on terminals supporting Kitty or Sixel graphics.",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-      "score": 51
+      "why": "Added GPT-6.1 Terra to the model catalogs. · Added a repository filter to the session picker and directory grouping to the agent command center, making it easier to navigate sessions across linked worktrees.",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+      "score": 59
     },
     {
-      "id": "cc-2.1.311-0",
+      "id": "cc-2.1.312-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-27T20:24:20Z",
+      "title": "click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does",
+      "action": null,
+      "why": "Added in v2.1.312.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.311-2",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -45,10 +57,12 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 39
-    },
+      "score": 37
+    }
+  ],
+  "more": [
     {
-      "id": "cc-2.1.311-1",
+      "id": "cc-2.1.311-3",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -57,23 +71,10 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 39
-    }
-  ],
-  "more": [
-    {
-      "id": "hn-50175779",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-21T03:36:43Z",
-      "title": "Using Claude to reduce the attack surface of code",
-      "action": null,
-      "why": "137 points, 91 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50175779",
       "score": 37
     },
     {
-      "id": "cc-2.1.307-3",
+      "id": "cc-2.1.307-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-21T22:17:02Z",
@@ -81,30 +82,6 @@
       "action": null,
       "why": "Added in v2.1.307.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
-      "tipId": null,
-      "score": 29
-    },
-    {
-      "id": "cc-2.1.305-5",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-20T20:46:50Z",
-      "title": "`sandbox.allowNestedUserNamespaces` so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox",
-      "action": null,
-      "why": "Added in v2.1.305.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "cc-2.1.305-6",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-20T20:46:50Z",
-      "title": "`CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS` so unattended retry mode (`CLAUDE_CODE_RETRY_WATCHDOG`) notices a usage limit that was lifted before its res",
-      "action": null,
-      "why": "Added in v2.1.305.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
       "tipId": null,
       "score": 27
     }
