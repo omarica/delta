@@ -1,7 +1,18 @@
 {
-  "generated": "2026-10-28T12:49:58.094Z",
+  "generated": "2026-10-29T12:57:25.654Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50284255",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-29T03:33:42Z",
+      "title": "Claude Code regularly sends each background agent’s transcript to its model",
+      "action": null,
+      "why": "450 points, 183 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50284255",
+      "score": 72
+    },
     {
       "id": "curated-ponytail-caveat",
       "kind": "stop",
@@ -33,7 +44,7 @@
       "action": null,
       "why": "Added GPT-6.1 Terra to the model catalogs. · Added a repository filter to the session picker and directory grouping to the agent command center, making it easier to navigate sessions across linked worktrees.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
-      "score": 59
+      "score": 57
     },
     {
       "id": "cc-2.1.312-1",
@@ -45,8 +56,10 @@
       "why": "Added in v2.1.312.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
       "tipId": null,
-      "score": 39
-    },
+      "score": 37
+    }
+  ],
+  "more": [
     {
       "id": "cc-2.1.311-2",
       "kind": "new",
@@ -57,10 +70,8 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 37
-    }
-  ],
-  "more": [
+      "score": 35
+    },
     {
       "id": "cc-2.1.311-3",
       "kind": "new",
@@ -71,19 +82,7 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 37
-    },
-    {
-      "id": "cc-2.1.307-5",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-21T22:17:02Z",
-      "title": "`/claude-api api-version` to move Claude API code to API version `2026-10-21`",
-      "action": null,
-      "why": "Added in v2.1.307.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
-      "tipId": null,
-      "score": 27
+      "score": 35
     }
   ]
 }
