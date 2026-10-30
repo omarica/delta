@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T12:57:25.654Z",
+  "generated": "2026-10-30T12:50:56.581Z",
   "window_days": 7,
   "items": [
     {
@@ -9,9 +9,20 @@
       "date": "2026-10-29T03:33:42Z",
       "title": "Claude Code regularly sends each background agent’s transcript to its model",
       "action": null,
-      "why": "450 points, 183 comments on Hacker News.",
+      "why": "569 points, 232 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50284255",
-      "score": 72
+      "score": 71
+    },
+    {
+      "id": "hn-50302334",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T11:05:53Z",
+      "title": "Backdoors in official Claude Code extensions",
+      "action": null,
+      "why": "321 points, 81 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50302334",
+      "score": 65
     },
     {
       "id": "curated-ponytail-caveat",
@@ -36,18 +47,44 @@
       "score": 62
     },
     {
-      "id": "rel-openai/codex-rust-v0.165.0",
+      "id": "rel-openai/codex-rust-v0.166.0",
       "kind": "new",
       "tool": "Codex",
-      "date": "2026-10-27T20:09:38Z",
-      "title": "Codex 0.165.0: Added a built-in Google Cloud Vertex AI provider, configured with `model_provider = \"gcp\"`.",
+      "date": "2026-10-29T19:47:53Z",
+      "title": "Codex 0.166.0: Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts.",
       "action": null,
-      "why": "Added GPT-6.1 Terra to the model catalogs. · Added a repository filter to the session picker and directory grouping to the agent command center, making it easier to navigate sessions across linked worktrees.",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
-      "score": 57
+      "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+      "score": 59
+    }
+  ],
+  "more": [
+    {
+      "id": "cc-2.1.314-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-30T01:06:26Z",
+      "title": "`permissions.blockWritesOutsideWorkingDirectories`: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode",
+      "action": null,
+      "why": "Added in v2.1.314.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+      "tipId": null,
+      "score": 39
     },
     {
-      "id": "cc-2.1.312-1",
+      "id": "cc-2.1.314-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-30T01:06:26Z",
+      "title": "idle compaction to VS Code and Claude Desktop's Code tab: a 200K+ token conversation left idle is summarized, and the summary is used on your next message if th",
+      "action": null,
+      "why": "Added in v2.1.314.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.312-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-27T20:24:20Z",
@@ -56,12 +93,10 @@
       "why": "Added in v2.1.312.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
       "tipId": null,
-      "score": 37
-    }
-  ],
-  "more": [
+      "score": 35
+    },
     {
-      "id": "cc-2.1.311-2",
+      "id": "cc-2.1.311-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -70,10 +105,10 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
-      "id": "cc-2.1.311-3",
+      "id": "cc-2.1.311-7",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -82,7 +117,18 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 35
+      "score": 33
+    },
+    {
+      "id": "hn-50291116",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-29T15:56:32Z",
+      "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+      "action": null,
+      "why": "73 points, 26 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50291116",
+      "score": 25
     }
   ]
 }
