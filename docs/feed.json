@@ -1,7 +1,18 @@
 {
-  "generated": "2026-10-30T12:50:56.581Z",
+  "generated": "2026-10-31T12:22:21.035Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50300683",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T07:09:12Z",
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "action": null,
+      "why": "914 points, 535 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50300683",
+      "score": 71
+    },
     {
       "id": "hn-50284255",
       "kind": "news",
@@ -9,20 +20,21 @@
       "date": "2026-10-29T03:33:42Z",
       "title": "Claude Code regularly sends each background agent’s transcript to its model",
       "action": null,
-      "why": "569 points, 232 comments on Hacker News.",
+      "why": "583 points, 235 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50284255",
-      "score": 71
+      "score": 70
     },
     {
-      "id": "hn-50302334",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T11:05:53Z",
-      "title": "Backdoors in official Claude Code extensions",
-      "action": null,
-      "why": "321 points, 81 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50302334",
-      "score": 65
+      "id": "cc-2.1.316-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-31T01:01:35Z",
+      "title": "`CLAUDE_CODE_SUBAGENT_EFFORT` to set the effort level subagents run at when nothing else names one, instead of inheriting the session's",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "tipId": "codex-multi-agent",
+      "score": 62
     },
     {
       "id": "curated-ponytail-caveat",
@@ -45,6 +57,30 @@
       "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
       "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
       "score": 62
+    }
+  ],
+  "more": [
+    {
+      "id": "hn-50302334",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T11:05:53Z",
+      "title": "Backdoors in official Claude Code extensions",
+      "action": null,
+      "why": "655 points, 17 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50302334",
+      "score": 60
+    },
+    {
+      "id": "hn-50301983",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T10:22:51Z",
+      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
+      "action": null,
+      "why": "399 points, 1 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50301983",
+      "score": 59
     },
     {
       "id": "rel-openai/codex-rust-v0.166.0",
@@ -55,12 +91,22 @@
       "action": null,
       "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-      "score": 59
-    }
-  ],
-  "more": [
+      "score": 57
+    },
     {
-      "id": "cc-2.1.314-0",
+      "id": "cc-2.1.316-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-31T01:01:35Z",
+      "title": "`CLAUDE_CODE_DISABLE_ULTRATHINK`, which turns the `ultrathink` keyword off",
+      "action": null,
+      "why": "Added in v2.1.316.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.314-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-30T01:06:26Z",
@@ -69,10 +115,10 @@
       "why": "Added in v2.1.314.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
       "tipId": null,
-      "score": 39
+      "score": 37
     },
     {
-      "id": "cc-2.1.314-3",
+      "id": "cc-2.1.314-9",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-30T01:06:26Z",
@@ -81,10 +127,10 @@
       "why": "Added in v2.1.314.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
       "tipId": null,
-      "score": 39
+      "score": 37
     },
     {
-      "id": "cc-2.1.312-5",
+      "id": "cc-2.1.312-11",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-27T20:24:20Z",
@@ -93,10 +139,10 @@
       "why": "Added in v2.1.312.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
-      "id": "cc-2.1.311-6",
+      "id": "cc-2.1.311-12",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -105,10 +151,10 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 33
+      "score": 31
     },
     {
-      "id": "cc-2.1.311-7",
+      "id": "cc-2.1.311-13",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-26T21:51:23Z",
@@ -117,7 +163,7 @@
       "why": "Added in v2.1.311.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
       "tipId": null,
-      "score": 33
+      "score": 31
     },
     {
       "id": "hn-50291116",
@@ -126,9 +172,9 @@
       "date": "2026-10-29T15:56:32Z",
       "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
       "action": null,
-      "why": "73 points, 26 comments on Hacker News.",
+      "why": "77 points, 35 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50291116",
-      "score": 25
+      "score": 26
     }
   ]
 }
