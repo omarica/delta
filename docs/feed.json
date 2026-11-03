@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T15:44:56.090Z",
+  "generated": "2026-11-03T14:08:47.967Z",
   "window_days": 7,
   "items": [
     {
@@ -9,9 +9,9 @@
       "date": "2026-10-30T07:09:12Z",
       "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
       "action": null,
-      "why": "1005 points, 553 comments on Hacker News.",
+      "why": "1008 points, 553 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50300683",
-      "score": 69
+      "score": 68
     },
     {
       "id": "hn-50284255",
@@ -20,78 +20,21 @@
       "date": "2026-10-29T03:33:42Z",
       "title": "Claude Code regularly sends each background agent’s transcript to its model",
       "action": null,
-      "why": "588 points, 236 comments on Hacker News.",
+      "why": "589 points, 236 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50284255",
       "score": 67
     },
     {
-      "id": "curated-ponytail-caveat",
-      "kind": "stop",
-      "tool": "Plugins",
-      "date": "2026-10-03T00:00:00.000Z",
-      "title": "Ponytail: useful, but not a token saver",
-      "action": "Judge it on code size, not tokens. Viral videos claim 50%+ token savings; the top reply cites the docs saying that is not its purpose.",
-      "why": "Reported 3,629 -> 490 lines on one task; the savings claim is disputed.",
-      "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
-      "score": 62
-    },
-    {
-      "id": "curated-omniroute-caution",
-      "kind": "stop",
-      "tool": "Plugins",
-      "date": "2026-10-03T00:00:00.000Z",
-      "title": "Treat \"unlimited free usage\" routers with suspicion",
-      "action": "Before installing a router that pools free third-party providers, read its source: your prompts and code pass through it. Unverified community warning, not a confirmed finding.",
-      "why": "A plugin-stack video promoting one drew a 'do not install' reply; verify yourself.",
-      "url": "https://www.tiktok.com/@ai.honeycove/video/7683640993203113229",
-      "score": 62
-    },
-    {
-      "id": "cc-2.1.316-3",
+      "id": "cc-2.1.317-4",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-10-31T01:01:35Z",
-      "title": "`CLAUDE_CODE_SUBAGENT_EFFORT` to set the effort level subagents run at when nothing else names one, instead of inheriting the session's",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view",
       "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": "codex-multi-agent",
-      "score": 58
-    }
-  ],
-  "more": [
-    {
-      "id": "hn-50320588",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-31T21:49:07Z",
-      "title": "ChatGPT and Codex usage limits merging",
-      "action": null,
-      "why": "228 points, 168 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50320588",
-      "score": 65
-    },
-    {
-      "id": "hn-50302334",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T11:05:53Z",
-      "title": "Backdoors in official Claude Code extensions",
-      "action": null,
-      "why": "661 points, 17 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50302334",
-      "score": 58
-    },
-    {
-      "id": "hn-50301983",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T10:22:51Z",
-      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
-      "action": null,
-      "why": "399 points, 1 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50301983",
-      "score": 57
+      "score": 62
     },
     {
       "id": "rel-openai/codex-rust-v0.166.0",
@@ -102,10 +45,128 @@
       "action": null,
       "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.316-0",
+      "id": "cc-2.1.317-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "`onFailure: \"block\"` for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 47
+    }
+  ],
+  "more": [
+    {
+      "id": "hn-50320588",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-31T21:49:07Z",
+      "title": "ChatGPT and Codex usage limits merging",
+      "action": null,
+      "why": "233 points, 171 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50320588",
+      "score": 65
+    },
+    {
+      "id": "hn-50302334",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T11:05:53Z",
+      "title": "Backdoors in official Claude Code extensions",
+      "action": null,
+      "why": "662 points, 17 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50302334",
+      "score": 57
+    },
+    {
+      "id": "hn-50301983",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T10:22:51Z",
+      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
+      "action": null,
+      "why": "399 points, 1 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50301983",
+      "score": 56
+    },
+    {
+      "id": "cc-2.1.316-12",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-10-31T01:01:35Z",
+      "title": "`CLAUDE_CODE_SUBAGENT_EFFORT` to set the effort level subagents run at when nothing else names one, instead of inheriting the session's",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "tipId": "codex-multi-agent",
+      "score": 56
+    },
+    {
+      "id": "hn-50339913",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-02T17:05:25Z",
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "action": null,
+      "why": "152 points, 101 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50339913",
+      "score": 46
+    },
+    {
+      "id": "cc-2.1.317-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for, with how to remove them",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.317-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "a check that asks before a web or shell tool call sends your account email address to the network",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.317-5",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "`anthropic.plan`, `anthropic.seat_type`, `anthropic.provider` and `anthropic.custom_base_url` to OTel metrics, events and spans",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.317-8",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "`CLAUDE_CODE_DISABLE_NESTED_SESSION_ID`: set it to `1` on a self-hosted runner to have `claude -p` run inside a session use that session's ID and transcript, as",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.316-9",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-31T01:01:35Z",
@@ -114,10 +175,10 @@
       "why": "Added in v2.1.316.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
-      "id": "cc-2.1.314-6",
+      "id": "cc-2.1.314-15",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-30T01:06:26Z",
@@ -126,10 +187,10 @@
       "why": "Added in v2.1.314.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
       "tipId": null,
-      "score": 33
+      "score": 31
     },
     {
-      "id": "cc-2.1.314-9",
+      "id": "cc-2.1.314-18",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-30T01:06:26Z",
@@ -138,54 +199,7 @@
       "why": "Added in v2.1.314.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
       "tipId": null,
-      "score": 33
-    },
-    {
-      "id": "cc-2.1.312-11",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-27T20:24:20Z",
-      "title": "click to send: in fullscreen, clicking the \"to send now\" hint under a queued message sends it right away, as its key does",
-      "action": null,
-      "why": "Added in v2.1.312.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
-      "tipId": null,
-      "score": 28
-    },
-    {
-      "id": "cc-2.1.311-12",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-26T21:51:23Z",
-      "title": "`--hold-idle-file` and `--max-hold-min` to `self-hosted-runner`, to keep an idle session while your host reports processes it left running",
-      "action": null,
-      "why": "Added in v2.1.311.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "cc-2.1.311-13",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-26T21:51:23Z",
-      "title": "a tip for the Explanatory output style, shown when you ask Claude for explanations",
-      "action": null,
-      "why": "Added in v2.1.311.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
-      "tipId": null,
-      "score": 27
-    },
-    {
-      "id": "hn-50315987",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-31T13:25:00Z",
-      "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
-      "action": null,
-      "why": "74 points, 43 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50315987",
-      "score": 26
+      "score": 31
     }
   ]
 }
