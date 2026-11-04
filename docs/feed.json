@@ -1,7 +1,18 @@
 {
-  "generated": "2026-11-03T14:08:47.967Z",
+  "generated": "2026-11-04T14:29:17.858Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50352757",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-03T14:53:41Z",
+      "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+      "action": null,
+      "why": "502 points, 149 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50352757",
+      "score": 69
+    },
     {
       "id": "hn-50300683",
       "kind": "news",
@@ -9,23 +20,12 @@
       "date": "2026-10-30T07:09:12Z",
       "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
       "action": null,
-      "why": "1008 points, 553 comments on Hacker News.",
+      "why": "1010 points, 553 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50300683",
-      "score": 68
-    },
-    {
-      "id": "hn-50284255",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-29T03:33:42Z",
-      "title": "Claude Code regularly sends each background agent’s transcript to its model",
-      "action": null,
-      "why": "589 points, 236 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50284255",
       "score": 67
     },
     {
-      "id": "cc-2.1.317-4",
+      "id": "cc-2.1.317-9",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-03T01:25:46Z",
@@ -34,7 +34,19 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": "codex-multi-agent",
-      "score": 62
+      "score": 60
+    },
+    {
+      "id": "cc-2.1.318-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-04T00:01:03Z",
+      "title": "a record of your answer when Claude Code asks to turn on the mods it writes in a session",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "tipId": "mods",
+      "score": 54
     },
     {
       "id": "rel-openai/codex-rust-v0.166.0",
@@ -45,22 +57,21 @@
       "action": null,
       "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-      "score": 50
-    },
-    {
-      "id": "cc-2.1.317-2",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "`onFailure: \"block\"` for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
-      "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": null,
-      "score": 47
+      "score": 48
     }
   ],
   "more": [
+    {
+      "id": "hn-50284255",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-29T03:33:42Z",
+      "title": "Claude Code regularly sends each background agent’s transcript to its model",
+      "action": null,
+      "why": "589 points, 236 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50284255",
+      "score": 66
+    },
     {
       "id": "hn-50320588",
       "kind": "news",
@@ -68,7 +79,7 @@
       "date": "2026-10-31T21:49:07Z",
       "title": "ChatGPT and Codex usage limits merging",
       "action": null,
-      "why": "233 points, 171 comments on Hacker News.",
+      "why": "234 points, 174 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50320588",
       "score": 65
     },
@@ -81,7 +92,7 @@
       "action": null,
       "why": "662 points, 17 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50302334",
-      "score": 57
+      "score": 56
     },
     {
       "id": "hn-50301983",
@@ -92,10 +103,10 @@
       "action": null,
       "why": "399 points, 1 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50301983",
-      "score": 56
+      "score": 55
     },
     {
-      "id": "cc-2.1.316-12",
+      "id": "cc-2.1.316-17",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-10-31T01:01:35Z",
@@ -104,7 +115,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
       "tipId": "codex-multi-agent",
-      "score": 56
+      "score": 54
     },
     {
       "id": "hn-50339913",
@@ -113,31 +124,43 @@
       "date": "2026-11-02T17:05:25Z",
       "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
       "action": null,
-      "why": "152 points, 101 comments on Hacker News.",
+      "why": "161 points, 126 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50339913",
-      "score": 46
+      "score": 49
     },
     {
-      "id": "cc-2.1.317-0",
+      "id": "cc-2.1.317-7",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-03T01:25:46Z",
-      "title": "a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for, with how to remove them",
+      "title": "`onFailure: \"block\"` for Agent SDK hook callbacks, so a callback that fails blocks the action instead of letting it run",
       "action": null,
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
+      "score": 45
+    },
+    {
+      "id": "cc-2.1.318-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-04T00:01:03Z",
+      "title": "the date a stored claude.ai sign-in ends to `claude auth status` (`loginExpiresAt`) and to `claude -p` JSON results (`credential_expires_at`)",
+      "action": null,
+      "why": "Added in v2.1.318.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "tipId": null,
       "score": 39
     },
     {
-      "id": "cc-2.1.317-1",
+      "id": "cc-2.1.318-4",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "a check that asks before a web or shell tool call sends your account email address to the network",
+      "date": "2026-11-04T00:01:03Z",
+      "title": "a one-line stderr warning to `claude -p` text output, starting 10 days before a stored claude.ai sign-in ends",
       "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "why": "Added in v2.1.318.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": null,
       "score": 39
     },
@@ -146,60 +169,36 @@
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-03T01:25:46Z",
+      "title": "a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for, with how to remove them",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 37
+    },
+    {
+      "id": "cc-2.1.317-6",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "a check that asks before a web or shell tool call sends your account email address to the network",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 37
+    },
+    {
+      "id": "cc-2.1.317-10",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
       "title": "`anthropic.plan`, `anthropic.seat_type`, `anthropic.provider` and `anthropic.custom_base_url` to OTel metrics, events and spans",
       "action": null,
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 39
-    },
-    {
-      "id": "cc-2.1.317-8",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "`CLAUDE_CODE_DISABLE_NESTED_SESSION_ID`: set it to `1` on a self-hosted runner to have `claude -p` run inside a session use that session's ID and transcript, as",
-      "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": null,
-      "score": 39
-    },
-    {
-      "id": "cc-2.1.316-9",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-31T01:01:35Z",
-      "title": "`CLAUDE_CODE_DISABLE_ULTRATHINK`, which turns the `ultrathink` keyword off",
-      "action": null,
-      "why": "Added in v2.1.316.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-      "tipId": null,
-      "score": 33
-    },
-    {
-      "id": "cc-2.1.314-15",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-30T01:06:26Z",
-      "title": "`permissions.blockWritesOutsideWorkingDirectories`: Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode",
-      "action": null,
-      "why": "Added in v2.1.314.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
-      "tipId": null,
-      "score": 31
-    },
-    {
-      "id": "cc-2.1.314-18",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-10-30T01:06:26Z",
-      "title": "idle compaction to VS Code and Claude Desktop's Code tab: a 200K+ token conversation left idle is summarized, and the summary is used on your next message if th",
-      "action": null,
-      "why": "Added in v2.1.314.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
-      "tipId": null,
-      "score": 31
+      "score": 37
     }
   ]
 }
