@@ -1,7 +1,18 @@
 {
-  "generated": "2026-11-04T14:29:17.858Z",
+  "generated": "2026-11-05T14:37:43.425Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50366117",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-04T14:37:22Z",
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "action": null,
+      "why": "429 points, 497 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "score": 71
+    },
     {
       "id": "hn-50352757",
       "kind": "news",
@@ -9,20 +20,9 @@
       "date": "2026-11-03T14:53:41Z",
       "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
       "action": null,
-      "why": "502 points, 149 comments on Hacker News.",
+      "why": "521 points, 156 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50352757",
-      "score": 69
-    },
-    {
-      "id": "hn-50300683",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T07:09:12Z",
-      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-      "action": null,
-      "why": "1010 points, 553 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50300683",
-      "score": 67
+      "score": 68
     },
     {
       "id": "cc-2.1.317-9",
@@ -34,7 +34,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": "codex-multi-agent",
-      "score": 60
+      "score": 58
     },
     {
       "id": "cc-2.1.318-0",
@@ -46,7 +46,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": "mods",
-      "score": 54
+      "score": 52
     },
     {
       "id": "rel-openai/codex-rust-v0.166.0",
@@ -57,19 +57,30 @@
       "action": null,
       "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-      "score": 48
+      "score": 46
     }
   ],
   "more": [
     {
-      "id": "hn-50284255",
+      "id": "hn-50369925",
       "kind": "news",
       "tool": "Community",
-      "date": "2026-10-29T03:33:42Z",
-      "title": "Claude Code regularly sends each background agent’s transcript to its model",
+      "date": "2026-11-04T18:53:29Z",
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
       "action": null,
-      "why": "589 points, 236 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50284255",
+      "why": "315 points, 113 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50369925",
+      "score": 67
+    },
+    {
+      "id": "hn-50300683",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-10-30T07:09:12Z",
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "action": null,
+      "why": "1011 points, 553 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50300683",
       "score": 66
     },
     {
@@ -79,9 +90,9 @@
       "date": "2026-10-31T21:49:07Z",
       "title": "ChatGPT and Codex usage limits merging",
       "action": null,
-      "why": "234 points, 174 comments on Hacker News.",
+      "why": "236 points, 175 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50320588",
-      "score": 65
+      "score": 64
     },
     {
       "id": "hn-50302334",
@@ -92,7 +103,7 @@
       "action": null,
       "why": "662 points, 17 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50302334",
-      "score": 56
+      "score": 55
     },
     {
       "id": "hn-50301983",
@@ -103,7 +114,7 @@
       "action": null,
       "why": "399 points, 1 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50301983",
-      "score": 55
+      "score": 54
     },
     {
       "id": "cc-2.1.316-17",
@@ -115,7 +126,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
       "tipId": "codex-multi-agent",
-      "score": 54
+      "score": 52
     },
     {
       "id": "hn-50339913",
@@ -124,7 +135,7 @@
       "date": "2026-11-02T17:05:25Z",
       "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
       "action": null,
-      "why": "161 points, 126 comments on Hacker News.",
+      "why": "166 points, 132 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50339913",
       "score": 49
     },
@@ -138,7 +149,7 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.318-3",
@@ -150,7 +161,7 @@
       "why": "Added in v2.1.318.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": null,
-      "score": 39
+      "score": 37
     },
     {
       "id": "cc-2.1.318-4",
@@ -162,7 +173,7 @@
       "why": "Added in v2.1.318.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": null,
-      "score": 39
+      "score": 37
     },
     {
       "id": "cc-2.1.317-5",
@@ -174,7 +185,7 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.317-6",
@@ -186,19 +197,7 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 37
-    },
-    {
-      "id": "cc-2.1.317-10",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "`anthropic.plan`, `anthropic.seat_type`, `anthropic.provider` and `anthropic.custom_base_url` to OTel metrics, events and spans",
-      "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": null,
-      "score": 37
+      "score": 35
     }
   ]
 }
