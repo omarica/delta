@@ -1,7 +1,18 @@
 {
-  "generated": "2026-11-05T14:37:43.425Z",
+  "generated": "2026-11-06T14:14:58.249Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50385272",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-05T22:17:15Z",
+      "title": "Claude Code sends your email address to websites",
+      "action": null,
+      "why": "1326 points, 417 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50385272",
+      "score": 71
+    },
     {
       "id": "hn-50366117",
       "kind": "news",
@@ -9,20 +20,20 @@
       "date": "2026-11-04T14:37:22Z",
       "title": "Ask HN: What's your current AI agentic setup?",
       "action": null,
-      "why": "429 points, 497 comments on Hacker News.",
+      "why": "532 points, 654 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50366117",
-      "score": 71
+      "score": 70
     },
     {
-      "id": "hn-50352757",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-03T14:53:41Z",
-      "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+      "id": "rel-openai/codex-rust-v0.167.0",
+      "kind": "new",
+      "tool": "Codex",
+      "date": "2026-11-06T01:40:00Z",
+      "title": "Codex 0.167.0: Open the agent command center with `codex agents --no-daemon`. The command center and session picker now mark unread results (#58238, #58239, #58263, #58264).",
       "action": null,
-      "why": "521 points, 156 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50352757",
-      "score": 68
+      "why": "Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457). · Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446).",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+      "score": 59
     },
     {
       "id": "cc-2.1.317-9",
@@ -34,7 +45,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": "codex-multi-agent",
-      "score": 58
+      "score": 56
     },
     {
       "id": "cc-2.1.318-0",
@@ -46,21 +57,21 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": "mods",
-      "score": 52
-    },
-    {
-      "id": "rel-openai/codex-rust-v0.166.0",
-      "kind": "new",
-      "tool": "Codex",
-      "date": "2026-10-29T19:47:53Z",
-      "title": "Codex 0.166.0: Added keyboard-driven transcript selection with word, line, and page motions, integrated search, and configurable shortcuts.",
-      "action": null,
-      "why": "Rendered Markdown consistently in async questions, choices, answers, and transcript replies. · Added GPT-6.1 Terra to the bundled, Vertex AI, and Amazon Bedrock model catalogs.",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-      "score": 46
+      "score": 50
     }
   ],
   "more": [
+    {
+      "id": "hn-50352757",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-03T14:53:41Z",
+      "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+      "action": null,
+      "why": "526 points, 163 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50352757",
+      "score": 68
+    },
     {
       "id": "hn-50369925",
       "kind": "news",
@@ -68,20 +79,9 @@
       "date": "2026-11-04T18:53:29Z",
       "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
       "action": null,
-      "why": "315 points, 113 comments on Hacker News.",
+      "why": "336 points, 125 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50369925",
       "score": 67
-    },
-    {
-      "id": "hn-50300683",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T07:09:12Z",
-      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-      "action": null,
-      "why": "1011 points, 553 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50300683",
-      "score": 66
     },
     {
       "id": "hn-50320588",
@@ -92,29 +92,7 @@
       "action": null,
       "why": "236 points, 175 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50320588",
-      "score": 64
-    },
-    {
-      "id": "hn-50302334",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T11:05:53Z",
-      "title": "Backdoors in official Claude Code extensions",
-      "action": null,
-      "why": "662 points, 17 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50302334",
-      "score": 55
-    },
-    {
-      "id": "hn-50301983",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-10-30T10:22:51Z",
-      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
-      "action": null,
-      "why": "399 points, 1 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50301983",
-      "score": 54
+      "score": 63
     },
     {
       "id": "cc-2.1.316-17",
@@ -126,7 +104,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
       "tipId": "codex-multi-agent",
-      "score": 52
+      "score": 50
     },
     {
       "id": "hn-50339913",
@@ -135,9 +113,9 @@
       "date": "2026-11-02T17:05:25Z",
       "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
       "action": null,
-      "why": "166 points, 132 comments on Hacker News.",
+      "why": "166 points, 133 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50339913",
-      "score": 49
+      "score": 48
     },
     {
       "id": "cc-2.1.317-7",
@@ -149,7 +127,7 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.318-3",
@@ -161,7 +139,7 @@
       "why": "Added in v2.1.318.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.318-4",
@@ -173,7 +151,18 @@
       "why": "Added in v2.1.318.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
       "tipId": null,
-      "score": 37
+      "score": 35
+    },
+    {
+      "id": "hn-50381687",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-05T17:17:42Z",
+      "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+      "action": null,
+      "why": "107 points, 56 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50381687",
+      "score": 34
     },
     {
       "id": "cc-2.1.317-5",
@@ -185,7 +174,7 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 35
+      "score": 33
     },
     {
       "id": "cc-2.1.317-6",
@@ -197,7 +186,19 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 35
+      "score": 33
+    },
+    {
+      "id": "cc-2.1.317-10",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "`anthropic.plan`, `anthropic.seat_type`, `anthropic.provider` and `anthropic.custom_base_url` to OTel metrics, events and spans",
+      "action": null,
+      "why": "Added in v2.1.317.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": null,
+      "score": 33
     }
   ]
 }
