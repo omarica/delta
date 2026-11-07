@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T14:14:58.249Z",
+  "generated": "2026-11-07T12:57:10.420Z",
   "window_days": 7,
   "items": [
     {
@@ -9,9 +9,9 @@
       "date": "2026-11-05T22:17:15Z",
       "title": "Claude Code sends your email address to websites",
       "action": null,
-      "why": "1326 points, 417 comments on Hacker News.",
+      "why": "1578 points, 504 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50385272",
-      "score": 71
+      "score": 70
     },
     {
       "id": "hn-50366117",
@@ -20,9 +20,21 @@
       "date": "2026-11-04T14:37:22Z",
       "title": "Ask HN: What's your current AI agentic setup?",
       "action": null,
-      "why": "532 points, 654 comments on Hacker News.",
+      "why": "547 points, 678 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50366117",
-      "score": 70
+      "score": 69
+    },
+    {
+      "id": "cc-2.1.319-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "`permissions.denyInsteadOfPrompting` setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagen",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "tipId": "codex-multi-agent",
+      "score": 61
     },
     {
       "id": "rel-openai/codex-rust-v0.167.0",
@@ -33,31 +45,19 @@
       "action": null,
       "why": "Switch between connected backends from the terminal session picker and keep your drafts when switching (#58280, #58457). · Preview local image attachments while composing on supported terminals, and open viewed local images from clickable transcript paths (#58261, #58446).",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
-      "score": 59
+      "score": 57
     },
     {
-      "id": "cc-2.1.317-9",
+      "id": "cc-2.1.319-14",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view",
-      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
-      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": "codex-multi-agent",
-      "score": 56
-    },
-    {
-      "id": "cc-2.1.318-0",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-04T00:01:03Z",
-      "title": "a record of your answer when Claude Code asks to turn on the mods it writes in a session",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
-      "tipId": "mods",
-      "score": 50
+      "date": "2026-11-06T17:04:01Z",
+      "title": "a note to `/loop` confirmations in cloud sessions that a timer stops with its container, with an offer of a loop that survives",
+      "action": "Try: /loop 5m check the deploy and tell me if it fails",
+      "why": "Babysitting CI, deploys and PRs without staying in the chat.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "tipId": "loop",
+      "score": 53
     }
   ],
   "more": [
@@ -68,9 +68,9 @@
       "date": "2026-11-03T14:53:41Z",
       "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
       "action": null,
-      "why": "526 points, 163 comments on Hacker News.",
+      "why": "530 points, 163 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50352757",
-      "score": 68
+      "score": 67
     },
     {
       "id": "hn-50369925",
@@ -79,9 +79,9 @@
       "date": "2026-11-04T18:53:29Z",
       "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
       "action": null,
-      "why": "336 points, 125 comments on Hacker News.",
+      "why": "339 points, 127 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50369925",
-      "score": 67
+      "score": 66
     },
     {
       "id": "hn-50320588",
@@ -92,19 +92,43 @@
       "action": null,
       "why": "236 points, 175 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50320588",
-      "score": 63
+      "score": 62
     },
     {
-      "id": "cc-2.1.316-17",
+      "id": "cc-2.1.319-13",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-10-31T01:01:35Z",
-      "title": "`CLAUDE_CODE_SUBAGENT_EFFORT` to set the effort level subagents run at when nothing else names one, instead of inheriting the session's",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "an \"Earlier in this session\" row to `/tasks` that lists finished subagents, so you can reopen one and message it even after it leaves the list or you restart",
       "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": "codex-multi-agent",
-      "score": 50
+      "score": 61
+    },
+    {
+      "id": "cc-2.1.317-24",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-03T01:25:46Z",
+      "title": "a notice when auto mode's check has no answer for a subagent's tool call, which used to leave nothing in the main view",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "tipId": "codex-multi-agent",
+      "score": 54
+    },
+    {
+      "id": "cc-2.1.318-15",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-04T00:01:03Z",
+      "title": "a record of your answer when Claude Code asks to turn on the mods it writes in a session",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "tipId": "mods",
+      "score": 48
     },
     {
       "id": "hn-50339913",
@@ -113,12 +137,24 @@
       "date": "2026-11-02T17:05:25Z",
       "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
       "action": null,
-      "why": "166 points, 133 comments on Hacker News.",
+      "why": "167 points, 133 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50339913",
-      "score": 48
+      "score": 47
     },
     {
-      "id": "cc-2.1.317-7",
+      "id": "cc-2.1.319-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "support for MCP tasks in the terminal: when an MCP server runs a tool call as a task, Claude Code moves it to the background right away and tells Claude the res",
+      "action": null,
+      "why": "Added in v2.1.319.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "tipId": null,
+      "score": 46
+    },
+    {
+      "id": "cc-2.1.317-22",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-03T01:25:46Z",
@@ -127,78 +163,43 @@
       "why": "Added in v2.1.317.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
       "tipId": null,
-      "score": 41
+      "score": 39
     },
     {
-      "id": "cc-2.1.318-3",
+      "id": "cc-2.1.319-3",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-04T00:01:03Z",
-      "title": "the date a stored claude.ai sign-in ends to `claude auth status` (`loginExpiresAt`) and to `claude -p` JSON results (`credential_expires_at`)",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "`/claude-api latency-optimize` to find where your Claude API code makes people wait and try faster settings against your eval",
       "action": null,
-      "why": "Added in v2.1.318.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "why": "Added in v2.1.319.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 35
+      "score": 38
     },
     {
-      "id": "cc-2.1.318-4",
+      "id": "cc-2.1.319-11",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-04T00:01:03Z",
-      "title": "a one-line stderr warning to `claude -p` text output, starting 10 days before a stored claude.ai sign-in ends",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "a warning when your claude.ai login ends and Claude Code continues on the sign-in from `ant auth login`, which bills usage to your Claude Console organization",
       "action": null,
-      "why": "Added in v2.1.318.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "why": "Added in v2.1.319.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 35
+      "score": 38
     },
     {
-      "id": "hn-50381687",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-05T17:17:42Z",
-      "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
-      "action": null,
-      "why": "107 points, 56 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50381687",
-      "score": 34
-    },
-    {
-      "id": "cc-2.1.317-5",
+      "id": "cc-2.1.319-12",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "a warning to `/schedule` when a new cloud scheduled task gets connectors you did not ask for, with how to remove them",
+      "date": "2026-11-06T17:04:01Z",
+      "title": "a line at startup naming the Claude Console organization that is billed in a case where Claude Code uses the sign-in from `ant auth login`",
       "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+      "why": "Added in v2.1.319.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 33
-    },
-    {
-      "id": "cc-2.1.317-6",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "a check that asks before a web or shell tool call sends your account email address to the network",
-      "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": null,
-      "score": 33
-    },
-    {
-      "id": "cc-2.1.317-10",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-03T01:25:46Z",
-      "title": "`anthropic.plan`, `anthropic.seat_type`, `anthropic.provider` and `anthropic.custom_base_url` to OTel metrics, events and spans",
-      "action": null,
-      "why": "Added in v2.1.317.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
-      "tipId": null,
-      "score": 33
+      "score": 38
     }
   ]
 }
