@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T14:16:48.003Z",
+  "generated": "2026-11-12T15:09:23.508Z",
   "window_days": 7,
   "items": [
     {
@@ -12,7 +12,18 @@
       "why": "Added in v2.1.321.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
       "tipId": null,
-      "score": 71
+      "score": 69
+    },
+    {
+      "id": "hn-50431144",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-09T20:04:55Z",
+      "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+      "action": null,
+      "why": "379 points, 278 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50431144",
+      "score": 69
     },
     {
       "id": "hn-50415628",
@@ -21,31 +32,20 @@
       "date": "2026-11-08T18:16:07Z",
       "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
       "action": null,
-      "why": "901 points, 492 comments on Hacker News.",
+      "why": "902 points, 496 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50415628",
-      "score": 69
-    },
-    {
-      "id": "hn-50407882",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-07T20:45:32Z",
-      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
-      "action": null,
-      "why": "626 points, 428 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50407882",
       "score": 68
     },
     {
-      "id": "rel-openai/codex-rust-v0.167.1",
+      "id": "rel-openai/codex-rust-v0.167.2",
       "kind": "new",
       "tool": "Codex",
-      "date": "2026-11-10T21:32:01Z",
-      "title": "Codex 0.167.1: new release",
+      "date": "2026-11-11T22:44:46Z",
+      "title": "Codex 0.167.2: Codex now sends tool updates incrementally by default on Google Cloud Vertex AI. To opt out, set `incremental_tools_legacy_gcp = false` under `[features]` in `config",
       "action": null,
       "why": "See release notes.",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
-      "score": 54
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+      "score": 59
     },
     {
       "id": "cc-2.1.319-5",
@@ -57,7 +57,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": "codex-multi-agent",
-      "score": 53
+      "score": 51
     }
   ],
   "more": [
@@ -68,9 +68,20 @@
       "date": "2026-11-10T18:01:15Z",
       "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
       "action": null,
-      "why": "404 points, 132 comments on Hacker News.",
+      "why": "434 points, 142 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50443812",
       "score": 68
+    },
+    {
+      "id": "hn-50407882",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-07T20:45:32Z",
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "action": null,
+      "why": "626 points, 429 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50407882",
+      "score": 67
     },
     {
       "id": "hn-50385272",
@@ -79,31 +90,9 @@
       "date": "2026-11-05T22:17:15Z",
       "title": "Claude Code sends your email address to websites",
       "action": null,
-      "why": "1614 points, 535 comments on Hacker News.",
+      "why": "1615 points, 535 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50385272",
-      "score": 66
-    },
-    {
-      "id": "hn-50366117",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-04T14:37:22Z",
-      "title": "Ask HN: What's your current AI agentic setup?",
-      "action": null,
-      "why": "571 points, 711 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50366117",
       "score": 65
-    },
-    {
-      "id": "hn-50369925",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-04T18:53:29Z",
-      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-      "action": null,
-      "why": "341 points, 127 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50369925",
-      "score": 62
     },
     {
       "id": "cc-2.1.319-16",
@@ -115,7 +104,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": "codex-multi-agent",
-      "score": 53
+      "score": 51
     },
     {
       "id": "cc-2.1.319-17",
@@ -127,7 +116,7 @@
       "why": "Babysitting CI, deploys and PRs without staying in the chat.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": "loop",
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.319-3",
@@ -139,7 +128,7 @@
       "why": "Added in v2.1.319.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 38
+      "score": 36
     },
     {
       "id": "cc-2.1.322-0",
@@ -151,7 +140,7 @@
       "why": "Added in v2.1.322.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.321-2",
@@ -163,7 +152,7 @@
       "why": "Added in v2.1.321.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
       "tipId": null,
-      "score": 36
+      "score": 34
     },
     {
       "id": "hn-50381687",
@@ -174,7 +163,18 @@
       "action": null,
       "why": "122 points, 59 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50381687",
-      "score": 32
+      "score": 31
+    },
+    {
+      "id": "hn-50403153",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-07T10:01:48Z",
+      "title": "Ask HN: How do you manage your AI agents' context across clients and projects?",
+      "action": null,
+      "why": "99 points, 60 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50403153",
+      "score": 29
     },
     {
       "id": "cc-2.1.319-6",
@@ -186,7 +186,7 @@
       "why": "Added in v2.1.319.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 30
+      "score": 28
     },
     {
       "id": "cc-2.1.319-14",
@@ -198,7 +198,7 @@
       "why": "Added in v2.1.319.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "tipId": null,
-      "score": 30
+      "score": 28
     }
   ]
 }
