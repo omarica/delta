@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T14:32:37.096Z",
+  "generated": "2026-11-14T13:29:32.570Z",
   "window_days": 7,
   "items": [
     {
@@ -9,21 +9,9 @@
       "date": "2026-11-13T10:18:13Z",
       "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "action": null,
-      "why": "339 points, 298 comments on Hacker News.",
+      "why": "489 points, 387 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50481187",
-      "score": 72
-    },
-    {
-      "id": "cc-2.1.321-17",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-09T19:22:30Z",
-      "title": "Claude Fable 5.2 (`claude-fable-5-2`), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads",
-      "action": null,
-      "why": "Added in v2.1.321.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-      "tipId": null,
-      "score": 67
+      "score": 71
     },
     {
       "id": "hn-50415628",
@@ -32,12 +20,24 @@
       "date": "2026-11-08T18:16:07Z",
       "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
       "action": null,
-      "why": "903 points, 496 comments on Hacker News.",
+      "why": "905 points, 496 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50415628",
-      "score": 67
+      "score": 66
     },
     {
-      "id": "cc-2.1.323-3",
+      "id": "cc-2.1.321-20",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-09T19:22:30Z",
+      "title": "Claude Fable 5.2 (`claude-fable-5-2`), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads",
+      "action": null,
+      "why": "Added in v2.1.321.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "tipId": null,
+      "score": 65
+    },
+    {
+      "id": "cc-2.1.323-6",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -46,7 +46,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 62
+      "score": 60
     },
     {
       "id": "rel-openai/codex-rust-v0.169.0",
@@ -57,7 +57,7 @@
       "action": null,
       "why": "Search older tasks from the agent command center by name, prompt preview, or working directory. · Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool output searchable.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
-      "score": 60
+      "score": 58
     }
   ],
   "more": [
@@ -68,9 +68,9 @@
       "date": "2026-11-10T18:01:15Z",
       "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
       "action": null,
-      "why": "441 points, 145 comments on Hacker News.",
+      "why": "442 points, 146 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50443812",
-      "score": 67
+      "score": 66
     },
     {
       "id": "hn-50407882",
@@ -79,12 +79,12 @@
       "date": "2026-11-07T20:45:32Z",
       "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "action": null,
-      "why": "626 points, 430 comments on Hacker News.",
+      "why": "626 points, 431 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50407882",
-      "score": 66
+      "score": 65
     },
     {
-      "id": "cc-2.1.323-12",
+      "id": "cc-2.1.323-15",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -93,10 +93,22 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "codex-multi-agent",
-      "score": 62
+      "score": 60
     },
     {
-      "id": "cc-2.1.323-15",
+      "id": "cc-2.1.325-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-13T20:40:01Z",
+      "title": "a line under the error shown when your organization's policy blocks a request, saying how to continue: run `/rewind` and change the message, or run `/clear`",
+      "action": "Try: /rewind  → pick \"Summarize up to here\"",
+      "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "tipId": "rewind",
+      "score": 54
+    },
+    {
+      "id": "cc-2.1.323-18",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -105,34 +117,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 54
+      "score": 52
     },
     {
-      "id": "cc-2.1.319-21",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-06T17:04:01Z",
-      "title": "`permissions.denyInsteadOfPrompting` setting: a tool call that would wait on a permission prompt is denied and the turn continues, in terminal sessions, subagen",
-      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
-      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-      "tipId": "codex-multi-agent",
-      "score": 49
-    },
-    {
-      "id": "cc-2.1.319-32",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-06T17:04:01Z",
-      "title": "an \"Earlier in this session\" row to `/tasks` that lists finished subagents, so you can reopen one and message it even after it leaves the list or you restart",
-      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
-      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-      "tipId": "codex-multi-agent",
-      "score": 49
-    },
-    {
-      "id": "cc-2.1.323-1",
+      "id": "cc-2.1.323-4",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -141,10 +129,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.323-2",
+      "id": "cc-2.1.323-5",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -153,10 +141,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.323-6",
+      "id": "cc-2.1.323-9",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -165,10 +153,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.323-10",
+      "id": "cc-2.1.323-13",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -177,10 +165,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.323-14",
+      "id": "cc-2.1.323-17",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -189,19 +177,31 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.319-33",
+      "id": "cc-2.1.325-0",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-06T17:04:01Z",
-      "title": "a note to `/loop` confirmations in cloud sessions that a timer stops with its container, with an offer of a loop that survives",
-      "action": "Try: /loop 5m check the deploy and tell me if it fails",
-      "why": "Babysitting CI, deploys and PRs without staying in the chat.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-      "tipId": "loop",
-      "score": 41
+      "date": "2026-11-13T20:40:01Z",
+      "title": "a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook",
+      "action": null,
+      "why": "Added in v2.1.325.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.325-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-13T20:40:01Z",
+      "title": "a note for Claude when a sandboxed `git checkout`, `git stash` or autostash pull cannot update protected files such as those in `.claude`",
+      "action": null,
+      "why": "Added in v2.1.325.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "tipId": null,
+      "score": 39
     }
   ]
 }
