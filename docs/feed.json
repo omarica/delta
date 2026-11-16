@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T13:55:19.776Z",
+  "generated": "2026-11-16T15:40:45.963Z",
   "window_days": 7,
   "items": [
     {
@@ -9,20 +9,20 @@
       "date": "2026-11-13T10:18:13Z",
       "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "action": null,
-      "why": "493 points, 389 comments on Hacker News.",
+      "why": "493 points, 392 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50481187",
-      "score": 70
+      "score": 69
     },
     {
-      "id": "hn-50415628",
+      "id": "hn-50463399",
       "kind": "news",
       "tool": "Community",
-      "date": "2026-11-08T18:16:07Z",
-      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+      "date": "2026-11-12T05:29:24Z",
+      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
       "action": null,
-      "why": "905 points, 497 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50415628",
-      "score": 65
+      "why": "438 points, 220 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50463399",
+      "score": 68
     },
     {
       "id": "cc-2.1.321-20",
@@ -34,7 +34,7 @@
       "why": "Added in v2.1.321.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
       "tipId": null,
-      "score": 63
+      "score": 61
     },
     {
       "id": "cc-2.1.323-6",
@@ -46,7 +46,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 58
+      "score": 56
     },
     {
       "id": "rel-openai/codex-rust-v0.169.0",
@@ -57,7 +57,7 @@
       "action": null,
       "why": "Search older tasks from the agent command center by name, prompt preview, or working directory. · Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool output searchable.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
-      "score": 56
+      "score": 53
     }
   ],
   "more": [
@@ -68,9 +68,9 @@
       "date": "2026-11-10T18:01:15Z",
       "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
       "action": null,
-      "why": "446 points, 146 comments on Hacker News.",
+      "why": "448 points, 146 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50443812",
-      "score": 65
+      "score": 64
     },
     {
       "id": "cc-2.1.323-15",
@@ -82,7 +82,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "codex-multi-agent",
-      "score": 58
+      "score": 56
     },
     {
       "id": "cc-2.1.325-1",
@@ -94,7 +94,7 @@
       "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "tipId": "rewind",
-      "score": 52
+      "score": 49
     },
     {
       "id": "cc-2.1.323-18",
@@ -106,7 +106,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 50
+      "score": 48
     },
     {
       "id": "cc-2.1.323-4",
@@ -118,7 +118,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.323-5",
@@ -130,7 +130,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.323-9",
@@ -142,7 +142,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.323-13",
@@ -154,7 +154,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.323-17",
@@ -166,7 +166,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.325-0",
@@ -178,7 +178,7 @@
       "why": "Added in v2.1.325.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "tipId": null,
-      "score": 37
+      "score": 34
     },
     {
       "id": "cc-2.1.325-2",
@@ -190,19 +190,18 @@
       "why": "Added in v2.1.325.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "tipId": null,
-      "score": 37
+      "score": 34
     },
     {
-      "id": "cc-2.1.323-3",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-12T22:12:13Z",
-      "title": "Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see https://code.claude.com/docs/en/code-mode to turn it on, or to turn i",
+      "id": "hn-50492141",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-14T00:28:11Z",
+      "title": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
       "action": null,
-      "why": "Added in v2.1.323.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "tipId": null,
-      "score": 35
+      "why": "100 points, 96 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50492141",
+      "score": 34
     }
   ]
 }
