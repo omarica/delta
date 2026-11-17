@@ -1,7 +1,18 @@
 {
-  "generated": "2026-11-16T15:40:45.963Z",
+  "generated": "2026-11-17T15:58:21.645Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "hn-50524736",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-16T22:58:20Z",
+      "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+      "action": null,
+      "why": "679 points, 539 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50524736",
+      "score": 71
+    },
     {
       "id": "hn-50481187",
       "kind": "news",
@@ -9,35 +20,24 @@
       "date": "2026-11-13T10:18:13Z",
       "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "action": null,
-      "why": "493 points, 392 comments on Hacker News.",
+      "why": "493 points, 393 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50481187",
-      "score": 69
-    },
-    {
-      "id": "hn-50463399",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-12T05:29:24Z",
-      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
-      "action": null,
-      "why": "438 points, 220 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50463399",
       "score": 68
     },
     {
-      "id": "cc-2.1.321-20",
+      "id": "cc-2.1.326-7",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-09T19:22:30Z",
-      "title": "Claude Fable 5.2 (`claude-fable-5-2`), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads",
-      "action": null,
-      "why": "Added in v2.1.321.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-      "tipId": null,
-      "score": 61
+      "date": "2026-11-16T22:11:05Z",
+      "title": "an `esc to stop` footer hint in a subagent's view where Esc would stop it",
+      "action": "Try: ~/.codex/config.toml → [features] multi_agent = true, hooks = true",
+      "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "tipId": "codex-multi-agent",
+      "score": 62
     },
     {
-      "id": "cc-2.1.323-6",
+      "id": "cc-2.1.323-16",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -46,7 +46,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 56
+      "score": 54
     },
     {
       "id": "rel-openai/codex-rust-v0.169.0",
@@ -57,10 +57,21 @@
       "action": null,
       "why": "Search older tasks from the agent command center by name, prompt preview, or working directory. · Turn on **Collapse turn details** in the full-screen transcript to fold completed activity beneath each prompt while keeping answers visible and tool output searchable.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
-      "score": 53
+      "score": 51
     }
   ],
   "more": [
+    {
+      "id": "hn-50463399",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-12T05:29:24Z",
+      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+      "action": null,
+      "why": "454 points, 240 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50463399",
+      "score": 67
+    },
     {
       "id": "hn-50443812",
       "kind": "news",
@@ -70,10 +81,10 @@
       "action": null,
       "why": "448 points, 146 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50443812",
-      "score": 64
+      "score": 63
     },
     {
-      "id": "cc-2.1.323-15",
+      "id": "cc-2.1.323-25",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -82,10 +93,22 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "codex-multi-agent",
-      "score": 56
+      "score": 54
     },
     {
-      "id": "cc-2.1.325-1",
+      "id": "cc-2.1.326-9",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-16T22:11:05Z",
+      "title": "`overflowX=\"scroll\"` on a mod's `Box`, and `maxLines` and `wrap=\"clip\"` on its `Text`",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "tipId": "mods",
+      "score": 54
+    },
+    {
+      "id": "cc-2.1.325-11",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-13T20:40:01Z",
@@ -94,10 +117,22 @@
       "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "tipId": "rewind",
-      "score": 49
+      "score": 47
     },
     {
-      "id": "cc-2.1.323-18",
+      "id": "cc-2.1.326-4",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-16T22:11:05Z",
+      "title": "a note in `/plugin` and `claude plugin list` when a malformed `plugin.json` field such as `author` or `homepage` is ignored",
+      "action": null,
+      "why": "Added in v2.1.326.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.323-28",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -106,10 +141,32 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 48
+      "score": 46
     },
     {
-      "id": "cc-2.1.323-4",
+      "id": "hn-50529612",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-17T10:20:40Z",
+      "title": "How the Claude Code team thinks about verification",
+      "action": null,
+      "why": "123 points, 125 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50529612",
+      "score": 43
+    },
+    {
+      "id": "hn-50526152",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-17T01:18:56Z",
+      "title": "Running coding agents without handing them my credentials",
+      "action": null,
+      "why": "124 points, 105 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50526152",
+      "score": 41
+    },
+    {
+      "id": "cc-2.1.323-14",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -118,10 +175,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 41
+      "score": 39
     },
     {
-      "id": "cc-2.1.323-5",
+      "id": "cc-2.1.323-15",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -130,10 +187,10 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 41
+      "score": 39
     },
     {
-      "id": "cc-2.1.323-9",
+      "id": "cc-2.1.323-19",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -142,66 +199,7 @@
       "why": "Added in v2.1.323.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": null,
-      "score": 41
-    },
-    {
-      "id": "cc-2.1.323-13",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-12T22:12:13Z",
-      "title": "a warning when a plugin's language server can't start, naming the server and what to check",
-      "action": null,
-      "why": "Added in v2.1.323.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "tipId": null,
-      "score": 41
-    },
-    {
-      "id": "cc-2.1.323-17",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-12T22:12:13Z",
-      "title": "`unsetOptionCount` to the `claude plugin install --json` result: how many `userConfig` options are not yet set",
-      "action": null,
-      "why": "Added in v2.1.323.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "tipId": null,
-      "score": 41
-    },
-    {
-      "id": "cc-2.1.325-0",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-13T20:40:01Z",
-      "title": "a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook",
-      "action": null,
-      "why": "Added in v2.1.325.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-      "tipId": null,
-      "score": 34
-    },
-    {
-      "id": "cc-2.1.325-2",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-13T20:40:01Z",
-      "title": "a note for Claude when a sandboxed `git checkout`, `git stash` or autostash pull cannot update protected files such as those in `.claude`",
-      "action": null,
-      "why": "Added in v2.1.325.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-      "tipId": null,
-      "score": 34
-    },
-    {
-      "id": "hn-50492141",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-14T00:28:11Z",
-      "title": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
-      "action": null,
-      "why": "100 points, 96 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50492141",
-      "score": 34
+      "score": 39
     }
   ]
 }
