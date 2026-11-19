@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T15:37:42.716Z",
+  "generated": "2026-11-19T15:43:29.485Z",
   "window_days": 7,
   "items": [
     {
@@ -9,9 +9,9 @@
       "date": "2026-11-17T21:16:12Z",
       "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
       "action": null,
-      "why": "270 points, 360 comments on Hacker News.",
+      "why": "322 points, 451 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50538303",
-      "score": 71
+      "score": 70
     },
     {
       "id": "hn-50529612",
@@ -20,12 +20,12 @@
       "date": "2026-11-17T10:20:40Z",
       "title": "How the Claude Code team thinks about verification",
       "action": null,
-      "why": "289 points, 229 comments on Hacker News.",
+      "why": "294 points, 233 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50529612",
-      "score": 71
+      "score": 70
     },
     {
-      "id": "cc-2.1.326-15",
+      "id": "cc-2.1.326-22",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-16T22:11:05Z",
@@ -34,7 +34,7 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "codex-multi-agent",
-      "score": 60
+      "score": 58
     },
     {
       "id": "rel-openai/codex-rust-v0.170.0",
@@ -45,10 +45,10 @@
       "action": null,
       "why": "Added automatically refreshed authentication headers for OpenTelemetry HTTP exporters. · Added experimental support for using identically named MCP servers across environments.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
-      "score": 59
+      "score": 57
     },
     {
-      "id": "cc-2.1.323-24",
+      "id": "cc-2.1.323-31",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -57,7 +57,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     }
   ],
   "more": [
@@ -68,9 +68,9 @@
       "date": "2026-11-16T22:58:20Z",
       "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
       "action": null,
-      "why": "725 points, 609 comments on Hacker News.",
+      "why": "728 points, 620 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50524736",
-      "score": 70
+      "score": 69
     },
     {
       "id": "hn-50481187",
@@ -79,23 +79,12 @@
       "date": "2026-11-13T10:18:13Z",
       "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "action": null,
-      "why": "494 points, 395 comments on Hacker News.",
+      "why": "494 points, 396 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50481187",
-      "score": 67
-    },
-    {
-      "id": "hn-50463399",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-12T05:29:24Z",
-      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
-      "action": null,
-      "why": "455 points, 242 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50463399",
       "score": 66
     },
     {
-      "id": "cc-2.1.323-33",
+      "id": "cc-2.1.323-40",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-12T22:12:13Z",
@@ -104,10 +93,10 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
       "tipId": "codex-multi-agent",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.326-17",
+      "id": "cc-2.1.326-24",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-16T22:11:05Z",
@@ -116,10 +105,46 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "mods",
-      "score": 52
+      "score": 50
     },
     {
-      "id": "cc-2.1.327-1",
+      "id": "cc-2.1.328-0",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-19T01:14:04Z",
+      "title": "auto mode for Claude Opus 4.6 and Sonnet 4.6 on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude apps gateway; interactive sessions w",
+      "action": null,
+      "why": "Added in v2.1.328.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "tipId": null,
+      "score": 49
+    },
+    {
+      "id": "cc-2.1.328-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-19T01:14:04Z",
+      "title": "`\"onFailure\": \"block\"` for `mcp_tool` hooks, as for command and HTTP hooks: a hook whose call fails blocks the action",
+      "action": null,
+      "why": "Added in v2.1.328.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.328-4",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-19T01:14:04Z",
+      "title": "`CLAUDE_CODE_DISABLE_DEFERRED_TOOL_RESUME`, which lets a host stop `claude -p --resume` and `--continue` from running a tool call that a hook deferred",
+      "action": null,
+      "why": "Added in v2.1.328.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.327-8",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-17T23:17:45Z",
@@ -128,10 +153,10 @@
       "why": "Added in v2.1.327.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.325-19",
+      "id": "cc-2.1.325-26",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-13T20:40:01Z",
@@ -140,10 +165,10 @@
       "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "tipId": "rewind",
-      "score": 45
+      "score": 43
     },
     {
-      "id": "cc-2.1.326-12",
+      "id": "cc-2.1.326-19",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-16T22:11:05Z",
@@ -152,19 +177,7 @@
       "why": "Added in v2.1.326.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": null,
-      "score": 45
-    },
-    {
-      "id": "cc-2.1.323-36",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-12T22:12:13Z",
-      "title": "`isPromptCovered` to the props a mod's pane is drawn with, telling it when a dialog or a field above the prompt covers the prompt",
-      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
-      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "tipId": "mods",
-      "score": 44
+      "score": 43
     },
     {
       "id": "hn-50526152",
@@ -173,33 +186,21 @@
       "date": "2026-11-17T01:18:56Z",
       "title": "Running coding agents without handing them my credentials",
       "action": null,
-      "why": "133 points, 113 comments on Hacker News.",
+      "why": "134 points, 115 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50526152",
-      "score": 43
+      "score": 42
     },
     {
-      "id": "cc-2.1.327-0",
+      "id": "cc-2.1.323-43",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-17T23:17:45Z",
-      "title": "a confirmation before `/install-github-app` changes a repository",
-      "action": null,
-      "why": "Added in v2.1.327.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
-      "tipId": null,
-      "score": 39
-    },
-    {
-      "id": "cc-2.1.327-2",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-17T23:17:45Z",
-      "title": "a line when a resumed session's earlier messages can't be loaded",
-      "action": null,
-      "why": "Added in v2.1.327.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
-      "tipId": null,
-      "score": 39
+      "date": "2026-11-12T22:12:13Z",
+      "title": "`isPromptCovered` to the props a mod's pane is drawn with, telling it when a dialog or a field above the prompt covers the prompt",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "tipId": "mods",
+      "score": 42
     }
   ]
 }
