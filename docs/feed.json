@@ -1,7 +1,19 @@
 {
-  "generated": "2026-11-20T15:25:26.252Z",
+  "generated": "2026-11-21T14:37:48.717Z",
   "window_days": 7,
   "items": [
+    {
+      "id": "cc-2.1.330-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-20T22:32:56Z",
+      "title": "easel, a built-in mod that draws charts when asked and under MCP metrics results, on Pro, Max and, where available, Team and Enterprise on macOS and Linux; turn",
+      "action": "Try: Ask Claude: \"use the plugin-authoring skill to make a mod that ...\"",
+      "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "tipId": "mods",
+      "score": 87
+    },
     {
       "id": "hn-50538303",
       "kind": "news",
@@ -9,9 +21,9 @@
       "date": "2026-11-17T21:16:12Z",
       "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
       "action": null,
-      "why": "327 points, 462 comments on Hacker News.",
+      "why": "328 points, 465 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50538303",
-      "score": 69
+      "score": 68
     },
     {
       "id": "hn-50529612",
@@ -22,7 +34,7 @@
       "action": null,
       "why": "296 points, 235 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50529612",
-      "score": 69
+      "score": 68
     },
     {
       "id": "rel-openai/codex-rust-v0.171.0",
@@ -33,10 +45,10 @@
       "action": null,
       "why": "Enabled the TUI workspace by default, with searchable document previews, image previews, and subagent transcripts alongside the main conversation. · Added configurable undo and redo shortcuts to the non-Vim prompt composer, including restoration of attachments and large pastes.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
-      "score": 59
+      "score": 57
     },
     {
-      "id": "cc-2.1.326-28",
+      "id": "cc-2.1.326-35",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-16T22:11:05Z",
@@ -45,18 +57,6 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "codex-multi-agent",
-      "score": 56
-    },
-    {
-      "id": "cc-2.1.329-2",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-19T22:14:41Z",
-      "title": "this session's scheduled tasks, `/loop` wakeups, the goal and this conversation's forks to `/tasks`; x stops one after asking",
-      "action": "Try: /loop 5m check the deploy and tell me if it fails",
-      "why": "Babysitting CI, deploys and PRs without staying in the chat.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
-      "tipId": "loop",
       "score": 54
     }
   ],
@@ -68,12 +68,48 @@
       "date": "2026-11-16T22:58:20Z",
       "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
       "action": null,
-      "why": "735 points, 623 comments on Hacker News.",
+      "why": "736 points, 624 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50524736",
-      "score": 68
+      "score": 67
     },
     {
-      "id": "cc-2.1.326-30",
+      "id": "cc-2.1.329-9",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-19T22:14:41Z",
+      "title": "this session's scheduled tasks, `/loop` wakeups, the goal and this conversation's forks to `/tasks`; x stops one after asking",
+      "action": "Try: /loop 5m check the deploy and tell me if it fails",
+      "why": "Babysitting CI, deploys and PRs without staying in the chat.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+      "tipId": "loop",
+      "score": 52
+    },
+    {
+      "id": "cc-2.1.330-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-20T22:32:56Z",
+      "title": "a notice in cloud and self-hosted runner sessions when a plugin marketplace can't be fetched because its repository isn't one of the session's",
+      "action": null,
+      "why": "Added in v2.1.330.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.330-4",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-20T22:32:56Z",
+      "title": "`commandPrinted` to `claude plugin install --json` results, true when the plugin's install command wrote to stderr, and `commandFailed` when it exited with an e",
+      "action": null,
+      "why": "Added in v2.1.330.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.326-37",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-16T22:11:05Z",
@@ -82,10 +118,10 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "mods",
-      "score": 48
+      "score": 46
     },
     {
-      "id": "cc-2.1.328-6",
+      "id": "cc-2.1.328-13",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T01:14:04Z",
@@ -94,10 +130,10 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.329-0",
+      "id": "cc-2.1.329-7",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T22:14:41Z",
@@ -106,10 +142,10 @@
       "why": "Added in v2.1.329.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.329-3",
+      "id": "cc-2.1.329-10",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T22:14:41Z",
@@ -118,10 +154,10 @@
       "why": "Added in v2.1.329.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
-      "id": "cc-2.1.328-7",
+      "id": "cc-2.1.328-14",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T01:14:04Z",
@@ -130,10 +166,10 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
-      "id": "cc-2.1.328-10",
+      "id": "cc-2.1.328-17",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T01:14:04Z",
@@ -142,10 +178,10 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
-      "id": "cc-2.1.327-14",
+      "id": "cc-2.1.327-21",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-17T23:17:45Z",
@@ -154,18 +190,6 @@
       "why": "Added in v2.1.327.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
       "tipId": null,
-      "score": 43
-    },
-    {
-      "id": "cc-2.1.325-32",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-13T20:40:01Z",
-      "title": "a line under the error shown when your organization's policy blocks a request, saying how to continue: run `/rewind` and change the message, or run `/clear`",
-      "action": "Try: /rewind  → pick \"Summarize up to here\"",
-      "why": "Keeps the useful part of a long session. Heavy /clear users usually lose context they wanted.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-      "tipId": "rewind",
       "score": 41
     },
     {
@@ -175,33 +199,9 @@
       "date": "2026-11-17T01:18:56Z",
       "title": "Running coding agents without handing them my credentials",
       "action": null,
-      "why": "134 points, 117 comments on Hacker News.",
+      "why": "134 points, 118 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50526152",
-      "score": 41
-    },
-    {
-      "id": "cc-2.1.326-25",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-16T22:11:05Z",
-      "title": "a note in `/plugin` and `claude plugin list` when a malformed `plugin.json` field such as `author` or `homepage` is ignored",
-      "action": null,
-      "why": "Added in v2.1.326.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
-      "tipId": null,
-      "score": 41
-    },
-    {
-      "id": "cc-2.1.328-8",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-19T01:14:04Z",
-      "title": "a warning when a message from a session that skips permission prompts may be held and dropped by a cloud session",
-      "action": null,
-      "why": "Added in v2.1.328.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
-      "tipId": null,
-      "score": 37
+      "score": 40
     }
   ]
 }
