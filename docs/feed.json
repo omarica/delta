@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T14:37:48.717Z",
+  "generated": "2026-11-22T14:32:19.783Z",
   "window_days": 7,
   "items": [
     {
@@ -12,18 +12,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": "mods",
-      "score": 87
-    },
-    {
-      "id": "hn-50538303",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-17T21:16:12Z",
-      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
-      "action": null,
-      "why": "328 points, 465 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50538303",
-      "score": 68
+      "score": 85
     },
     {
       "id": "hn-50529612",
@@ -32,9 +21,20 @@
       "date": "2026-11-17T10:20:40Z",
       "title": "How the Claude Code team thinks about verification",
       "action": null,
-      "why": "296 points, 235 comments on Hacker News.",
+      "why": "298 points, 235 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50529612",
-      "score": 68
+      "score": 67
+    },
+    {
+      "id": "hn-50524736",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-16T22:58:20Z",
+      "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
+      "action": null,
+      "why": "737 points, 624 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50524736",
+      "score": 66
     },
     {
       "id": "rel-openai/codex-rust-v0.171.0",
@@ -45,7 +45,7 @@
       "action": null,
       "why": "Enabled the TUI workspace by default, with searchable document previews, image previews, and subagent transcripts alongside the main conversation. · Added configurable undo and redo shortcuts to the non-Vim prompt composer, including restoration of attachments and large pastes.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
-      "score": 57
+      "score": 55
     },
     {
       "id": "cc-2.1.326-35",
@@ -57,21 +57,10 @@
       "why": "Parallel subagents and lifecycle hooks, the same shape as Claude Code's.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "codex-multi-agent",
-      "score": 54
+      "score": 52
     }
   ],
   "more": [
-    {
-      "id": "hn-50524736",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-16T22:58:20Z",
-      "title": "Windows 11 is collecting data on which coding agents and developer tools you use",
-      "action": null,
-      "why": "736 points, 624 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50524736",
-      "score": 67
-    },
     {
       "id": "cc-2.1.329-9",
       "kind": "new",
@@ -82,7 +71,18 @@
       "why": "Babysitting CI, deploys and PRs without staying in the chat.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": "loop",
-      "score": 52
+      "score": 50
+    },
+    {
+      "id": "hn-50586292",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-21T05:38:01Z",
+      "title": "ClawDOS – An AI coding agent for DOS",
+      "action": null,
+      "why": "166 points, 52 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50586292",
+      "score": 45
     },
     {
       "id": "cc-2.1.330-3",
@@ -94,7 +94,7 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
       "id": "cc-2.1.330-4",
@@ -106,7 +106,7 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 47
+      "score": 45
     },
     {
       "id": "cc-2.1.326-37",
@@ -118,7 +118,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
       "tipId": "mods",
-      "score": 46
+      "score": 44
     },
     {
       "id": "cc-2.1.328-13",
@@ -130,7 +130,7 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.329-7",
@@ -142,7 +142,7 @@
       "why": "Added in v2.1.329.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.329-10",
@@ -154,7 +154,7 @@
       "why": "Added in v2.1.329.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.328-14",
@@ -166,7 +166,7 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.328-17",
@@ -178,7 +178,7 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 43
+      "score": 41
     },
     {
       "id": "cc-2.1.327-21",
@@ -190,18 +190,19 @@
       "why": "Added in v2.1.327.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
       "tipId": null,
-      "score": 41
+      "score": 39
     },
     {
-      "id": "hn-50526152",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-17T01:18:56Z",
-      "title": "Running coding agents without handing them my credentials",
+      "id": "cc-2.1.330-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-20T22:32:56Z",
+      "title": "`CLAUDE_CODE_FULL_SIGN_IN_LINK=1` to print the full sign-in link, if the short one shows an error or a script reads values from it",
       "action": null,
-      "why": "134 points, 118 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50526152",
-      "score": 40
+      "why": "Added in v2.1.330.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "tipId": null,
+      "score": 37
     }
   ]
 }
