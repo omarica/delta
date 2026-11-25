@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-24T17:41:03.884Z",
+  "generated": "2026-11-25T17:10:57.923Z",
   "window_days": 7,
   "items": [
     {
-      "id": "cc-2.1.330-9",
+      "id": "cc-2.1.330-17",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-20T22:32:56Z",
@@ -12,18 +12,7 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": "mods",
-      "score": 80
-    },
-    {
-      "id": "hn-50538303",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-17T21:16:12Z",
-      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
-      "action": null,
-      "why": "332 points, 471 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50538303",
-      "score": 65
+      "score": 78
     },
     {
       "id": "rel-openai/codex-rust-v0.172.0",
@@ -34,19 +23,19 @@
       "action": null,
       "why": "Press `Tab` to complete arguments for supported slash commands. For example, `/mcp lo` completes to `/mcp login`. · Jump between task groups in the agent command center with `Shift+Up` and `Shift+Down`.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
-      "score": 59
+      "score": 57
     },
     {
-      "id": "cc-2.1.331-7",
+      "id": "cc-2.1.332-0",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "`optionalDependencies` to plugin manifests: plugins that install with the plugin listing them and can be disabled or uninstalled on their own",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "skills from MCP servers (beta). They show as `server:skill` in the `/` menu; other skills keep their names",
       "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 46
+      "score": 47
     },
     {
       "id": "hn-50586292",
@@ -57,12 +46,47 @@
       "action": null,
       "why": "176 points, 53 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50586292",
-      "score": 45
+      "score": 44
+    },
+    {
+      "id": "hn-50634426",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-24T20:44:15Z",
+      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+      "action": null,
+      "why": "99 points, 93 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50634426",
+      "score": 35
     }
   ],
   "more": [
     {
-      "id": "cc-2.1.329-17",
+      "id": "cc-2.1.332-1",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "a `PreSkillShellCommand` hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it open",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 47
+    },
+    {
+      "id": "cc-2.1.331-15",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-23T21:34:41Z",
+      "title": "`optionalDependencies` to plugin manifests: plugins that install with the plugin listing them and can be disabled or uninstalled on their own",
+      "action": null,
+      "why": "Added in v2.1.331.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+      "tipId": null,
+      "score": 44
+    },
+    {
+      "id": "cc-2.1.329-25",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T22:14:41Z",
@@ -71,10 +95,70 @@
       "why": "Babysitting CI, deploys and PRs without staying in the chat.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": "loop",
-      "score": 45
+      "score": 43
     },
     {
-      "id": "cc-2.1.330-11",
+      "id": "cc-2.1.332-2",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "\"Always deliver\" to the prompt for held messages from other sessions",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.332-3",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "a footer line that stays while a flagged message has your session on a different model, until you pick one with `/model`",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.332-5",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "a warning in VS Code and Desktop's Code tab when part of a session couldn't be saved, saying how to save it with `/compact`",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.332-6",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "a notice in VS Code and Desktop's Code tab when a resumed session's earlier messages weren't loaded, as the terminal already shows",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.332-7",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-25T01:32:14Z",
+      "title": "your Cyber Verification Program access tier to the startup header, beside the model name when your tier applies to that model and you're signed in with a claude",
+      "action": null,
+      "why": "Added in v2.1.332.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+      "tipId": null,
+      "score": 39
+    },
+    {
+      "id": "cc-2.1.330-19",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-20T22:32:56Z",
@@ -83,10 +167,10 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 40
+      "score": 38
     },
     {
-      "id": "cc-2.1.330-12",
+      "id": "cc-2.1.330-20",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-20T22:32:56Z",
@@ -95,10 +179,10 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 40
+      "score": 38
     },
     {
-      "id": "cc-2.1.328-21",
+      "id": "cc-2.1.328-29",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T01:14:04Z",
@@ -107,10 +191,10 @@
       "why": "Added in v2.1.328.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
       "tipId": null,
-      "score": 39
+      "score": 37
     },
     {
-      "id": "cc-2.1.329-15",
+      "id": "cc-2.1.329-23",
       "kind": "new",
       "tool": "Claude Code",
       "date": "2026-11-19T22:14:41Z",
@@ -119,91 +203,7 @@
       "why": "Added in v2.1.329.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
       "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.329-18",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-19T22:14:41Z",
-      "title": "a \"Server message\" row to a server's page in `/mcp` that shows the JSON-RPC error message of a remote HTTP MCP server that refuses the connection",
-      "action": null,
-      "why": "Added in v2.1.329.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.331-0",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS",
-      "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.331-2",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "an API connectivity section to `claude doctor` that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested",
-      "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.331-3",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "a notice when tap-mode voice dictation stops by itself, after 15 seconds without recognized speech or at its 2-minute limit",
-      "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.331-4",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "`CLAUDE_CODE_DISABLE_RESPONSE_COMPRESSION` to ask for uncompressed model responses behind a proxy that cuts compressed ones off; not advised yet for self-hosted",
-      "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.331-6",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-23T21:34:41Z",
-      "title": "`gen_ai.usage.*`, `gen_ai.response.model` and `gen_ai.operation.name` to `claude_code.llm_request` trace spans; `gen_ai.usage.input_tokens` includes prompt cach",
-      "action": null,
-      "why": "Added in v2.1.331.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "tipId": null,
-      "score": 38
-    },
-    {
-      "id": "cc-2.1.328-22",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-19T01:14:04Z",
-      "title": "`\"onFailure\": \"block\"` for `mcp_tool` hooks, as for command and HTTP hooks: a hook whose call fails blocks the action",
-      "action": null,
-      "why": "Added in v2.1.328.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
-      "tipId": null,
-      "score": 37
+      "score": 36
     }
   ]
 }
