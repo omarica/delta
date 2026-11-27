@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26T16:52:09.147Z",
+  "generated": "2026-11-27T16:37:57.211Z",
   "window_days": 7,
   "items": [
     {
@@ -12,7 +12,18 @@
       "why": "Customize Claude Code itself: status bands, tool-call guards, auto-handoff.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": "mods",
-      "score": 76
+      "score": 74
+    },
+    {
+      "id": "hn-50653477",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-26T09:44:23Z",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "action": null,
+      "why": "388 points, 319 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50653477",
+      "score": 71
     },
     {
       "id": "rel-openai/codex-rust-v0.172.0",
@@ -23,7 +34,7 @@
       "action": null,
       "why": "Press `Tab` to complete arguments for supported slash commands. For example, `/mcp lo` completes to `/mcp login`. · Jump between task groups in the agent command center with `Shift+Up` and `Shift+Down`.",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
-      "score": 55
+      "score": 53
     },
     {
       "id": "cc-2.1.332-0",
@@ -35,7 +46,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "hn-50586292",
@@ -46,18 +57,7 @@
       "action": null,
       "why": "176 points, 53 comments on Hacker News.",
       "url": "https://news.ycombinator.com/item?id=50586292",
-      "score": 43
-    },
-    {
-      "id": "hn-50634426",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-24T20:44:15Z",
-      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
-      "action": null,
-      "why": "106 points, 106 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50634426",
-      "score": 36
+      "score": 42
     }
   ],
   "more": [
@@ -71,7 +71,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 45
+      "score": 43
     },
     {
       "id": "cc-2.1.331-15",
@@ -83,19 +83,18 @@
       "why": "Added in v2.1.331.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
       "tipId": null,
-      "score": 42
+      "score": 40
     },
     {
-      "id": "cc-2.1.329-25",
-      "kind": "new",
-      "tool": "Claude Code",
-      "date": "2026-11-19T22:14:41Z",
-      "title": "this session's scheduled tasks, `/loop` wakeups, the goal and this conversation's forks to `/tasks`; x stops one after asking",
-      "action": "Try: /loop 5m check the deploy and tell me if it fails",
-      "why": "Babysitting CI, deploys and PRs without staying in the chat.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
-      "tipId": "loop",
-      "score": 41
+      "id": "hn-50634426",
+      "kind": "news",
+      "tool": "Community",
+      "date": "2026-11-24T20:44:15Z",
+      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+      "action": null,
+      "why": "110 points, 110 comments on Hacker News.",
+      "url": "https://news.ycombinator.com/item?id=50634426",
+      "score": 37
     },
     {
       "id": "cc-2.1.332-2",
@@ -107,7 +106,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.332-3",
@@ -119,7 +118,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.332-5",
@@ -131,7 +130,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.332-6",
@@ -143,7 +142,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.332-7",
@@ -155,7 +154,7 @@
       "why": "Added in v2.1.332.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
       "tipId": null,
-      "score": 37
+      "score": 35
     },
     {
       "id": "cc-2.1.330-19",
@@ -167,7 +166,7 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 36
+      "score": 34
     },
     {
       "id": "cc-2.1.330-20",
@@ -179,30 +178,31 @@
       "why": "Added in v2.1.330.",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "tipId": null,
-      "score": 36
+      "score": 34
     },
     {
-      "id": "hn-50653477",
-      "kind": "news",
-      "tool": "Community",
-      "date": "2026-11-26T09:44:23Z",
-      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-      "action": null,
-      "why": "92 points, 106 comments on Hacker News.",
-      "url": "https://news.ycombinator.com/item?id=50653477",
-      "score": 35
-    },
-    {
-      "id": "cc-2.1.329-23",
+      "id": "cc-2.1.331-8",
       "kind": "new",
       "tool": "Claude Code",
-      "date": "2026-11-19T22:14:41Z",
-      "title": "a trust dialog warning that says where a folder's hooks are declared",
+      "date": "2026-11-23T21:34:41Z",
+      "title": "Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS",
       "action": null,
-      "why": "Added in v2.1.329.",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+      "why": "Added in v2.1.331.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
       "tipId": null,
-      "score": 34
+      "score": 32
+    },
+    {
+      "id": "cc-2.1.331-10",
+      "kind": "new",
+      "tool": "Claude Code",
+      "date": "2026-11-23T21:34:41Z",
+      "title": "an API connectivity section to `claude doctor` that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested",
+      "action": null,
+      "why": "Added in v2.1.331.",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+      "tipId": null,
+      "score": 32
     }
   ]
 }
